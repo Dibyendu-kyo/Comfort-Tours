@@ -57,7 +57,7 @@ export default function ServicesPage() {
         {/* Car Rentals */}
         <h2 className="text-2xl font-bold mb-6 text-secondary">Car Rentals</h2>
         <div className="grid md:grid-cols-2 gap-12 mb-12">
-          {carCategories.map((cat, idx) => (
+          {carCategories.map((cat) => (
             <div key={cat.name} className="bg-white rounded-xl shadow card p-8 flex flex-col">
               <h3 className="text-xl font-semibold mb-4 text-primary">{cat.name}</h3>
               <div className="flex gap-6 mb-4">

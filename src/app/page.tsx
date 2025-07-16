@@ -108,15 +108,15 @@ export default function Home() {
         <h2 className="text-3xl font-bold mb-12 text-center text-primary tracking-tight">What Our Customers Say</h2>
         <div className="grid md:grid-cols-3 gap-12">
           <div className="card flex flex-col items-start">
-            <p className="text-lg mb-4">"Comfort Tours made our holiday absolutely stress-free! From transport to hotels, everything was perfectly arranged. Highly recommended for a relaxed travel experience."</p>
+            <p className="text-lg mb-4">&quot;Comfort Tours made our holiday absolutely stress-free! From transport to hotels, everything was perfectly arranged. Highly recommended for a relaxed travel experience.&quot;</p>
             <span className="font-semibold text-primary">Rohit Deshmukh, Mumbai</span>
           </div>
           <div className="card flex flex-col items-start">
-            <p className="text-lg mb-4">"Best tour company we’ve experienced! Professional team, great service, and amazing memories. Thank you, Comfort Tours, for making our trip unforgettable."</p>
+            <p className="text-lg mb-4">&quot;Best tour company we’ve experienced! Professional team, great service, and amazing memories. Thank you, Comfort Tours, for making our trip unforgettable.&quot;</p>
             <span className="font-semibold text-primary">Priya Nair, Pune</span>
           </div>
           <div className="card flex flex-col items-start">
-            <p className="text-lg mb-4">"We loved every moment of our tour with Comfort Tours. Very well organized itineraries and friendly support throughout. Definitely booking with them again."</p>
+            <p className="text-lg mb-4">&quot;We loved every moment of our tour with Comfort Tours. Very well organized itineraries and friendly support throughout. Definitely booking with them again.&quot;</p>
             <span className="font-semibold text-primary">Vijay Kulkarni, Nagpur</span>
           </div>
         </div>
