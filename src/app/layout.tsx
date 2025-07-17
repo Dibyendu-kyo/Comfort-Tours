@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import Image from "next/image";
 import Link from "next/link";
 
 const geistSans = Geist({
@@ -57,23 +58,19 @@ export default function RootLayout({
       >
         {/* Header Navigation */}
         <header className="w-full border-b bg-white sticky top-0 z-50 shadow-sm">
-          <nav className="w-full flex items-center justify-between py-4 px-8 max-w-none">
-            <div className="flex items-center gap-3">
-              {/* Logo placeholder */}
-              <span className="font-extrabold text-2xl tracking-tight text-primary flex items-center gap-2">
-                <svg width="32" height="32" fill="none" viewBox="0 0 32 32"><circle cx="16" cy="16" r="15" stroke="#ffd700" strokeWidth="2" fill="#f8f5f0"/><text x="16" y="21" textAnchor="middle" fontSize="16" fill="#1a365d" fontWeight="bold">CT</text></svg>
-                Comfort Tours
-              </span>
+          <nav className="flex items-center justify-between py-4 px-8 bg-white shadow">
+            <Link href="/">
+              <Image src="/images/comfort-tours-logo-01.png" alt="Comfort Tours Logo" width={96} height={96} className="mr-4" />
+            </Link>
+            <div className="flex gap-6">
+              <Link href="/">Home</Link>
+              <Link href="/about">About</Link>
+              <Link href="/services">Services</Link>
+              <Link href="/clients">Clients</Link>
+              <Link href="/contact">Contact</Link>
+              <Link href="/gallery">Gallery</Link>
+              <Link href="/blog">Blog</Link>
             </div>
-            <ul className="flex gap-8 text-base font-medium">
-              <li><Link href="/" className="header-link">Home</Link></li>
-              <li><Link href="/about" className="header-link">About</Link></li>
-              <li><Link href="/services" className="header-link">Services</Link></li>
-              <li><Link href="/clients" className="header-link">Clients</Link></li>
-              <li><Link href="/career" className="header-link">Career</Link></li>
-              <li><Link href="/blog" className="header-link">Blog</Link></li>
-              <li><Link href="/contact" className="header-link">Contact</Link></li>
-            </ul>
           </nav>
         </header>
         <main className="w-full min-h-[80vh] px-0 py-0">{children}</main>
