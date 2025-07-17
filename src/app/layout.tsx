@@ -58,17 +58,18 @@ export default function RootLayout({
       >
         {/* Header Navigation */}
         <header className="w-full border-b bg-white sticky top-0 z-50 shadow-sm">
-          <nav className="flex items-center justify-between py-4 px-8 bg-white shadow">
+          <nav className="flex items-center justify-between py-1 px-8 bg-white shadow">
             <Link href="/">
               <Image src="/images/comfort-tours-logo-01.png" alt="Comfort Tours Logo" width={96} height={96} className="mr-4" />
             </Link>
-            <div className="flex gap-6">
+            <div className="flex gap-6 items-center">
               <Link href="/">Home</Link>
               <Link href="/about">About</Link>
               <Link href="/services">Services</Link>
               <Link href="/clients">Clients</Link>
               <Link href="/contact">Contact</Link>
               <Link href="/gallery">Gallery</Link>
+              <a href="https://comfortvacanze.com/" target="_blank" rel="noopener noreferrer">Packaged Tours</a>
               <Link href="/blog">Blog</Link>
             </div>
           </nav>
