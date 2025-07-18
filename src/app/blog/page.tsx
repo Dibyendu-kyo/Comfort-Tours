@@ -22,7 +22,7 @@ export default function BlogPage() {
     {
       title: "Konkan Coast: Hidden Gems",
       category: "Destination",
-      description: "Explore the pristine beaches and coastal towns of Maharashtra's Konkan region.",
+      description: "Explore the pristine beaches and coastal towns of Maharashtra&apos;s Konkan region.",
       image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400&h=250&fit=crop",
       readTime: "6 min read",
       comingSoon: true
@@ -76,7 +76,7 @@ export default function BlogPage() {
       {/* Upcoming Content Preview */}
       <section className="mb-20">
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold mb-4 text-primary">What's Coming</h2>
+          <h2 className="text-3xl font-bold mb-4 text-primary">What&apos;s Coming</h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
             Get a sneak peek at the exciting travel content we&apos;re preparing for you.
           </p>
