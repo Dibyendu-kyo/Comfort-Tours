@@ -10,7 +10,7 @@ export default function AboutPage() {
           About Comfort Tours
         </h1>
         <p className="text-2xl text-gray-600 mb-8 max-w-4xl mx-auto leading-relaxed">
-          Pune's Premier Travel Partner Since 2006 - Redefining Luxury Travel with Safety & Excellence
+          Pune&apos;s Premier Travel Partner Since 2006 - Redefining Luxury Travel with Safety & Excellence
         </p>
         <div className="relative w-full h-64 md:h-80 rounded-2xl overflow-hidden mb-8">
           <Image
@@ -34,7 +34,7 @@ export default function AboutPage() {
           <div>
             <h2 className="text-3xl font-bold mb-6 text-primary">Our Story</h2>
             <p className="text-lg text-gray-700 mb-6 leading-relaxed">
-              The brainchild of dedicated professionals, Comfort Tours began its journey catering to the transport needs of software companies in Pune. Over time, we've redefined luxury travel with a specific focus on safety and security.
+              The brainchild of dedicated professionals, Comfort Tours began its journey catering to the transport needs of software companies in Pune. Over time, we&apos;ve redefined luxury travel with a specific focus on safety and security.
             </p>
             <p className="text-lg text-gray-700 mb-6 leading-relaxed">
               We were the <strong>first to introduce GPS-enabled buses</strong> for the software industry in Pune, setting new standards for corporate transportation.

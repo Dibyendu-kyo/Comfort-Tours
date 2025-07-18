@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Comfort Tours | Pune's Premier Travel Agency",
+  title: "Comfort Tours | Pune&apos;s Premier Travel Agency",
   description: "Car rentals, tour packages, and corporate travel solutions in Pune. Trusted by top companies and families since 2006.",
   openGraph: {
     type: "website",
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Comfort Tours | Pune's Premier Travel Agency",
+    title: "Comfort Tours | Pune&apos;s Premier Travel Agency",
     description: "Car rentals, tour packages, and corporate travel solutions in Pune. Trusted by top companies and families since 2006.",
     images: [
       {

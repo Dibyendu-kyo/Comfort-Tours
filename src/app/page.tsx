@@ -112,7 +112,7 @@ export default function Home() {
             </div>
             <div className="flex flex-col flex-grow px-2">
               <h3 className="text-lg font-semibold mb-2 text-secondary">Ashtavinayaka Darshan</h3>
-              <p className="text-gray-600 mb-4 flex-grow">2N/3D | Pune - 8 Ganpati Temples<br />Sacred pilgrimage to Lord Ganesha's eight holy temples</p>
+              <p className="text-gray-600 mb-4 flex-grow">2N/3D | Pune - 8 Ganpati Temples<br />Sacred pilgrimage to Lord Ganesha&apos;s eight holy temples</p>
               <Link href="/services" className="btn mt-auto">View Details</Link>
             </div>
           </div>
