@@ -1,27 +1,28 @@
 import Image from "next/image";
 import Link from "next/link";
+import ClientCarousel from "@/components/ClientCarousel";
+import HeroCarousel from "@/components/HeroCarousel";
 
 export default function Home() {
   return (
     <div className="flex flex-col">
-      {/* Hero Section with background image */}
-      <section className="relative flex flex-col items-center justify-center min-h-screen text-center px-4 overflow-hidden">
-        <div className="absolute inset-0 z-0">
-          <Image
-            src="/images/3d-icon-traveling-vacation.jpg"
-            alt="Travel Hero Background"
-            fill
-            style={{ objectFit: 'cover', objectPosition: 'center' }}
-            priority
-          />
-          <div className="absolute inset-0 bg-black/40" />
-        </div>
+      {/* Hero Section with automatic carousel */}
+      <section className="relative flex flex-col items-center justify-center h-[calc(100vh-4rem)] text-center px-4 overflow-hidden">
+        <HeroCarousel />
         <div className="relative z-10 flex flex-col items-center justify-center">
-          <h1 className="text-5xl md:text-6xl font-extrabold mb-6 text-white drop-shadow-lg tracking-tight">Ride with Comfort</h1>
-          <p className="text-2xl md:text-2xl text-white max-w-3xl mb-8 drop-shadow">Premier travel solutions in Pune since 2006. Car rentals, tour packages, and corporate travel—trusted by top companies and families alike.</p>
-          <div className="flex flex-col sm:flex-row gap-6 justify-center">
-            <Link href="/contact" className="btn text-lg">Get a Quote</Link>
-            <Link href="/services" className="btn text-lg">Plan Your Trip</Link>
+          <h1 className="text-5xl md:text-6xl font-extrabold mb-6 text-white drop-shadow-2xl tracking-tight animate-fade-in-up">
+            Ride with Comfort
+          </h1>
+          <p className="text-2xl md:text-2xl text-white max-w-3xl mb-8 drop-shadow-lg animate-fade-in-up" style={{ animationDelay: '0.3s' }}>
+            Premier travel solutions in Pune since 2006. Car rentals, tour packages, and corporate travel—trusted by top companies and families alike.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-6 justify-center animate-fade-in-up" style={{ animationDelay: '0.6s' }}>
+            <Link href="/contact" className="btn text-lg shadow-lg hover:shadow-xl transition-all duration-300">
+              Get a Quote
+            </Link>
+            <Link href="/services" className="btn text-lg shadow-lg hover:shadow-xl transition-all duration-300">
+              Plan Your Trip
+            </Link>
           </div>
         </div>
       </section>
@@ -30,22 +31,46 @@ export default function Home() {
       <section className="w-full max-w-screen-xl mx-auto py-20 px-4 md:px-8">
         <h2 className="text-3xl font-bold text-center mb-12 text-primary tracking-tight">Our Services</h2>
         <div className="grid md:grid-cols-3 gap-12">
-          <div className="card flex flex-col items-center">
-            <Image src="/images/car-rental.png" alt="Car Rental" width={80} height={80} />
-            <h3 className="text-xl font-semibold mt-4 mb-2 text-primary">Car Rentals</h3>
-            <p className="text-gray-600 text-center mb-4">Wide range of vehicles for every need—economy, premium, SUVs, and luxury cars.</p>
+          <div className="card flex flex-col items-center group hover:shadow-xl transition-all duration-300">
+            <div className="relative w-full h-48 mb-6 rounded-lg overflow-hidden">
+              <Image 
+                src="/images/rental_car.png" 
+                alt="Car Rental Services" 
+                fill
+                style={{ objectFit: 'cover', objectPosition: 'center' }}
+                className="transition-transform duration-300 group-hover:scale-105"
+              />
+            </div>
+            <h3 className="text-xl font-semibold mb-2 text-primary">Car Rentals</h3>
+            <p className="text-gray-600 text-center mb-4 flex-grow">Wide range of vehicles for every need—economy, premium, SUVs, and luxury cars.</p>
             <Link href="/services" className="btn">View Cars</Link>
           </div>
-          <div className="card flex flex-col items-center">
-            <Image src="/images/tour-package.png" alt="Tour Packages" width={80} height={80} />
-            <h3 className="text-xl font-semibold mt-4 mb-2 text-primary">Tour Packages</h3>
-            <p className="text-gray-600 text-center mb-4">Curated tours: Ashtavinayaka, Konkan, North India, and more. Customizable for families & groups.</p>
+          <div className="card flex flex-col items-center group hover:shadow-xl transition-all duration-300">
+            <div className="relative w-full h-48 mb-6 rounded-lg overflow-hidden">
+              <Image 
+                src="/images/Tour_packages.png" 
+                alt="Tour Packages" 
+                fill
+                style={{ objectFit: 'cover', objectPosition: 'center' }}
+                className="transition-transform duration-300 group-hover:scale-105"
+              />
+            </div>
+            <h3 className="text-xl font-semibold mb-2 text-primary">Tour Packages</h3>
+            <p className="text-gray-600 text-center mb-4 flex-grow">Curated tours: Ashtavinayaka, Konkan, North India, and more. Customizable for families & groups.</p>
             <Link href="/services" className="btn">Explore Packages</Link>
           </div>
-          <div className="card flex flex-col items-center">
-            <Image src="/images/corporate.png" alt="Corporate Travel" width={80} height={80} />
-            <h3 className="text-xl font-semibold mt-4 mb-2 text-primary">Corporate Travel</h3>
-            <p className="text-gray-600 text-center mb-4">Employee transport, event logistics, and fleet management for businesses.</p>
+          <div className="card flex flex-col items-center group hover:shadow-xl transition-all duration-300">
+            <div className="relative w-full h-48 mb-6 rounded-lg overflow-hidden">
+              <Image 
+                src="/images/Corporate_packages.png" 
+                alt="Corporate Travel Packages" 
+                fill
+                style={{ objectFit: 'cover', objectPosition: 'center' }}
+                className="transition-transform duration-300 group-hover:scale-105"
+              />
+            </div>
+            <h3 className="text-xl font-semibold mb-2 text-primary">Corporate Travel</h3>
+            <p className="text-gray-600 text-center mb-4 flex-grow">Employee transport, event logistics, and fleet management for businesses.</p>
             <Link href="/services" className="btn">Corporate Solutions</Link>
           </div>
         </div>
@@ -74,20 +99,56 @@ export default function Home() {
       <section className="w-full max-w-screen-xl mx-auto py-20 px-4 md:px-8">
         <h2 className="text-3xl font-bold mb-10 text-center text-primary tracking-tight">Featured Tour Packages</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 justify-items-center">
-          <div className="card w-full max-w-xs flex flex-col items-start">
-            <h3 className="text-lg font-semibold mb-2 text-secondary">Ashtavinayaka Darshan</h3>
-            <p className="text-gray-600 mb-2">2N/3D | Pune - 8 Ganpati Temples</p>
-            <Link href="/services" className="btn mt-auto">View Details</Link>
+          <div className="card w-full max-w-sm flex flex-col group hover:shadow-xl transition-all duration-300">
+            <div className="relative w-full h-48 mb-4 rounded-lg overflow-hidden">
+              <Image
+                src="https://images.unsplash.com/photo-1582510003544-4d00b7f74220?w=400&h=300&fit=crop&crop=center"
+                alt="Ashtavinayaka Darshan - Hindu Temple"
+                fill
+                style={{ objectFit: 'cover', objectPosition: 'center' }}
+                className="transition-transform duration-300 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
+            </div>
+            <div className="flex flex-col flex-grow px-2">
+              <h3 className="text-lg font-semibold mb-2 text-secondary">Ashtavinayaka Darshan</h3>
+              <p className="text-gray-600 mb-4 flex-grow">2N/3D | Pune - 8 Ganpati Temples<br />Sacred pilgrimage to Lord Ganesha's eight holy temples</p>
+              <Link href="/services" className="btn mt-auto">View Details</Link>
+            </div>
           </div>
-          <div className="card w-full max-w-xs flex flex-col items-start">
-            <h3 className="text-lg font-semibold mb-2 text-secondary">Konkan Beach Tour</h3>
-            <p className="text-gray-600 mb-2">3N/4D | Alibaug, Ratnagiri, Ganpatipule</p>
-            <Link href="/services" className="btn mt-auto">View Details</Link>
+          <div className="card w-full max-w-sm flex flex-col group hover:shadow-xl transition-all duration-300">
+            <div className="relative w-full h-48 mb-4 rounded-lg overflow-hidden">
+              <Image
+                src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400&h=300&fit=crop&crop=center"
+                alt="Konkan Beach Tour - Beautiful Coastline"
+                fill
+                style={{ objectFit: 'cover', objectPosition: 'center' }}
+                className="transition-transform duration-300 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
+            </div>
+            <div className="flex flex-col flex-grow px-2">
+              <h3 className="text-lg font-semibold mb-2 text-secondary">Konkan Beach Tour</h3>
+              <p className="text-gray-600 mb-4 flex-grow">3N/4D | Alibaug, Ratnagiri, Ganpatipule<br />Pristine beaches and coastal Maharashtra experience</p>
+              <Link href="/services" className="btn mt-auto">View Details</Link>
+            </div>
           </div>
-          <div className="card w-full max-w-xs flex flex-col items-start">
-            <h3 className="text-lg font-semibold mb-2 text-secondary">North India Explorer</h3>
-            <p className="text-gray-600 mb-2">6N/7D | Delhi, Agra, Jaipur</p>
-            <Link href="/services" className="btn mt-auto">View Details</Link>
+          <div className="card w-full max-w-sm flex flex-col group hover:shadow-xl transition-all duration-300">
+            <div className="relative w-full h-48 mb-4 rounded-lg overflow-hidden">
+              <Image
+                src="https://images.unsplash.com/photo-1564507592333-c60657eea523?w=400&h=300&fit=crop&crop=center"
+                alt="North India Explorer - Taj Mahal"
+                fill
+                style={{ objectFit: 'cover', objectPosition: 'center' }}
+                className="transition-transform duration-300 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
+            </div>
+            <div className="flex flex-col flex-grow px-2">
+              <h3 className="text-lg font-semibold mb-2 text-secondary">North India Explorer</h3>
+              <p className="text-gray-600 mb-4 flex-grow">6N/7D | Delhi, Agra, Jaipur<br />Golden Triangle tour with iconic monuments and culture</p>
+              <Link href="/services" className="btn mt-auto">View Details</Link>
+            </div>
           </div>
         </div>
       </section>
@@ -95,11 +156,14 @@ export default function Home() {
       {/* Our Trusted Clients */}
       <section className="w-full max-w-screen-xl mx-auto py-16 px-4 md:px-8">
         <h2 className="text-2xl font-bold mb-8 text-center text-secondary tracking-tight">Our Trusted Clients</h2>
-        <div className="flex flex-wrap justify-center gap-8 items-center">
-          <Image src="/images/client1.png" alt="Client 1" width={100} height={40} />
-          <Image src="/images/client2.png" alt="Client 2" width={100} height={40} />
-          <Image src="/images/client3.png" alt="Client 3" width={100} height={40} />
-          <Image src="/images/client4.png" alt="Client 4" width={100} height={40} />
+        <ClientCarousel />
+        <div className="flex justify-end mt-8">
+          <Link href="/clients" className="text-primary hover:text-secondary font-semibold text-lg transition-colors duration-300 flex items-center gap-2">
+            View All Clients
+            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+            </svg>
+          </Link>
         </div>
       </section>
 

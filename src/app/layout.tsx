@@ -58,19 +58,19 @@ export default function RootLayout({
       >
         {/* Header Navigation */}
         <header className="w-full border-b bg-white sticky top-0 z-50 shadow-sm">
-          <nav className="flex items-center justify-between py-1 px-8 bg-white shadow">
-            <Link href="/">
-              <Image src="/images/comfort-tours-logo-01.png" alt="Comfort Tours Logo" width={96} height={96} className="mr-4" />
+          <nav className="flex items-center justify-between py-2 px-8 bg-white shadow h-16">
+            <Link href="/" className="flex items-center logo-link">
+              <Image src="/images/comfort-tours-logo-01.png" alt="Comfort Tours Logo" width={80} height={80} className="mr-4" />
             </Link>
-            <div className="flex gap-6 items-center">
-              <Link href="/">Home</Link>
-              <Link href="/about">About</Link>
-              <Link href="/services">Services</Link>
-              <Link href="/clients">Clients</Link>
-              <Link href="/contact">Contact</Link>
-              <Link href="/gallery">Gallery</Link>
-              <a href="https://comfortvacanze.com/" target="_blank" rel="noopener noreferrer">Packaged Tours</a>
-              <Link href="/blog">Blog</Link>
+            <div className="flex gap-4 items-center">
+              <Link href="/" className="header-link">Home</Link>
+              <Link href="/about" className="header-link">About</Link>
+              <Link href="/services" className="header-link">Services</Link>
+              <Link href="/clients" className="header-link">Clients</Link>
+              <Link href="/contact" className="header-link">Contact</Link>
+              <Link href="/gallery" className="header-link">Gallery</Link>
+              <a href="https://comfortvacanze.com/" target="_blank" rel="noopener noreferrer" className="header-link">Packaged Tours</a>
+              <Link href="/blog" className="header-link">Blog</Link>
             </div>
           </nav>
         </header>
