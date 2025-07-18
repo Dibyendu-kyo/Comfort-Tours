@@ -1,5 +1,4 @@
 import Link from "next/link";
-import Image from "next/image";
 
 export default function ContactPage() {
   return (
@@ -10,7 +9,7 @@ export default function ContactPage() {
           Get In Touch
         </h1>
         <p className="text-2xl text-gray-600 mb-8 max-w-4xl mx-auto leading-relaxed">
-          Ready to plan your next journey? We're here to help make your travel dreams come true.
+          Ready to plan your next journey? We&apos;re here to help make your travel dreams come true.
         </p>
       </section>
 
@@ -77,7 +76,7 @@ export default function ContactPage() {
           {/* Contact Form */}
           <div className="bg-white rounded-2xl shadow-lg card p-8">
             <h2 className="text-3xl font-bold mb-6 text-primary">Send Us a Message</h2>
-            <p className="text-gray-600 mb-8">Fill out the form below and we'll get back to you within 24 hours.</p>
+            <p className="text-gray-600 mb-8">Fill out the form below and we&apos;ll get back to you within 24 hours.</p>
             
             <form className="space-y-6">
               <div className="grid md:grid-cols-2 gap-6">

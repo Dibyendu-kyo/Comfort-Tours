@@ -1,5 +1,4 @@
 import React from "react";
-import Image from "next/image";
 
 export default function Gallery() {
   const videos = [
@@ -62,7 +61,7 @@ export default function Gallery() {
           </div>
           <h3 className="text-2xl font-bold mb-4 text-primary">Photos Coming Soon</h3>
           <p className="text-gray-600 max-w-2xl mx-auto">
-            We're preparing a beautiful collection of photos showcasing our fleet, destinations, and memorable journeys. Check back soon!
+            We&apos;re preparing a beautiful collection of photos showcasing our fleet, destinations, and memorable journeys. Check back soon!
           </p>
         </div>
       </section>
