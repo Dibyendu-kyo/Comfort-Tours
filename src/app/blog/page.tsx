@@ -59,7 +59,7 @@ export default function BlogPage() {
           </div>
           <h2 className="text-3xl font-bold mb-4 text-primary">Blog Coming Soon!</h2>
           <p className="text-lg text-gray-700 mb-6 max-w-2xl mx-auto">
-            We're working on bringing you amazing travel content, destination guides, and insider tips. 
+            We&apos;re working on bringing you amazing travel content, destination guides, and insider tips. 
             Stay tuned for expert advice from our travel professionals!
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -78,7 +78,7 @@ export default function BlogPage() {
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold mb-4 text-primary">What's Coming</h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            Get a sneak peek at the exciting travel content we're preparing for you.
+            Get a sneak peek at the exciting travel content we&apos;re preparing for you.
           </p>
         </div>
 
@@ -146,7 +146,7 @@ export default function BlogPage() {
             </button>
           </div>
           <p className="text-sm text-gray-500 mt-3">
-            We'll only send you valuable travel content. No spam, ever.
+            We&apos;ll only send you valuable travel content. No spam, ever.
           </p>
         </div>
       </section>

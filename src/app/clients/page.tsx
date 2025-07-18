@@ -1,5 +1,4 @@
 import Image from "next/image";
-import ClientCarousel from "@/components/ClientCarousel";
 
 const clients = [
   { name: "Atlas Copco", logo: "/logo/Atlas-Copco-Logo.svg.png" },
