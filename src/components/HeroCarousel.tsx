@@ -5,6 +5,12 @@ import { useEffect, useState } from "react";
 
 const heroImages = [
   {
+    src: "/images/3d-icon-traveling-vacation.jpg",
+    alt: "Travel and Vacation",
+    title: "Travel with Comfort",
+    description: "Your trusted travel partner for unforgettable journeys and experiences"
+  },
+  {
     src: "/images/Corporate_packages.png",
     alt: "Corporate Travel Packages",
     title: "Corporate Travel Solutions",
@@ -66,9 +72,12 @@ export default function HeroCarousel() {
             onClick={() => setCurrentIndex(index)}
             className={`w-3 h-3 rounded-full transition-all duration-300 ${
               index === currentIndex 
-                ? 'bg-secondary w-8 shadow-lg' 
+                ? 'w-8 shadow-lg' 
                 : 'bg-white/50 hover:bg-white/80'
             }`}
+            style={{
+              backgroundColor: index === currentIndex ? '#e67817' : undefined
+            }}
             aria-label={`Go to slide ${index + 1}`}
           />
         ))}

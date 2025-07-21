@@ -53,6 +53,53 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <link
+          rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+        />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              var url = 'https://wati-integration-prod-service.clare.ai/v2/watiWidget.js?94984';
+              var s = document.createElement('script');
+              s.type = 'text/javascript';
+              s.async = true;
+              s.src = url;
+              var options = {
+                "enabled": true,
+                "chatButtonSetting": {
+                  "backgroundColor": "#00e785",
+                  "ctaText": "Chat with us",
+                  "borderRadius": "25",
+                  "marginLeft": "0",
+                  "marginRight": "25",
+                  "marginBottom": "90",
+                  "ctaIconWATI": false,
+                  "position": "right"
+                },
+                "brandSetting": {
+                  "brandName": "Comfort Tours",
+                  "brandSubTitle": "Travel with Comfort",
+                  "brandImg": "/images/comfort-tours-logo-01.png",
+                  "welcomeText": "Hi there!\\nHow can I help you?",
+                  "messageText": "Hello, I have a question about {{page_link}}",
+                  "backgroundColor": "#00e785",
+                  "ctaText": "Chat with us",
+                  "borderRadius": "25",
+                  "autoShow": false,
+                  "phoneNumber": "+91 9763704501"
+                }
+              };
+              s.onload = function() {
+                CreateWhatsappChatWidget(options);
+              };
+              var x = document.getElementsByTagName('script')[0];
+              x.parentNode.insertBefore(s, x);
+            `,
+          }}
+        />
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
@@ -60,7 +107,7 @@ export default function RootLayout({
         <header className="w-full border-b bg-white sticky top-0 z-50 shadow-sm">
           <nav className="flex items-center justify-between py-2 px-8 bg-white shadow h-16">
             <Link href="/" className="flex items-center logo-link">
-              <Image src="/images/comfort-tours-logo-01.png" alt="Comfort Tours Logo" width={80} height={80} className="mr-4" />
+              <Image src="/images/comfort-tours-logo-01.png" alt="Comfort Tours Logo" width={150} height={100} className="mr-4" />
             </Link>
             <div className="flex gap-4 items-center">
               <Link href="/" className="header-link">Home</Link>
@@ -76,11 +123,11 @@ export default function RootLayout({
         </header>
         <main className="w-full min-h-[80vh] px-0 py-0">{children}</main>
         {/* Footer */}
-        <footer className="w-full bg-[#16213e] text-white pt-14 pb-7 mt-20 shadow-inner border-t border-white/10">
+        <footer className="w-full text-white pt-14 pb-7 mt-20 shadow-inner border-t border-white/10" style={{ backgroundColor: '#007dc0' }}>
           <div className="max-w-screen-xl mx-auto px-4 md:px-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-12">
             {/* Contact Info */}
             <div>
-              <h3 className="font-bold text-lg mb-3">Contact Us</h3>
+              <h3 className="font-bold text-lg mb-3 text-white">Contact Us</h3>
               <p className="mb-2">Comfort Tours Pvt. Ltd.</p>
               <p className="mb-2">Office No. 1, 2nd Floor, Rucha Building,<br />Punavale, Pune - 411033</p>
               <p className="mb-2">Phone: <Link href="tel:+912041230000" className="footer-link">+91-20-41230000</Link></p>
@@ -88,40 +135,52 @@ export default function RootLayout({
             </div>
             {/* Quick Links */}
             <div>
-              <h3 className="font-bold text-lg mb-3">Quick Links</h3>
+              <h3 className="font-bold text-lg mb-3 text-white">Quick Links</h3>
               <ul className="space-y-2">
                 <li><Link href="/" className="footer-link">Home</Link></li>
                 <li><Link href="/services" className="footer-link">Services</Link></li>
                 <li><Link href="/clients" className="footer-link">Clients</Link></li>
-                <li><Link href="/packages" className="footer-link">Packages</Link></li>
+                <li><a href="https://comfortvacanze.com/" target="_blank" rel="noopener noreferrer" className="footer-link" title="Comfort Vacanze - Corporate Group Travel & International Event Management from Pune">Packages</a></li>
                 <li><Link href="/contact" className="footer-link">Contact</Link></li>
               </ul>
             </div>
             {/* Company */}
             <div>
-              <h3 className="font-bold text-lg mb-3">Company</h3>
+              <h3 className="font-bold text-lg mb-3 text-white">Company</h3>
               <ul className="space-y-2">
                 <li><Link href="/about" className="footer-link">About</Link></li>
-                <li><Link href="/career" className="footer-link">Careers</Link></li>
+                <li><Link href="/gallery" className="footer-link">Gallery</Link></li>
                 <li><Link href="/blog" className="footer-link">Blog</Link></li>
               </ul>
             </div>
             {/* Help & Social */}
             <div>
-              <h3 className="font-bold text-lg mb-3">Help & Social</h3>
+              <h3 className="font-bold text-lg mb-3 text-white">Help & Social</h3>
               <ul className="space-y-2 mb-4">
                 <li><Link href="#" className="footer-link">FAQ</Link></li>
                 <li><Link href="#" className="footer-link">Support</Link></li>
               </ul>
-              <div className="flex gap-6 mt-2">
-                <Link href="https://facebook.com" target="_blank" rel="noopener" className="footer-link" aria-label="Facebook">
-                  <svg width="28" height="28" fill="currentColor" viewBox="0 0 24 24"><path d="M22.675 0h-21.35C.595 0 0 .592 0 1.326v21.348C0 23.408.595 24 1.325 24h11.495v-9.294H9.692v-3.622h3.128V8.413c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.797.143v3.24l-1.918.001c-1.504 0-1.797.715-1.797 1.763v2.313h3.587l-.467 3.622h-3.12V24h6.116C23.406 24 24 23.408 24 22.674V1.326C24 .592 23.406 0 22.675 0"/></svg>
+              <div className="flex gap-3 mt-2">
+                <Link href="https://facebook.com" target="_blank" rel="noopener" className="group" aria-label="Facebook">
+                  <div className="w-10 h-10 bg-white/10 hover:bg-white/20 rounded-lg flex items-center justify-center transition-all duration-300 group-hover:scale-110">
+                    <svg width="20" height="20" fill="white" viewBox="0 0 24 24">
+                      <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+                    </svg>
+                  </div>
                 </Link>
-                <Link href="https://instagram.com" target="_blank" rel="noopener" className="footer-link" aria-label="Instagram">
-                  <svg width="28" height="28" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.366.062 2.633.334 3.608 1.308.974.974 1.246 2.241 1.308 3.608.058 1.266.069 1.646.069 4.85s-.012 3.584-.07 4.85c-.062 1.366-.334 2.633-1.308 3.608-.974.974-2.241 1.246-3.608 1.308-1.266.058-1.646.069-4.85.069s-3.584-.012-4.85-.07c-1.366-.062-2.633-.334-3.608-1.308-.974-.974-1.246-2.241-1.308-3.608C2.175 15.647 2.163 15.267 2.163 12s.012-3.584.07-4.85c.062-1.366.334-2.633 1.308-3.608C4.515 2.497 5.782 2.225 7.148 2.163 8.414 2.105 8.794 2.163 12 2.163zm0-2.163C8.741 0 8.332.012 7.052.07 5.771.128 4.659.334 3.678 1.315c-.98.98-1.187 2.092-1.245 3.373C2.012 5.668 2 6.077 2 12c0 5.923.012 6.332.07 7.612.058 1.281.265 2.393 1.245 3.373.98.98 2.092 1.187 3.373 1.245C8.332 23.988 8.741 24 12 24s3.668-.012 4.948-.07c1.281-.058 2.393-.265 3.373-1.245.98-.98 1.187-2.092 1.245-3.373.058-1.28.07-1.689.07-7.612 0-5.923-.012-6.332-.07-7.612-.058-1.281-.265-2.393-1.245-3.373-.98-.98-2.092-1.187-3.373-1.245C15.668.012 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zm0 10.162a3.999 3.999 0 1 1 0-7.998 3.999 3.999 0 0 1 0 7.998zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+                <Link href="https://instagram.com" target="_blank" rel="noopener" className="group" aria-label="Instagram">
+                  <div className="w-10 h-10 bg-white/10 hover:bg-white/20 rounded-lg flex items-center justify-center transition-all duration-300 group-hover:scale-110">
+                    <svg width="20" height="20" fill="white" viewBox="0 0 24 24">
+                      <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+                    </svg>
+                  </div>
                 </Link>
-                <Link href="https://linkedin.com" target="_blank" rel="noopener" className="footer-link" aria-label="LinkedIn">
-                  <svg width="28" height="28" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.761 0 5-2.239 5-5v-14c0-2.761-2.239-5-5-5zm-11.75 20h-3v-10h3v10zm-1.5-11.268c-.966 0-1.75-.784-1.75-1.75s.784-1.75 1.75-1.75 1.75.784 1.75 1.75-.784 1.75-1.75 1.75zm15.25 11.268h-3v-5.604c0-1.337-.025-3.063-1.868-3.063-1.868 0-2.154 1.459-2.154 2.967v5.7h-3v-10h2.881v1.367h.041c.401-.761 1.381-1.563 2.841-1.563 3.039 0 3.6 2.001 3.6 4.601v5.595z"/></svg>
+                <Link href="https://linkedin.com" target="_blank" rel="noopener" className="group" aria-label="LinkedIn">
+                  <div className="w-10 h-10 bg-white/10 hover:bg-white/20 rounded-lg flex items-center justify-center transition-all duration-300 group-hover:scale-110">
+                    <svg width="20" height="20" fill="white" viewBox="0 0 24 24">
+                      <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                    </svg>
+                  </div>
                 </Link>
               </div>
             </div>

@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import ClientCarousel from "@/components/ClientCarousel";
 import HeroCarousel from "@/components/HeroCarousel";
+import ScrollToTop from "@/components/ScrollToTop";
 
 export default function Home() {
   return (
@@ -29,7 +30,7 @@ export default function Home() {
 
       {/* Our Services */}
       <section className="w-full max-w-screen-xl mx-auto py-20 px-4 md:px-8">
-        <h2 className="text-3xl font-bold text-center mb-12 text-primary tracking-tight">Our Services</h2>
+        <h2 className="text-4xl font-bold text-center mb-12 text-primary tracking-tight">Our Services</h2>
         <div className="grid md:grid-cols-3 gap-12">
           <div className="card flex flex-col items-center group hover:shadow-xl transition-all duration-300">
             <div className="relative w-full h-48 mb-6 rounded-lg overflow-hidden">
@@ -77,27 +78,27 @@ export default function Home() {
       </section>
 
       {/* Why Choose Us */}
-      <section className="w-full max-w-screen-xl mx-auto py-20 px-4 md:px-8 bg-[#f8f5f0] rounded-xl my-20">
-        <h2 className="text-3xl font-bold text-center mb-10 text-secondary tracking-tight">Why Choose Comfort Tours?</h2>
+      <section className="w-full max-w-screen-xl mx-auto py-20 px-4 md:px-8 bg-gradient-to-r from-orange-500 to-blue-500 rounded-xl my-20" style={{ background: 'linear-gradient(135deg, #e67817 0%, #007dc0 100%)' }}>
+        <h2 className="text-4xl font-bold text-center mb-10 text-white tracking-tight">Why Choose Comfort Tours?</h2>
         <div className="grid md:grid-cols-3 gap-12 text-center">
           <div className="flex flex-col items-center">
-            <span className="text-5xl font-extrabold text-primary mb-2">18+</span>
-            <span className="text-lg font-medium text-[#1a365d]">Years of Experience</span>
+            <span className="text-5xl font-extrabold text-white mb-2">18+</span>
+            <span className="text-lg font-medium text-white/90">Years of Experience</span>
           </div>
           <div className="flex flex-col items-center">
-            <span className="text-5xl font-extrabold text-primary mb-2">200+</span>
-            <span className="text-lg font-medium text-[#1a365d]">Fleet Size</span>
+            <span className="text-5xl font-extrabold text-white mb-2">200+</span>
+            <span className="text-lg font-medium text-white/90">Fleet Size</span>
           </div>
           <div className="flex flex-col items-center">
-            <span className="text-5xl font-extrabold text-primary mb-2">1000+</span>
-            <span className="text-lg font-medium text-[#1a365d]">Clients Served</span>
+            <span className="text-5xl font-extrabold text-white mb-2">1000+</span>
+            <span className="text-lg font-medium text-white/90">Clients Served</span>
           </div>
         </div>
       </section>
 
       {/* Featured Packages */}
       <section className="w-full max-w-screen-xl mx-auto py-20 px-4 md:px-8">
-        <h2 className="text-3xl font-bold mb-10 text-center text-primary tracking-tight">Featured Tour Packages</h2>
+        <h2 className="text-4xl font-bold mb-10 text-center text-primary tracking-tight">Featured Tour Packages</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 justify-items-center">
           <div className="card w-full max-w-sm flex flex-col group hover:shadow-xl transition-all duration-300">
             <div className="relative w-full h-48 mb-4 rounded-lg overflow-hidden">
@@ -155,7 +156,7 @@ export default function Home() {
 
       {/* Our Trusted Clients */}
       <section className="w-full max-w-screen-xl mx-auto py-16 px-4 md:px-8">
-        <h2 className="text-2xl font-bold mb-8 text-center text-secondary tracking-tight">Our Trusted Clients</h2>
+        <h2 className="text-4xl font-bold mb-8 text-center text-secondary tracking-tight">Our Trusted Clients</h2>
         <ClientCarousel />
         <div className="flex justify-end mt-8">
           <Link href="/clients" className="text-primary hover:text-secondary font-semibold text-lg transition-colors duration-300 flex items-center gap-2">
@@ -169,7 +170,7 @@ export default function Home() {
 
       {/* Testimonials Section */}
       <section className="w-full max-w-screen-xl mx-auto py-20 px-4 md:px-8 bg-white my-20">
-        <h2 className="text-3xl font-bold mb-12 text-center text-primary tracking-tight">What Our Customers Say</h2>
+        <h2 className="text-4xl font-bold mb-12 text-center text-primary tracking-tight">What Our Customers Say</h2>
         <div className="grid md:grid-cols-3 gap-12">
           <div className="card flex flex-col items-start">
             <p className="text-lg mb-4">&quot;Comfort Tours made our holiday absolutely stress-free! From transport to hotels, everything was perfectly arranged. Highly recommended for a relaxed travel experience.&quot;</p>
@@ -185,6 +186,8 @@ export default function Home() {
           </div>
         </div>
       </section>
+      
+      <ScrollToTop />
     </div>
   );
 }

@@ -78,12 +78,13 @@ export default function ContactPage() {
             <h2 className="text-3xl font-bold mb-6 text-primary">Send Us a Message</h2>
             <p className="text-gray-600 mb-8">Fill out the form below and we&apos;ll get back to you within 24 hours.</p>
             
-            <form className="space-y-6">
+            <form className="space-y-6" action="mailto:raj.kolpe@comfort-toursindia.com" method="post" encType="text/plain">
               <div className="grid md:grid-cols-2 gap-6">
                 <div>
                   <label className="block text-sm font-semibold text-gray-700 mb-2">Full Name *</label>
                   <input 
                     type="text" 
+                    name="name"
                     className="w-full border-2 border-gray-200 rounded-lg px-4 py-3 focus:border-primary focus:outline-none transition-colors" 
                     placeholder="Enter your full name" 
                     required 
@@ -93,6 +94,7 @@ export default function ContactPage() {
                   <label className="block text-sm font-semibold text-gray-700 mb-2">Phone Number *</label>
                   <input 
                     type="tel" 
+                    name="phone"
                     className="w-full border-2 border-gray-200 rounded-lg px-4 py-3 focus:border-primary focus:outline-none transition-colors" 
                     placeholder="Enter your phone number" 
                     required 
@@ -104,6 +106,7 @@ export default function ContactPage() {
                 <label className="block text-sm font-semibold text-gray-700 mb-2">Email Address *</label>
                 <input 
                   type="email" 
+                  name="email"
                   className="w-full border-2 border-gray-200 rounded-lg px-4 py-3 focus:border-primary focus:outline-none transition-colors" 
                   placeholder="Enter your email address" 
                   required 
@@ -112,7 +115,7 @@ export default function ContactPage() {
               
               <div>
                 <label className="block text-sm font-semibold text-gray-700 mb-2">Service Required</label>
-                <select className="w-full border-2 border-gray-200 rounded-lg px-4 py-3 focus:border-primary focus:outline-none transition-colors">
+                <select name="service" className="w-full border-2 border-gray-200 rounded-lg px-4 py-3 focus:border-primary focus:outline-none transition-colors">
                   <option value="">Select a service</option>
                   <option value="car-rental">Car Rental</option>
                   <option value="tour-package">Tour Package</option>
@@ -125,6 +128,7 @@ export default function ContactPage() {
               <div>
                 <label className="block text-sm font-semibold text-gray-700 mb-2">Message *</label>
                 <textarea 
+                  name="message"
                   className="w-full border-2 border-gray-200 rounded-lg px-4 py-3 focus:border-primary focus:outline-none transition-colors" 
                   rows={5} 
                   placeholder="Tell us about your travel requirements..." 
@@ -132,9 +136,11 @@ export default function ContactPage() {
                 />
               </div>
               
-              <button type="submit" className="btn w-full text-lg py-4">
-                Send Message
-              </button>
+              <div className="mb-4">
+                <button type="submit" className="btn w-full text-lg py-4">
+                  Send Message
+                </button>
+              </div>
             </form>
           </div>
 

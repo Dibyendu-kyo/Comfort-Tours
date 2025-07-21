@@ -50,20 +50,20 @@ export default function ClientCarousel() {
         <div 
           className={`flex gap-12 items-center ${isHovered ? 'animate-scroll-paused' : 'animate-scroll'}`}
           style={{
-            width: `${duplicatedLogos.length * 180}px`, // 180px per logo (144px width + 48px gap)
+            width: `${duplicatedLogos.length * 240}px`, // 240px per logo (192px width + 48px gap)
           }}
         >
           {duplicatedLogos.map((logo, i) => (
             <div 
               key={`${logo}-${i}`} 
-              className="flex-shrink-0 flex items-center justify-center h-20 w-36 group"
+              className="flex-shrink-0 flex items-center justify-center h-28 w-48 group"
             >
-              <div className="relative w-full h-full flex items-center justify-center bg-white rounded-lg shadow-sm border border-gray-100 p-3 transition-all duration-300 group-hover:shadow-lg group-hover:scale-105 group-hover:border-primary/20">
+              <div className="relative w-full h-full flex items-center justify-center bg-white rounded-lg shadow-sm border border-gray-100 p-4 transition-all duration-300 group-hover:shadow-lg group-hover:scale-105 group-hover:border-primary/20">
                 <Image
                   src={`/logo/${logo}`}
                   alt={logo.replace(/\.[^.]+$/, "").replace(/[-_]/g, " ")}
-                  width={140}
-                  height={70}
+                  width={180}
+                  height={90}
                   className="object-contain h-full w-auto transition-all duration-300 group-hover:brightness-110"
                   priority={i < 6}
                 />

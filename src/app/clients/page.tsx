@@ -74,20 +74,20 @@ export default function ClientsPage() {
       </section>
 
       {/* Stats Section */}
-      <section className="mt-20 bg-gradient-to-r from-primary/5 to-secondary/5 rounded-2xl p-12 text-center">
-        <h2 className="text-2xl font-bold mb-8 text-primary">Partnership Excellence</h2>
+      <section className="mt-20 rounded-2xl p-12 text-center" style={{ background: 'linear-gradient(135deg, #e67817 0%, #007dc0 100%)' }}>
+        <h2 className="text-2xl font-bold mb-8 text-white">Partnership Excellence</h2>
         <div className="grid md:grid-cols-3 gap-8">
           <div className="flex flex-col items-center">
-            <span className="text-4xl font-extrabold text-primary mb-2">23+</span>
-            <span className="text-lg font-medium text-gray-700">Major Corporate Clients</span>
+            <span className="text-4xl font-extrabold text-white mb-2">23+</span>
+            <span className="text-lg font-medium text-white/90">Major Corporate Clients</span>
           </div>
           <div className="flex flex-col items-center">
-            <span className="text-4xl font-extrabold text-primary mb-2">18+</span>
-            <span className="text-lg font-medium text-gray-700">Years of Partnership</span>
+            <span className="text-4xl font-extrabold text-white mb-2">18+</span>
+            <span className="text-lg font-medium text-white/90">Years of Partnership</span>
           </div>
           <div className="flex flex-col items-center">
-            <span className="text-4xl font-extrabold text-primary mb-2">100%</span>
-            <span className="text-lg font-medium text-gray-700">Client Satisfaction</span>
+            <span className="text-4xl font-extrabold text-white mb-2">100%</span>
+            <span className="text-lg font-medium text-white/90">Client Satisfaction</span>
           </div>
         </div>
       </section>

@@ -6,46 +6,38 @@ import Link from "next/link";
 const carCategories = [
   {
     name: "Economy Cars",
-    icon: "🚗",
     vehicles: [
       { name: "Tata Indica", img: "https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?w=200&h=120&fit=crop" },
       { name: "Hyundai Santro", img: "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?w=200&h=120&fit=crop" },
     ],
     features: ["Fuel Efficient", "Easy City Drive", "Affordable", "Perfect for Short Trips"],
-    price: "Starting ₹12/km",
     description: "Perfect for city commutes and short distance travel"
   },
   {
     name: "Premium Sedans",
-    icon: "🚙",
     vehicles: [
       { name: "Honda City", img: "https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=200&h=120&fit=crop" },
       { name: "Skoda Octavia", img: "https://images.unsplash.com/photo-1555215695-3004980ad54e?w=200&h=120&fit=crop" },
     ],
     features: ["Luxury Interiors", "Spacious", "AC", "Professional Chauffeur"],
-    price: "Starting ₹18/km",
     description: "Comfortable and stylish for business and leisure travel"
   },
   {
     name: "SUVs & MUVs",
-    icon: "🚐",
     vehicles: [
       { name: "Toyota Innova", img: "https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?w=200&h=120&fit=crop" },
       { name: "Mahindra Xylo", img: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=200&h=120&fit=crop" },
     ],
     features: ["Large Groups", "Comfort Ride", "Luggage Space", "Family Friendly"],
-    price: "Starting ₹22/km",
     description: "Ideal for family trips and group travel with ample space"
   },
   {
     name: "Luxury Fleet",
-    icon: "🏎️",
     vehicles: [
       { name: "BMW 5 Series", img: "https://images.unsplash.com/photo-1555215695-3004980ad54e?w=200&h=120&fit=crop" },
       { name: "Mercedes E-Class", img: "https://images.unsplash.com/photo-1563720223185-11003d516935?w=200&h=120&fit=crop" },
     ],
     features: ["Chauffeur Driven", "Top Safety", "Premium Experience", "VIP Service"],
-    price: "Starting ₹35/km",
     description: "Ultimate luxury experience for special occasions and VIP travel"
   },
 ];
@@ -64,13 +56,25 @@ export default function ServicesPage() {
   return (
     <div className="flex flex-col w-full max-w-screen-xl mx-auto py-20 px-4 md:px-8">
       {/* Hero Section */}
-      <section className="mb-20 text-center">
-        <h1 className="text-4xl md:text-5xl font-extrabold mb-6 text-primary tracking-tight">
-          Our Services
-        </h1>
-        <p className="text-2xl text-gray-600 mb-8 max-w-4xl mx-auto leading-relaxed">
-          Comprehensive Travel Solutions for Every Journey - From Economy to Luxury
-        </p>
+      <section className="relative mb-20 text-center">
+        <div className="relative h-64 md:h-80 rounded-2xl overflow-hidden mb-8">
+          <Image
+            src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=1200&h=600&fit=crop&crop=center&q=80"
+            alt="Comfort Tours Services"
+            fill
+            style={{ objectFit: 'cover', objectPosition: 'center' }}
+            className="transition-transform duration-300"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-black/30" />
+          <div className="absolute inset-0 flex flex-col items-center justify-center text-white">
+            <h1 className="text-4xl md:text-5xl font-extrabold mb-4 tracking-tight drop-shadow-2xl text-white">
+              Our Services
+            </h1>
+            <p className="text-xl md:text-2xl max-w-4xl mx-auto leading-relaxed drop-shadow-lg text-white">
+              Comprehensive Travel Solutions for Every Journey - From Economy to Luxury
+            </p>
+          </div>
+        </div>
       </section>
 
       {/* Car Rentals */}
@@ -84,12 +88,9 @@ export default function ServicesPage() {
         <div className="grid md:grid-cols-2 gap-8 mb-12">
           {carCategories.map((cat) => (
             <div key={cat.name} className="bg-white rounded-2xl shadow-lg card p-8 hover:shadow-xl transition-all duration-300 group">
-              <div className="flex items-center mb-6">
-                <span className="text-4xl mr-4">{cat.icon}</span>
-                <div>
-                  <h3 className="text-2xl font-bold text-primary">{cat.name}</h3>
-                  <p className="text-gray-600">{cat.description}</p>
-                </div>
+              <div className="mb-6">
+                <h3 className="text-2xl font-bold text-primary mb-2">{cat.name}</h3>
+                <p className="text-gray-600">{cat.description}</p>
               </div>
               
               <div className="grid grid-cols-2 gap-4 mb-6">
@@ -111,8 +112,7 @@ export default function ServicesPage() {
                     </span>
                   ))}
                 </div>
-                <div className="flex justify-between items-center">
-                  <span className="text-2xl font-bold text-secondary">{cat.price}</span>
+                <div className="flex justify-start">
                   <Link href="/contact" className="btn">Book Now</Link>
                 </div>
               </div>

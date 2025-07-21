@@ -6,24 +6,23 @@ export default function AboutPage() {
     <div className="flex flex-col w-full max-w-screen-xl mx-auto py-20 px-4 md:px-8">
       {/* Hero Section */}
       <section className="mb-20 text-center">
-        <h1 className="text-4xl md:text-5xl font-extrabold mb-6 text-primary tracking-tight">
-          About Comfort Tours
-        </h1>
-        <p className="text-2xl text-gray-600 mb-8 max-w-4xl mx-auto leading-relaxed">
-          Pune&apos;s Premier Travel Partner Since 2006 - Redefining Luxury Travel with Safety & Excellence
-        </p>
+
         <div className="relative w-full h-64 md:h-80 rounded-2xl overflow-hidden mb-8">
           <Image
-            src="https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=800&h=400&fit=crop&crop=center"
-            alt="Comfort Tours Fleet"
+            src="https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=1200&h=600&fit=crop&crop=center&q=80"
+            alt="Comfort Tours Excellence"
             fill
             style={{ objectFit: 'cover', objectPosition: 'center' }}
             className="transition-transform duration-300 hover:scale-105"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
-          <div className="absolute bottom-6 left-6 text-white">
-            <h3 className="text-2xl font-bold mb-2">18+ Years of Excellence</h3>
-            <p className="text-lg">Trusted by 1000+ clients across Maharashtra</p>
+          <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-black/30" />
+          <div className="absolute inset-0 flex flex-col items-center justify-center text-white">
+            <h1 className="text-4xl md:text-5xl font-extrabold mb-4 tracking-tight drop-shadow-2xl text-white">
+              About Comfort Tours
+            </h1>
+            <p className="text-xl md:text-2xl max-w-4xl mx-auto leading-relaxed drop-shadow-lg text-white text-center">
+              Pune's Premier Travel Partner Since 2006 - Redefining Luxury Travel with Safety & Excellence
+            </p>
           </div>
         </div>
       </section>
@@ -46,14 +45,16 @@ export default function AboutPage() {
               </Link>
             </div>
           </div>
-          <div className="relative">
-            <Image
-              src="https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=500&h=400&fit=crop&crop=center"
-              alt="Our Journey"
-              width={500}
-              height={400}
-              className="rounded-xl shadow-lg"
-            />
+          <div className="relative flex items-center justify-center">
+            <div className="bg-white rounded-xl shadow-lg p-8 flex items-center justify-center">
+              <Image
+                src="/images/comfort-tours-logo-01.png"
+                alt="Comfort Tours Logo"
+                width={300}
+                height={300}
+                className="object-contain"
+              />
+            </div>
           </div>
         </div>
       </section>
