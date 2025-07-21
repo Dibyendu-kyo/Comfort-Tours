@@ -21,7 +21,7 @@ export default function AboutPage() {
               About Comfort Tours
             </h1>
             <p className="text-xl md:text-2xl max-w-4xl mx-auto leading-relaxed drop-shadow-lg text-white text-center">
-              Pune's Premier Travel Partner Since 2006 - Redefining Luxury Travel with Safety & Excellence
+              Pune&apos;s Premier Travel Partner Since 2006 - Redefining Luxury Travel with Safety & Excellence
             </p>
           </div>
         </div>
