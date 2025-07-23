@@ -33,7 +33,7 @@ export default function ClientsPage() {
       <section className="mb-16 text-center">
         <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold mb-8 text-primary tracking-tight flex flex-col sm:flex-row items-center justify-center gap-3">
           <span>Our Trusted Clients</span>
-          <svg width="24" height="24" sm:width="32" sm:height="32" fill="none" viewBox="0 0 32 32">
+          <svg className="w-6 h-6 sm:w-8 sm:h-8" fill="none" viewBox="0 0 32 32">
             <polygon points="0,0 32,16 0,32" fill="#ffd700" />
           </svg>
         </h1>
