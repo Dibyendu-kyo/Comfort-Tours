@@ -52,7 +52,7 @@ Let us know your budget and destination, and we'll build a custom travel plan ju
       {/* Blog Posts */}
       <section className="mb-20">
         <div className="grid gap-12">
-          {blogPosts.map((post, idx) => (
+          {blogPosts.map((post) => (
             <article key={post.id} className="bg-white rounded-2xl shadow-lg card hover:shadow-xl transition-all duration-300 overflow-hidden">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-0">
                 {/* Image */}
