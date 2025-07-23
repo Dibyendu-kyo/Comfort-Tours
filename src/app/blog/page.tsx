@@ -2,38 +2,38 @@ import Image from "next/image";
 import Link from "next/link";
 
 export default function BlogPage() {
-  const upcomingPosts = [
+  const blogPosts = [
     {
-      title: "Top 10 Must-Visit Temples in Maharashtra",
-      category: "Travel Guide",
-      description: "Discover the spiritual heritage of Maharashtra with our comprehensive temple tour guide.",
-      image: "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?w=400&h=250&fit=crop",
+      id: 1,
+      title: "Why Renting a Car or Bus with Comfort Tours Makes Your Trip Better",
+      category: "Travel Tips",
+      excerpt: "Planning a trip with friends, family, or colleagues? Renting a vehicle might be the best decision you make.",
+      image: "/blog/10476.jpg",
+      readTime: "4 min read",
+      date: "January 15, 2025",
+      content: `Planning a trip with friends, family, or colleagues? Renting a vehicle might be the best decision you make. At Comfort Tours, we offer clean, well-maintained cars and buses with trained drivers who know the roads inside out.
+
+Whether you're attending a wedding, going on a corporate outing, or planning a local getaway, our rentals come with flexible packages that suit your timing and budget. You don't need to worry about parking, traffic, or fuel — just sit back and enjoy the ride.
+
+Our customers often tell us how much more relaxed and enjoyable their trips become when they choose us over public transport or self-driving. From Pune to anywhere in India, we've got your ride covered!
+
+So next time you plan a trip, remember — travel is better when Comfort Tours takes the wheel.`
+    },
+    {
+      id: 2,
+      title: "Your Dream International Trip, Handled by Comfort Tours",
+      category: "International Travel",
+      excerpt: "Thinking of exploring Dubai's skyscrapers, Thailand's beaches, or Europe's historic cities? We help you travel the world without stress.",
+      image: "/blog/travel-concept-with-landmarks.jpg",
       readTime: "5 min read",
-      comingSoon: true
-    },
-    {
-      title: "Corporate Travel Best Practices",
-      category: "Business Travel",
-      description: "Essential tips for managing corporate transportation and ensuring employee safety.",
-      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=250&fit=crop",
-      readTime: "7 min read",
-      comingSoon: true
-    },
-    {
-      title: "Konkan Coast: Hidden Gems",
-      category: "Destination",
-      description: "Explore the pristine beaches and coastal towns of Maharashtra&apos;s Konkan region.",
-      image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400&h=250&fit=crop",
-      readTime: "6 min read",
-      comingSoon: true
-    },
-    {
-      title: "Golden Triangle Travel Guide",
-      category: "Tour Package",
-      description: "Everything you need to know about Delhi, Agra, and Jaipur in one comprehensive guide.",
-      image: "https://images.unsplash.com/photo-1564507592333-c60657eea523?w=400&h=250&fit=crop",
-      readTime: "8 min read",
-      comingSoon: true
+      date: "January 10, 2025",
+      content: `Thinking of exploring Dubai's skyscrapers, Thailand's beaches, or Europe's historic cities? At Comfort Tours, we help you travel the world without stress.
+
+From visa assistance and flight bookings to hotels and sightseeing — we plan everything for you. Whether it's your first international trip or your fifth, we make sure it's smooth, safe, and full of memories. No hidden charges, no last-minute surprises — just clear planning and 24/7 support.
+
+We've helped hundreds of travelers enjoy unforgettable holidays, honeymoon packages, and family adventures abroad. We believe travel should be exciting, not exhausting — that's why we handle the details so you can enjoy every moment.
+
+Let us know your budget and destination, and we'll build a custom travel plan just for you. With Comfort Tours, the world is within your reach.`
     }
   ];
 
@@ -41,113 +41,103 @@ export default function BlogPage() {
     <div className="flex flex-col w-full max-w-screen-xl mx-auto py-20 px-4 md:px-8">
       {/* Hero Section */}
       <section className="mb-20 text-center">
-        <h1 className="text-4xl md:text-5xl font-extrabold mb-6 text-primary tracking-tight">
+        <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold mb-6 text-primary tracking-tight">
           Travel Blog
         </h1>
-        <p className="text-2xl text-gray-600 mb-8 max-w-4xl mx-auto leading-relaxed">
+        <p className="text-lg sm:text-xl md:text-2xl text-gray-600 mb-8 max-w-4xl mx-auto leading-relaxed px-4">
           Travel insights, destination guides, and expert tips from 18+ years of travel experience
         </p>
       </section>
 
-      {/* Coming Soon Notice */}
+      {/* Blog Posts */}
       <section className="mb-20">
-        <div className="bg-gradient-to-r from-primary/5 to-secondary/5 rounded-2xl p-12 text-center">
-          <div className="w-20 h-20 bg-secondary rounded-full flex items-center justify-center mx-auto mb-6">
-            <svg className="w-10 h-10 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" />
-            </svg>
-          </div>
-          <h2 className="text-3xl font-bold mb-4 text-primary">Blog Coming Soon!</h2>
-          <p className="text-lg text-gray-700 mb-6 max-w-2xl mx-auto">
-            We&apos;re working on bringing you amazing travel content, destination guides, and insider tips. 
-            Stay tuned for expert advice from our travel professionals!
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/contact" className="btn">
-              Get Travel Tips Now
-            </Link>
-            <Link href="/services" className="btn bg-white text-primary border-2 border-primary hover:bg-primary hover:text-white">
-              Explore Our Services
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* Upcoming Content Preview */}
-      <section className="mb-20">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold mb-4 text-primary">What&apos;s Coming</h2>
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            Get a sneak peek at the exciting travel content we&apos;re preparing for you.
-          </p>
-        </div>
-
-        <div className="grid md:grid-cols-2 gap-8">
-          {upcomingPosts.map((post, idx) => (
-            <div key={idx} className="bg-white rounded-2xl shadow-lg card hover:shadow-xl transition-all duration-300 overflow-hidden group">
-              <div className="relative h-48">
-                <Image
-                  src={post.image}
-                  alt={post.title}
-                  fill
-                  style={{ objectFit: 'cover' }}
-                  className="group-hover:scale-105 transition-transform duration-300"
-                />
-                <div className="absolute top-4 left-4">
-                  <span className="bg-secondary text-primary px-3 py-1 rounded-full text-sm font-bold">
-                    {post.category}
-                  </span>
+        <div className="grid gap-12">
+          {blogPosts.map((post, idx) => (
+            <article key={post.id} className="bg-white rounded-2xl shadow-lg card hover:shadow-xl transition-all duration-300 overflow-hidden">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-0">
+                {/* Image */}
+                <div className="relative h-64 md:h-full">
+                  <Image
+                    src={post.image}
+                    alt={post.title}
+                    fill
+                    style={{ objectFit: 'cover' }}
+                    className="hover:scale-105 transition-transform duration-300"
+                  />
+                  <div className="absolute top-4 left-4">
+                    <span className="bg-secondary text-primary px-3 py-1 rounded-full text-sm font-bold">
+                      {post.category}
+                    </span>
+                  </div>
                 </div>
-                <div className="absolute top-4 right-4">
-                  <span className="bg-primary text-white px-3 py-1 rounded-full text-sm font-bold">
-                    Coming Soon
-                  </span>
-                </div>
-              </div>
-              
-              <div className="p-6">
-                <h3 className="text-xl font-bold text-primary mb-2 group-hover:text-secondary transition-colors">
-                  {post.title}
-                </h3>
-                <p className="text-gray-600 mb-4 leading-relaxed">
-                  {post.description}
-                </p>
-                <div className="flex items-center justify-between">
-                  <span className="text-sm text-gray-500">{post.readTime}</span>
-                  <div className="flex items-center text-primary">
-                    <span className="text-sm font-medium mr-2">Notify Me</span>
-                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 17h5l-5 5-5-5h5v-12" />
-                    </svg>
+                
+                {/* Content */}
+                <div className="p-6 md:p-8 flex flex-col justify-between">
+                  <div>
+                    <div className="flex items-center gap-4 text-sm text-gray-500 mb-4">
+                      <span>{post.date}</span>
+                      <span>•</span>
+                      <span>{post.readTime}</span>
+                    </div>
+                    
+                    <h2 className="text-2xl md:text-3xl font-bold text-primary mb-4 leading-tight">
+                      {post.title}
+                    </h2>
+                    
+                    <p className="text-gray-600 mb-6 leading-relaxed">
+                      {post.excerpt}
+                    </p>
+                    
+                    <div className="prose prose-lg text-gray-700 leading-relaxed">
+                      {post.content.split('\n\n').map((paragraph, pIdx) => (
+                        <p key={pIdx} className="mb-4">
+                          {paragraph}
+                        </p>
+                      ))}
+                    </div>
+                  </div>
+                  
+                  <div className="mt-8 pt-6 border-t border-gray-200">
+                    <div className="flex items-center justify-between">
+                      <div className="flex items-center gap-4">
+                        <div className="w-10 h-10 bg-primary rounded-full flex items-center justify-center">
+                          <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                          </svg>
+                        </div>
+                        <div>
+                          <p className="font-semibold text-primary">Comfort Tours Team</p>
+                          <p className="text-sm text-gray-500">Travel Experts</p>
+                        </div>
+                      </div>
+                      
+                      <Link href="/contact" className="btn text-sm px-4 py-2">
+                        Plan Your Trip
+                      </Link>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
+            </article>
           ))}
         </div>
       </section>
 
-      {/* Newsletter Signup */}
-      <section className="bg-white rounded-2xl shadow-lg card p-12 text-center">
-        <h2 className="text-3xl font-bold mb-4 text-primary">Stay Updated</h2>
-        <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
-          Be the first to know when we publish new travel guides, tips, and destination insights.
+      {/* Call to Action */}
+      <section className="bg-gradient-to-r from-primary/5 to-secondary/5 rounded-2xl p-12 text-center">
+        <h2 className="text-2xl sm:text-3xl font-bold mb-4 text-primary">Ready to Start Your Journey?</h2>
+        <p className="text-base sm:text-lg text-gray-600 mb-8 max-w-2xl mx-auto px-4">
+          Whether you need a car rental for a local trip or planning an international adventure, 
+          we&apos;re here to make your travel dreams come true.
         </p>
         
-        <div className="max-w-md mx-auto">
-          <div className="flex gap-4">
-            <input
-              type="email"
-              placeholder="Enter your email address"
-              className="flex-1 border-2 border-gray-200 rounded-lg px-4 py-3 focus:border-primary focus:outline-none transition-colors"
-            />
-            <button className="btn px-6">
-              Subscribe
-            </button>
-          </div>
-          <p className="text-sm text-gray-500 mt-3">
-            We&apos;ll only send you valuable travel content. No spam, ever.
-          </p>
+        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <Link href="/contact" className="btn">
+            Get Free Quote
+          </Link>
+          <Link href="/services" className="btn bg-white text-primary border-2 border-primary hover:bg-primary hover:text-white">
+            View All Services
+          </Link>
         </div>
       </section>
     </div>

@@ -12,10 +12,10 @@ export default function Gallery() {
     <div className="flex flex-col w-full max-w-screen-xl mx-auto py-20 px-4 md:px-8">
       {/* Hero Section */}
       <section className="mb-20 text-center">
-        <h1 className="text-4xl md:text-5xl font-extrabold mb-6 text-primary tracking-tight">
+        <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold mb-6 text-primary tracking-tight">
           Our Gallery
         </h1>
-        <p className="text-2xl text-gray-600 mb-8 max-w-4xl mx-auto leading-relaxed">
+        <p className="text-lg sm:text-xl md:text-2xl text-gray-600 mb-8 max-w-4xl mx-auto leading-relaxed px-4">
           Explore our fleet, destinations, and memorable moments from 18+ years of exceptional service
         </p>
       </section>
@@ -23,8 +23,8 @@ export default function Gallery() {
       {/* Video Gallery */}
       <section className="mb-20">
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold mb-4 text-primary">Video Gallery</h2>
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+          <h2 className="text-2xl sm:text-3xl font-bold mb-4 text-primary">Video Gallery</h2>
+          <p className="text-base sm:text-lg text-gray-600 max-w-3xl mx-auto px-4">
             Watch our fleet in action and see why customers choose Comfort Tours for their travel needs.
           </p>
         </div>
@@ -47,8 +47,8 @@ export default function Gallery() {
       {/* Photo Gallery - Coming Soon */}
       <section className="mb-20">
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold mb-4 text-primary">Photo Gallery</h2>
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+          <h2 className="text-2xl sm:text-3xl font-bold mb-4 text-primary">Photo Gallery</h2>
+          <p className="text-base sm:text-lg text-gray-600 max-w-3xl mx-auto px-4">
             Photo gallery coming soon. We&apos;re working on showcasing our fleet and destinations.
           </p>
         </div>

@@ -43,10 +43,9 @@ const carCategories = [
 ];
 
 const tourPackages = [
-  { name: "Ashtavinayaka Darshan", type: "Religious", img: "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?w=300&h=200&fit=crop", desc: "2N/3D | Pune - 8 Ganpati Temples" },
-  { name: "Konkan Beach Tour", type: "Beach", img: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=300&h=200&fit=crop", desc: "3N/4D | Alibaug, Ratnagiri, Ganpatipule" },
-  { name: "North India Explorer", type: "Cultural", img: "https://images.unsplash.com/photo-1564507592333-c60657eea523?w=300&h=200&fit=crop", desc: "6N/7D | Delhi, Agra, Jaipur" },
-  { name: "Mahabaleshwar Weekend", type: "Hill Station", img: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=300&h=200&fit=crop", desc: "2N/3D | Mahabaleshwar, Panchgani" },
+  { name: "Malaysia", type: "International", img: "/tour/malaysia1.webp", desc: "5N/6D | Kuala Lumpur, Genting Highlands" },
+  { name: "Singapore", type: "International", img: "/tour/singapore-banner-1.webp", desc: "4N/5D | Marina Bay, Sentosa Island" },
+  { name: "Vietnam", type: "International", img: "/tour/vietnam-banner-1.webp", desc: "6N/7D | Ho Chi Minh City, Hanoi, Ha Long Bay" },
 ];
 
 const packageTypes = ["All", ...Array.from(new Set(tourPackages.map(p => p.type)))];
@@ -67,10 +66,10 @@ export default function ServicesPage() {
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-black/30" />
           <div className="absolute inset-0 flex flex-col items-center justify-center text-white">
-            <h1 className="text-4xl md:text-5xl font-extrabold mb-4 tracking-tight drop-shadow-2xl text-white">
+            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold mb-4 tracking-tight drop-shadow-2xl text-white px-4">
               Our Services
             </h1>
-            <p className="text-xl md:text-2xl max-w-4xl mx-auto leading-relaxed drop-shadow-lg text-white">
+            <p className="text-lg sm:text-xl md:text-2xl max-w-4xl mx-auto leading-relaxed drop-shadow-lg text-white px-4">
               Comprehensive Travel Solutions for Every Journey - From Economy to Luxury
             </p>
           </div>
@@ -80,12 +79,12 @@ export default function ServicesPage() {
       {/* Car Rentals */}
       <section className="mb-20">
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold mb-4 text-primary">Car Rental Fleet</h2>
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+          <h2 className="text-2xl sm:text-3xl font-bold mb-4 text-primary">Car Rental Fleet</h2>
+          <p className="text-base sm:text-lg text-gray-600 max-w-3xl mx-auto px-4">
             Choose from our diverse fleet of well-maintained vehicles, each category designed to meet specific travel needs and budgets.
           </p>
         </div>
-        <div className="grid md:grid-cols-2 gap-8 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 mb-12">
           {carCategories.map((cat) => (
             <div key={cat.name} className="bg-white rounded-2xl shadow-lg card p-8 hover:shadow-xl transition-all duration-300 group">
               <div className="mb-6">
@@ -123,18 +122,18 @@ export default function ServicesPage() {
       {/* Tour Packages */}
       <section className="mb-20">
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold mb-4 text-primary">Tour Packages</h2>
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+          <h2 className="text-2xl sm:text-3xl font-bold mb-4 text-primary">Tour Packages</h2>
+          <p className="text-base sm:text-lg text-gray-600 max-w-3xl mx-auto px-4">
             Discover amazing destinations with our carefully curated tour packages designed for every type of traveler.
           </p>
         </div>
         
-        <div className="flex gap-4 mb-8 flex-wrap justify-center">
+        <div className="flex gap-2 sm:gap-4 mb-8 flex-wrap justify-center px-4">
           {packageTypes.map(type => (
             <button 
               key={type} 
               onClick={() => setFilter(type)} 
-              className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 ${
+              className={`px-4 sm:px-6 py-2 sm:py-3 rounded-full font-semibold transition-all duration-300 text-sm sm:text-base ${
                 filter === type 
                   ? 'bg-secondary text-primary shadow-lg scale-105' 
                   : 'bg-white text-primary border-2 border-primary hover:bg-primary hover:text-white'
@@ -145,7 +144,7 @@ export default function ServicesPage() {
           ))}
         </div>
         
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 mb-12">
           {tourPackages.filter(p => filter === "All" || p.type === filter).map(pkg => (
             <div key={pkg.name} className="bg-white rounded-2xl shadow-lg card p-6 hover:shadow-xl transition-all duration-300 group">
               <div className="relative rounded-lg overflow-hidden mb-4">
@@ -156,22 +155,36 @@ export default function ServicesPage() {
               </div>
               <h3 className="font-bold text-xl mb-2 text-primary">{pkg.name}</h3>
               <p className="text-gray-600 mb-4">{pkg.desc}</p>
-              <Link href="/contact" className="btn w-full">Book Package</Link>
+              <a href="https://comfortvacanze.com/package" target="_blank" rel="noopener noreferrer" className="btn w-full">Book Package</a>
             </div>
           ))}
+        </div>
+        
+        <div className="text-center">
+          <a 
+            href="https://comfortvacanze.com/package" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="text-primary hover:text-secondary font-semibold text-lg transition-colors duration-300 flex items-center justify-center gap-2"
+          >
+            View More International Packages
+            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+            </svg>
+          </a>
         </div>
       </section>
 
       {/* Corporate & Event Services */}
       <section className="mb-20">
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold mb-4 text-primary">Corporate & Event Services</h2>
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+          <h2 className="text-2xl sm:text-3xl font-bold mb-4 text-primary">Corporate & Event Services</h2>
+          <p className="text-base sm:text-lg text-gray-600 max-w-3xl mx-auto px-4">
             Professional transportation solutions for businesses, institutions, and special events.
           </p>
         </div>
         
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
           <div className="bg-gradient-to-br from-primary/5 to-secondary/10 rounded-2xl p-8 card hover:shadow-xl transition-all duration-300">
             <div className="flex items-center mb-6">
               <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center mr-4">

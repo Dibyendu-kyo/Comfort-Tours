@@ -1,21 +1,45 @@
+'use client'
+
 import Link from "next/link";
+import { useState } from "react";
+import { submitContactForm } from "../actions/contact";
 
 export default function ContactPage() {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<{ type: 'success' | 'error', message: string } | null>(null);
+
+  const handleSubmit = async (formData: FormData) => {
+    setIsSubmitting(true);
+    setSubmitStatus(null);
+
+    const result = await submitContactForm(formData);
+
+    if (result.success) {
+      setSubmitStatus({ type: 'success', message: result.message || 'Message sent successfully!' });
+      // Reset form
+      const form = document.getElementById('contact-form') as HTMLFormElement;
+      form?.reset();
+    } else {
+      setSubmitStatus({ type: 'error', message: result.error || 'Failed to send message. Please try again.' });
+    }
+
+    setIsSubmitting(false);
+  };
   return (
     <div className="flex flex-col w-full max-w-screen-xl mx-auto py-20 px-4 md:px-8">
       {/* Hero Section */}
       <section className="mb-20 text-center">
-        <h1 className="text-4xl md:text-5xl font-extrabold mb-6 text-primary tracking-tight">
+        <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold mb-6 text-primary tracking-tight">
           Get In Touch
         </h1>
-        <p className="text-2xl text-gray-600 mb-8 max-w-4xl mx-auto leading-relaxed">
+        <p className="text-lg sm:text-xl md:text-2xl text-gray-600 mb-8 max-w-4xl mx-auto leading-relaxed px-4">
           Ready to plan your next journey? We&apos;re here to help make your travel dreams come true.
         </p>
       </section>
 
       {/* Contact Cards */}
       <section className="mb-20">
-        <div className="grid md:grid-cols-3 gap-8 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 mb-12">
           <div className="bg-gradient-to-br from-primary/5 to-secondary/10 rounded-2xl p-8 text-center card hover:shadow-xl transition-all duration-300">
             <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-4">
               <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -72,50 +96,80 @@ export default function ContactPage() {
 
       {/* Main Contact Section */}
       <section className="mb-20">
-        <div className="grid lg:grid-cols-2 gap-12">
+        <div className="grid lg:grid-cols-2 gap-12 items-start">
           {/* Contact Form */}
-          <div className="bg-white rounded-2xl shadow-lg card p-8">
-            <h2 className="text-3xl font-bold mb-6 text-primary">Send Us a Message</h2>
-            <p className="text-gray-600 mb-8">Fill out the form below and we&apos;ll get back to you within 24 hours.</p>
-            
-            <form className="space-y-6" action="mailto:raj.kolpe@comfort-toursindia.com" method="post" encType="text/plain">
-              <div className="grid md:grid-cols-2 gap-6">
+          <div className="bg-white rounded-2xl shadow-lg card px-8 pt-6 pb-10 self-start">
+            <h2 className="text-2xl sm:text-3xl font-bold mb-6 text-primary">Send Us a Message</h2>
+            <p className="text-gray-600 mb-6">Fill out the form below and we&apos;ll get back to you within 24 hours.</p>
+
+            {/* Status Messages */}
+            <div className="mb-6 min-h-[1px]">
+              {submitStatus && (
+                <div className={`p-4 rounded-lg ${submitStatus.type === 'success'
+                  ? 'bg-green-50 border border-green-200 text-green-800'
+                  : 'bg-red-50 border border-red-200 text-red-800'
+                  }`}>
+                  <div className="flex items-center">
+                    {submitStatus.type === 'success' ? (
+                      <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                      </svg>
+                    ) : (
+                      <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                      </svg>
+                    )}
+                    {submitStatus.message}
+                  </div>
+                </div>
+              )}
+            </div>
+
+            <form id="contact-form" className="space-y-5" action={handleSubmit}>
+              <div className="grid md:grid-cols-2 gap-5">
                 <div>
                   <label className="block text-sm font-semibold text-gray-700 mb-2">Full Name *</label>
-                  <input 
-                    type="text" 
+                  <input
+                    type="text"
                     name="name"
-                    className="w-full border-2 border-gray-200 rounded-lg px-4 py-3 focus:border-primary focus:outline-none transition-colors" 
-                    placeholder="Enter your full name" 
-                    required 
+                    className="w-full border-2 border-gray-200 rounded-lg px-4 py-3 focus:border-primary focus:outline-none transition-colors"
+                    placeholder="Enter your full name"
+                    required
+                    disabled={isSubmitting}
                   />
                 </div>
                 <div>
                   <label className="block text-sm font-semibold text-gray-700 mb-2">Phone Number *</label>
-                  <input 
-                    type="tel" 
+                  <input
+                    type="tel"
                     name="phone"
-                    className="w-full border-2 border-gray-200 rounded-lg px-4 py-3 focus:border-primary focus:outline-none transition-colors" 
-                    placeholder="Enter your phone number" 
-                    required 
+                    className="w-full border-2 border-gray-200 rounded-lg px-4 py-3 focus:border-primary focus:outline-none transition-colors"
+                    placeholder="Enter your phone number"
+                    required
+                    disabled={isSubmitting}
                   />
                 </div>
               </div>
-              
+
               <div>
                 <label className="block text-sm font-semibold text-gray-700 mb-2">Email Address *</label>
-                <input 
-                  type="email" 
+                <input
+                  type="email"
                   name="email"
-                  className="w-full border-2 border-gray-200 rounded-lg px-4 py-3 focus:border-primary focus:outline-none transition-colors" 
-                  placeholder="Enter your email address" 
-                  required 
+                  className="w-full border-2 border-gray-200 rounded-lg px-4 py-3 focus:border-primary focus:outline-none transition-colors"
+                  placeholder="Enter your email address"
+                  required
+                  disabled={isSubmitting}
                 />
               </div>
-              
+
               <div>
                 <label className="block text-sm font-semibold text-gray-700 mb-2">Service Required</label>
-                <select name="service" className="w-full border-2 border-gray-200 rounded-lg px-4 py-3 focus:border-primary focus:outline-none transition-colors">
+                <select
+                  name="service"
+                  className="w-full border-2 border-gray-200 rounded-lg px-4 py-3 focus:border-primary focus:outline-none transition-colors"
+                  disabled={isSubmitting}
+                >
                   <option value="">Select a service</option>
                   <option value="car-rental">Car Rental</option>
                   <option value="tour-package">Tour Package</option>
@@ -124,23 +178,36 @@ export default function ContactPage() {
                   <option value="other">Other</option>
                 </select>
               </div>
-              
+
               <div>
                 <label className="block text-sm font-semibold text-gray-700 mb-2">Message *</label>
-                <textarea 
+                <textarea
                   name="message"
-                  className="w-full border-2 border-gray-200 rounded-lg px-4 py-3 focus:border-primary focus:outline-none transition-colors" 
-                  rows={5} 
-                  placeholder="Tell us about your travel requirements..." 
-                  required 
+                  className="w-full border-2 border-gray-200 rounded-lg px-4 py-3 focus:border-primary focus:outline-none transition-colors resize-none"
+                  rows={5}
+                  placeholder="Tell us about your travel requirements..."
+                  required
+                  disabled={isSubmitting}
                 />
               </div>
-              
-              <div className="mb-4">
-                <button type="submit" className="btn w-full text-lg py-4">
-                  Send Message
-                </button>
-              </div>
+
+              <button
+                type="submit"
+                className="btn w-full text-lg py-4 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+                disabled={isSubmitting}
+              >
+                {isSubmitting ? (
+                  <>
+                    <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                      <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                      <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                    </svg>
+                    Sending...
+                  </>
+                ) : (
+                  'Send Message'
+                )}
+              </button>
             </form>
           </div>
 
@@ -148,7 +215,7 @@ export default function ContactPage() {
           <div className="space-y-8">
             <div className="bg-gradient-to-br from-primary/5 to-secondary/10 rounded-2xl p-8 card">
               <h3 className="text-2xl font-bold text-primary mb-6">Office Information</h3>
-              
+
               <div className="space-y-6">
                 <div className="flex items-start">
                   <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center mr-4 flex-shrink-0">
@@ -193,7 +260,7 @@ export default function ContactPage() {
               <h3 className="text-2xl font-bold text-primary mb-4">Find Us</h3>
               <div className="relative w-full h-64 rounded-lg overflow-hidden">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3782.2613173278896!2d73.7749!3d18.5204!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2bf2e67461101%3A0x828d43bf9d9ee343!2sPunavale%2C%20Pune%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1642678901234!5m2!1sen!2sin"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3782.4!2d73.7749!3d18.5204!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2bf2e67461101%3A0x828d43bf9d9ee343!2sComfort%20Tours%20Pvt.%20Ltd.!5e0!3m2!1sen!2sin!4v1642678901234!5m2!1sen!2sin"
                   width="100%"
                   height="100%"
                   style={{ border: 0 }}
@@ -203,6 +270,16 @@ export default function ContactPage() {
                   title="Comfort Tours Office Location"
                   className="rounded-lg"
                 />
+              </div>
+              <div className="mt-4 text-center">
+                <a
+                  href="https://maps.app.goo.gl/JAn3RZT7sd5HPKHK6"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn text-sm px-4 py-2"
+                >
+                  Open in Google Maps
+                </a>
               </div>
               <div className="mt-4 p-4 bg-primary/5 rounded-lg">
                 <p className="text-sm text-gray-700">

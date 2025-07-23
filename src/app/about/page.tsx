@@ -17,10 +17,10 @@ export default function AboutPage() {
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-black/30" />
           <div className="absolute inset-0 flex flex-col items-center justify-center text-white">
-            <h1 className="text-4xl md:text-5xl font-extrabold mb-4 tracking-tight drop-shadow-2xl text-white">
+            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold mb-4 tracking-tight drop-shadow-2xl text-white px-4">
               About Comfort Tours
             </h1>
-            <p className="text-xl md:text-2xl max-w-4xl mx-auto leading-relaxed drop-shadow-lg text-white text-center">
+            <p className="text-lg sm:text-xl md:text-2xl max-w-4xl mx-auto leading-relaxed drop-shadow-lg text-white text-center px-4">
               Pune&apos;s Premier Travel Partner Since 2006 - Redefining Luxury Travel with Safety & Excellence
             </p>
           </div>
@@ -29,18 +29,18 @@ export default function AboutPage() {
 
       {/* Our Story */}
       <section className="mb-20">
-        <div className="grid md:grid-cols-2 gap-12 items-center">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
           <div>
-            <h2 className="text-3xl font-bold mb-6 text-primary">Our Story</h2>
-            <p className="text-lg text-gray-700 mb-6 leading-relaxed">
+            <h2 className="text-2xl sm:text-3xl font-bold mb-6 text-primary">Our Story</h2>
+            <p className="text-base sm:text-lg text-gray-700 mb-6 leading-relaxed">
               The brainchild of dedicated professionals, Comfort Tours began its journey catering to the transport needs of software companies in Pune. Over time, we&apos;ve redefined luxury travel with a specific focus on safety and security.
             </p>
-            <p className="text-lg text-gray-700 mb-6 leading-relaxed">
+            <p className="text-base sm:text-lg text-gray-700 mb-6 leading-relaxed">
               We were the <strong>first to introduce GPS-enabled buses</strong> for the software industry in Pune, setting new standards for corporate transportation.
             </p>
-            <div className="flex gap-4">
-              <Link href="/services" className="btn">Our Services</Link>
-              <Link href="/contact" className="btn bg-white text-primary border-2 border-primary hover:bg-primary hover:text-white">
+            <div className="flex flex-col sm:flex-row gap-4">
+              <Link href="/services" className="btn text-center">Our Services</Link>
+              <Link href="/contact" className="btn bg-white text-primary border-2 border-primary hover:bg-primary hover:text-white text-center">
                 Get Quote
               </Link>
             </div>
@@ -77,8 +77,8 @@ export default function AboutPage() {
 
       {/* Vision & Mission */}
       <section className="mb-20">
-        <h2 className="text-3xl font-bold text-center mb-12 text-primary">Vision & Mission</h2>
-        <div className="grid md:grid-cols-2 gap-8">
+        <h2 className="text-2xl sm:text-3xl font-bold text-center mb-8 md:mb-12 text-primary">Vision & Mission</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
           <div className="bg-gradient-to-br from-primary/5 to-secondary/10 rounded-2xl p-8 card hover:shadow-xl transition-all duration-300">
             <div className="flex items-center mb-4">
               <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center mr-4">
@@ -111,8 +111,8 @@ export default function AboutPage() {
 
       {/* Key Achievements */}
       <section className="mb-20 bg-gradient-to-r from-primary/5 to-secondary/5 rounded-2xl p-12">
-        <h2 className="text-3xl font-bold text-center mb-12 text-primary">Key Achievements</h2>
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <h2 className="text-2xl sm:text-3xl font-bold text-center mb-8 md:mb-12 text-primary">Key Achievements</h2>
+        <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
           <div className="text-center">
             <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-4">
               <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">

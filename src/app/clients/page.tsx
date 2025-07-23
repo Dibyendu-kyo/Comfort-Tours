@@ -31,13 +31,13 @@ export default function ClientsPage() {
     <div className="flex flex-col w-full max-w-screen-xl mx-auto py-20 px-4 md:px-8">
       {/* Hero Section */}
       <section className="mb-16 text-center">
-        <h1 className="text-4xl md:text-5xl font-extrabold mb-8 text-primary tracking-tight flex items-center justify-center gap-3">
+        <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold mb-8 text-primary tracking-tight flex flex-col sm:flex-row items-center justify-center gap-3">
           <span>Our Trusted Clients</span>
-          <svg width="32" height="32" fill="none" viewBox="0 0 32 32">
+          <svg width="24" height="24" sm:width="32" sm:height="32" fill="none" viewBox="0 0 32 32">
             <polygon points="0,0 32,16 0,32" fill="#ffd700" />
           </svg>
         </h1>
-        <p className="text-xl text-gray-700 mb-12 max-w-4xl mx-auto leading-relaxed">
+        <p className="text-base sm:text-lg md:text-xl text-gray-700 mb-12 max-w-4xl mx-auto leading-relaxed px-4">
           Comfort Tours is successfully partnered with all the leading IT/BPO and manufacturing companies in Pune in managing their employee transportation requirements. Our proven expertise and credibility is an assurance for being the right business partners in a dynamic environment.
         </p>
       </section>
@@ -46,7 +46,7 @@ export default function ClientsPage() {
 
       {/* All Clients Grid */}
       <section>
-        <h2 className="text-3xl font-bold mb-12 text-center text-primary">Complete Client Portfolio</h2>
+        <h2 className="text-2xl sm:text-3xl font-bold mb-8 md:mb-12 text-center text-primary">Complete Client Portfolio</h2>
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-8">
           {clients.map((client, index) => (
             <div 
