@@ -18,10 +18,10 @@ export default function Home() {
             Premier travel solutions in Pune since 2006. Car rentals, tour packages, and corporate travel—trusted by top companies and families alike.
           </p>
           <div className="flex flex-col sm:flex-row gap-6 justify-center animate-fade-in-up" style={{ animationDelay: '0.6s' }}>
-            <Link href="/contact" className="btn text-lg shadow-lg hover:shadow-xl transition-all duration-300">
+            <Link href="/contact" className="btn text-lg shadow-lg hover:shadow-xl transition-all duration-300 text-white">
               Get a Quote
             </Link>
-            <Link href="/services" className="btn text-lg shadow-lg hover:shadow-xl transition-all duration-300">
+            <Link href="/services" className="btn text-lg shadow-lg hover:shadow-xl transition-all duration-300 text-white">
               Plan Your Trip
             </Link>
           </div>
