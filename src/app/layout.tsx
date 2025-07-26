@@ -123,9 +123,9 @@ export default function RootLayout({
         <header className="w-full border-b bg-white sticky top-0 z-50 shadow-sm">
           <nav className="flex items-center justify-between py-2 px-4 md:px-8 bg-white shadow h-16">
             <Link href="/" className="flex items-center logo-link">
-              <Image src="/images/comfort-tours-logo-01.png" alt="Comfort Tours Logo" width={100} height={70} className="md:w-[120px] md:h-[80px]" />
+              <Image src="/images/comfort-tours-logo-01.png" alt="Comfort Tours Logo" width={80} height={50} className="md:w-[100px] md:h-[60px] max-h-10 md:max-h-12 object-contain" />
             </Link>
-            
+
             {/* Desktop Navigation */}
             <div className="hidden lg:flex gap-4 items-center">
               <Link href="/" className="header-link">Home</Link>
