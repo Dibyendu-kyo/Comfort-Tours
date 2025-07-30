@@ -111,7 +111,7 @@ Let us know your budget and destination, and we'll build a custom travel plan ju
                         </div>
                       </div>
                       
-                      <Link href="/contact" className="btn text-sm px-4 py-2">
+                      <Link href="/contact" className="btn text-sm px-4 py-2 text-white">
                         Plan Your Trip
                       </Link>
                     </div>
@@ -132,7 +132,7 @@ Let us know your budget and destination, and we'll build a custom travel plan ju
         </p>
         
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <Link href="/contact" className="btn">
+          <Link href="/contact" className="btn text-white">
             Get Free Quote
           </Link>
           <Link href="/services" className="btn bg-white text-primary border-2 border-primary hover:bg-primary hover:text-white">

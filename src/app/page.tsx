@@ -44,7 +44,7 @@ export default function Home() {
             </div>
             <h3 className="text-xl font-semibold mb-2 text-primary">Car Rentals</h3>
             <p className="text-gray-600 text-center mb-4 flex-grow">Wide range of vehicles for every need—economy, premium, SUVs, and luxury cars.</p>
-            <Link href="/services" className="btn">View Cars</Link>
+            <Link href="/services" className="btn text-white">View Cars</Link>
           </div>
           <div className="card flex flex-col items-center group hover:shadow-xl transition-all duration-300">
             <div className="relative w-full h-48 mb-6 rounded-lg overflow-hidden">
@@ -58,7 +58,7 @@ export default function Home() {
             </div>
             <h3 className="text-xl font-semibold mb-2 text-primary">Tour Packages</h3>
             <p className="text-gray-600 text-center mb-4 flex-grow">Curated tours: Ashtavinayaka, Konkan, North India, and more. Customizable for families & groups.</p>
-            <Link href="/services" className="btn">Explore Packages</Link>
+            <Link href="/services" className="btn text-white">Explore Packages</Link>
           </div>
           <div className="card flex flex-col items-center group hover:shadow-xl transition-all duration-300">
             <div className="relative w-full h-48 mb-6 rounded-lg overflow-hidden">

@@ -9,7 +9,7 @@ export default function AboutPage() {
 
         <div className="relative w-full h-64 md:h-80 rounded-2xl overflow-hidden mb-8">
           <Image
-            src="https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=1200&h=600&fit=crop&crop=center&q=80"
+            src="/images/about us 01.png"
             alt="Comfort Tours Excellence"
             fill
             style={{ objectFit: 'cover', objectPosition: 'center' }}
@@ -39,7 +39,7 @@ export default function AboutPage() {
               We were the <strong>first to introduce GPS-enabled buses</strong> for the software industry in Pune, setting new standards for corporate transportation.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <Link href="/services" className="btn text-center">Our Services</Link>
+              <Link href="/services" className="btn text-center text-white">Our Services</Link>
               <Link href="/contact" className="btn bg-white text-primary border-2 border-primary hover:bg-primary hover:text-white text-center">
                 Get Quote
               </Link>

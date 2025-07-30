@@ -119,7 +119,7 @@ export default function PrivacyPolicyPage() {
 
       {/* Back to Home */}
       <section className="text-center">
-        <Link href="/" className="btn text-lg px-8 py-3">
+        <Link href="/" className="btn text-lg px-8 py-3 text-white">
           Back to Home
         </Link>
       </section>

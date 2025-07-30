@@ -58,7 +58,7 @@ export default function ServicesPage() {
       <section className="relative mb-20 text-center">
         <div className="relative h-64 md:h-80 rounded-2xl overflow-hidden mb-8">
           <Image
-            src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=1200&h=600&fit=crop&crop=center&q=80"
+            src="/images/services 01.png"
             alt="Comfort Tours Services"
             fill
             style={{ objectFit: 'cover', objectPosition: 'center' }}
@@ -112,7 +112,7 @@ export default function ServicesPage() {
                   ))}
                 </div>
                 <div className="flex justify-start">
-                  <Link href="/contact" className="btn">Book Now</Link>
+                  <Link href="/contact" className="btn text-white">Book Now</Link>
                 </div>
               </div>
             </div>
@@ -155,7 +155,7 @@ export default function ServicesPage() {
               </div>
               <h3 className="font-bold text-xl mb-2 text-primary">{pkg.name}</h3>
               <p className="text-gray-600 mb-4">{pkg.desc}</p>
-              <a href="https://comfortvacanze.com/package" target="_blank" rel="noopener noreferrer" className="btn w-full">Book Package</a>
+              <a href="https://comfortvacanze.com/package" target="_blank" rel="noopener noreferrer" className="btn w-full text-white">Book Package</a>
             </div>
           ))}
         </div>
@@ -209,7 +209,7 @@ export default function ServicesPage() {
                 className="w-full h-32 object-cover" 
               />
             </div>
-            <Link href="/contact" className="btn w-full">Get Corporate Quote</Link>
+            <Link href="/contact" className="btn w-full text-white">Get Corporate Quote</Link>
           </div>
           
           <div className="bg-gradient-to-br from-secondary/10 to-primary/5 rounded-2xl p-8 card hover:shadow-xl transition-all duration-300">
@@ -236,7 +236,7 @@ export default function ServicesPage() {
                 className="w-full h-32 object-cover" 
               />
             </div>
-            <Link href="/contact" className="btn w-full">Plan Event Transport</Link>
+            <Link href="/contact" className="btn w-full text-white">Plan Event Transport</Link>
           </div>
         </div>
       </section>
