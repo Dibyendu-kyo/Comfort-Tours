@@ -1,5 +1,3 @@
-'use client'
-import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -42,11 +40,7 @@ const carCategories = [
   },
 ];
 
-const tourPackages = [
-  { name: "Malaysia", type: "International", img: "/tour/malaysia1.webp", desc: "5N/6D | Kuala Lumpur, Genting Highlands" },
-  { name: "Singapore", type: "International", img: "/tour/singapore-banner-1.webp", desc: "4N/5D | Marina Bay, Sentosa Island" },
-  { name: "Vietnam", type: "International", img: "/tour/vietnam-banner-1.webp", desc: "6N/7D | Ho Chi Minh City, Hanoi, Ha Long Bay" },
-];
+
 
 export default function ServicesPage() {
   return (
