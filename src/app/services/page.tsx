@@ -48,10 +48,7 @@ const tourPackages = [
   { name: "Vietnam", type: "International", img: "/tour/vietnam-banner-1.webp", desc: "6N/7D | Ho Chi Minh City, Hanoi, Ha Long Bay" },
 ];
 
-const packageTypes = ["All", ...Array.from(new Set(tourPackages.map(p => p.type)))];
-
 export default function ServicesPage() {
-  const [filter, setFilter] = useState("All");
   return (
     <div className="flex flex-col w-full max-w-screen-xl mx-auto py-20 px-4 md:px-8">
       {/* Hero Section */}

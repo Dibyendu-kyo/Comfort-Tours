@@ -24,7 +24,7 @@ export default function Home() {
 
         <div className="relative z-10 max-w-7xl mx-auto w-full">
           <div className="max-w-2xl">
-            <p className="text-lg text-white/90 mb-2 font-medium">Corporate India's Largest</p>
+            <p className="text-lg text-white/90 mb-2 font-medium">Corporate India&apos;s Largest</p>
             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold mb-6 text-white drop-shadow-2xl tracking-tight leading-tight">
               Chauffeur Driven<br />
               Transport Solutions
@@ -290,15 +290,15 @@ export default function Home() {
         <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-8 md:mb-12 text-center text-primary tracking-tight">What Our Customers Say</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
           <div className="card flex flex-col items-start">
-            <p className="text-lg mb-4">"Comfort Tours made our holiday absolutely stress-free! From transport to hotels, everything was perfectly arranged. Highly recommended for a relaxed travel experience."</p>
+            <p className="text-lg mb-4">&ldquo;Comfort Tours made our holiday absolutely stress-free! From transport to hotels, everything was perfectly arranged. Highly recommended for a relaxed travel experience.&rdquo;</p>
             <span className="font-semibold text-primary">Rohit Deshmukh, Mumbai</span>
           </div>
           <div className="card flex flex-col items-start">
-            <p className="text-lg mb-4">"Best tour company we've experienced! Professional team, great service, and amazing memories. Thank you, Comfort Tours, for making our trip unforgettable."</p>
+            <p className="text-lg mb-4">&ldquo;Best tour company we&apos;ve experienced! Professional team, great service, and amazing memories. Thank you, Comfort Tours, for making our trip unforgettable.&rdquo;</p>
             <span className="font-semibold text-primary">Priya Nair, Pune</span>
           </div>
           <div className="card flex flex-col items-start">
-            <p className="text-lg mb-4">"We loved every moment of our tour with Comfort Tours. Very well organized itineraries and friendly support throughout. Definitely booking with them again."</p>
+            <p className="text-lg mb-4">&ldquo;We loved every moment of our tour with Comfort Tours. Very well organized itineraries and friendly support throughout. Definitely booking with them again.&rdquo;</p>
             <span className="font-semibold text-primary">Vijay Kulkarni, Nagpur</span>
           </div>
         </div>
