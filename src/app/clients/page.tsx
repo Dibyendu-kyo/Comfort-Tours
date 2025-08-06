@@ -24,6 +24,8 @@ const clients = [
   { name: "VOSS Automotive", logo: "/logo/voss-automotive.png" },
   { name: "Wipro", logo: "/logo/Wipro.png" },
   { name: "ZS Associates", logo: "/logo/ZS_Associates_Logo.png" },
+  { name: "KPIT", logo: "/logo/17.png" },
+  { name: "XPO Logistics", logo: "/logo/8.png" }
 ];
 
 export default function ClientsPage() {

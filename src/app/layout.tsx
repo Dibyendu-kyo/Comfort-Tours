@@ -117,7 +117,7 @@ export default function RootLayout({
         />
       </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-white`}
       >
         {/* Header Navigation */}
         <header className="w-full border-b bg-white sticky top-0 z-50 shadow-sm">
@@ -160,7 +160,7 @@ export default function RootLayout({
             </div>
           </div>
         </header>
-        <main className="w-full min-h-[80vh] px-0 py-0">{children}</main>
+        <main className="w-full min-h-[80vh] px-0 py-0 bg-white">{children}</main>
         {/* Footer */}
         <footer className="w-full text-white pt-14 pb-7 mt-20 shadow-inner border-t border-white/10" style={{ backgroundColor: '#007dc0' }}>
           <div className="max-w-screen-xl mx-auto px-4 md:px-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 md:gap-12">

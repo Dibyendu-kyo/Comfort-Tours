@@ -1,29 +1,114 @@
 import Image from "next/image";
 import Link from "next/link";
 import ClientCarousel from "@/components/ClientCarousel";
-import HeroCarousel from "@/components/HeroCarousel";
 import ScrollToTop from "@/components/ScrollToTop";
 
 export default function Home() {
   return (
     <div className="flex flex-col">
-      {/* Hero Section with automatic carousel */}
-      <section className="relative flex flex-col items-center justify-center h-[calc(100vh-4rem)] text-center px-4 overflow-hidden">
-        <HeroCarousel />
-        <div className="relative z-10 flex flex-col items-center justify-center">
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold mb-6 text-white drop-shadow-2xl tracking-tight animate-fade-in-up">
-            Ride with Comfort
-          </h1>
-          <p className="text-lg sm:text-xl md:text-2xl text-white max-w-3xl mb-8 drop-shadow-lg animate-fade-in-up px-4" style={{ animationDelay: '0.3s' }}>
-            Premier travel solutions in Pune since 2006. Car rentals, tour packages, and corporate travel—trusted by top companies and families alike.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-6 justify-center animate-fade-in-up" style={{ animationDelay: '0.6s' }}>
-            <Link href="/contact" className="btn text-lg shadow-lg hover:shadow-xl transition-all duration-300 text-white">
-              Get a Quote
-            </Link>
-            <Link href="/services" className="btn text-lg shadow-lg hover:shadow-xl transition-all duration-300 text-white">
-              Plan Your Trip
-            </Link>
+      {/* Hero Section */}
+      <section className="relative flex items-center justify-start h-[calc(100vh-4rem)] px-4 overflow-hidden">
+        {/* Hero Background Image */}
+        <div className="absolute inset-0 z-0">
+          <Image
+            src="/home-hero-img.png"
+            alt="Chauffeur Driven Transport Solutions"
+            fill
+            style={{ objectFit: 'cover', objectPosition: 'center' }}
+            priority
+            className="transition-transform duration-1000 ease-in-out"
+          />
+          {/* Dark overlay for better text readability */}
+          <div className="absolute inset-0 bg-black/50" />
+        </div>
+
+        <div className="relative z-10 max-w-7xl mx-auto w-full">
+          <div className="max-w-2xl">
+            <p className="text-lg text-white/90 mb-2 font-medium">Corporate India's Largest</p>
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold mb-6 text-white drop-shadow-2xl tracking-tight leading-tight">
+              Chauffeur Driven<br />
+              Transport Solutions
+            </h1>
+            <p className="text-lg sm:text-xl text-white/90 max-w-xl mb-12 drop-shadow-lg leading-relaxed">
+              Premier travel solutions in Pune since 2006, offering car and bus rentals for corporate travel. Trusted by top companies across PAN India.
+            </p>
+          </div>
+
+          {/* Stats Section */}
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-8 md:gap-12 max-w-4xl">
+            {/* Row 1 */}
+            <div className="flex flex-col">
+              <div className="flex items-center mb-2">
+                <div className="w-12 h-12 bg-red-500 rounded-full flex items-center justify-center mr-3">
+                  <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="2">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M9 11h6v6H9z" />
+                  </svg>
+                </div>
+                <div>
+                  <div className="text-3xl font-bold text-red-500">2000+</div>
+                  <div className="text-white text-sm">Vehicles</div>
+                </div>
+              </div>
+            </div>
+
+            <div className="flex flex-col">
+              <div className="flex items-center mb-2">
+                <div className="w-12 h-12 bg-red-500 rounded-full flex items-center justify-center mr-3">
+                  <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="2">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                  </svg>
+                </div>
+                <div>
+                  <div className="text-3xl font-bold text-red-500">75+</div>
+                  <div className="text-white text-sm">Corporate Companies</div>
+                </div>
+              </div>
+            </div>
+
+            <div className="flex flex-col">
+              <div className="flex items-center mb-2">
+                <div className="w-12 h-12 bg-red-500 rounded-full flex items-center justify-center mr-3">
+                  <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="2">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+                  </svg>
+                </div>
+                <div>
+                  <div className="text-3xl font-bold text-red-500">2M</div>
+                  <div className="text-white text-sm">Trips In FY 24</div>
+                </div>
+              </div>
+            </div>
+
+            {/* Row 2 */}
+            <div className="flex flex-col">
+              <div className="flex items-center mb-2">
+                <div className="w-12 h-12 bg-red-500 rounded-full flex items-center justify-center mr-3">
+                  <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="2">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                  </svg>
+                </div>
+                <div>
+                  <div className="text-3xl font-bold text-red-500">10+</div>
+                  <div className="text-white text-sm">Cities In India</div>
+                </div>
+              </div>
+            </div>
+
+            <div className="flex flex-col">
+              <div className="flex items-center mb-2">
+                <div className="w-12 h-12 bg-red-500 rounded-full flex items-center justify-center mr-3">
+                  <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="2">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                </div>
+                <div>
+                  <div className="text-3xl font-bold text-red-500">21+</div>
+                  <div className="text-white text-sm">Years Of Experience</div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -34,9 +119,9 @@ export default function Home() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
           <div className="card flex flex-col items-center group hover:shadow-xl transition-all duration-300">
             <div className="relative w-full h-48 mb-6 rounded-lg overflow-hidden">
-              <Image 
-                src="/images/rental_car.png" 
-                alt="Car Rental Services" 
+              <Image
+                src="/images/rental_car.png"
+                alt="Car Rental Services"
                 fill
                 style={{ objectFit: 'cover', objectPosition: 'center' }}
                 className="transition-transform duration-300 group-hover:scale-105"
@@ -48,9 +133,9 @@ export default function Home() {
           </div>
           <div className="card flex flex-col items-center group hover:shadow-xl transition-all duration-300">
             <div className="relative w-full h-48 mb-6 rounded-lg overflow-hidden">
-              <Image 
-                src="/images/Tour_packages.png" 
-                alt="Tour Packages" 
+              <Image
+                src="/images/Tour_packages.png"
+                alt="Tour Packages"
                 fill
                 style={{ objectFit: 'cover', objectPosition: 'center' }}
                 className="transition-transform duration-300 group-hover:scale-105"
@@ -62,9 +147,9 @@ export default function Home() {
           </div>
           <div className="card flex flex-col items-center group hover:shadow-xl transition-all duration-300">
             <div className="relative w-full h-48 mb-6 rounded-lg overflow-hidden">
-              <Image 
-                src="/images/Corporate_packages.png" 
-                alt="Corporate Travel Packages" 
+              <Image
+                src="/images/Corporate_packages.png"
+                alt="Corporate Travel Packages"
                 fill
                 style={{ objectFit: 'cover', objectPosition: 'center' }}
                 className="transition-transform duration-300 group-hover:scale-105"
@@ -80,90 +165,109 @@ export default function Home() {
       {/* Why Choose Us */}
       <section className="w-full max-w-screen-xl mx-auto py-20 px-4 md:px-8 bg-gradient-to-r from-orange-500 to-blue-500 rounded-xl my-20" style={{ background: 'linear-gradient(135deg, #e67817 0%, #007dc0 100%)' }}>
         <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-8 md:mb-10 text-white tracking-tight">Why Choose Comfort Tours?</h2>
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 md:gap-12 text-center">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 text-center">
           <div className="flex flex-col items-center">
-            <span className="text-5xl font-extrabold text-white mb-2">18+</span>
-            <span className="text-lg font-medium text-white/90">Years of Experience</span>
+            <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mb-4">
+              <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+            </div>
+            <h3 className="text-xl font-bold text-white mb-2">Trusted & Reliable</h3>
+            <p className="text-white/90">21+ years of experience serving corporate and individual clients across India</p>
           </div>
           <div className="flex flex-col items-center">
-            <span className="text-5xl font-extrabold text-white mb-2">200+</span>
-            <span className="text-lg font-medium text-white/90">Fleet Size</span>
+            <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mb-4">
+              <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+              </svg>
+            </div>
+            <h3 className="text-xl font-bold text-white mb-2">Large Fleet</h3>
+            <p className="text-white/90">2000+ well-maintained vehicles ranging from economy to luxury cars</p>
           </div>
           <div className="flex flex-col items-center">
-            <span className="text-5xl font-extrabold text-white mb-2">1000+</span>
-            <span className="text-lg font-medium text-white/90">Clients Served</span>
+            <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mb-4">
+              <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+              </svg>
+            </div>
+            <h3 className="text-xl font-bold text-white mb-2">Corporate Preferred</h3>
+            <p className="text-white/90">Trusted by 75+ corporate companies with 2M+ trips completed in FY 24</p>
           </div>
         </div>
       </section>
 
-      {/* Featured Packages */}
-      <section className="w-full max-w-screen-xl mx-auto py-20 px-4 md:px-8">
-        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-8 md:mb-10 text-center text-primary tracking-tight">Featured Tour Packages</h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 justify-items-center">
-          <div className="card w-full max-w-sm flex flex-col group hover:shadow-xl transition-all duration-300">
-            <div className="relative w-full h-48 mb-4 rounded-lg overflow-hidden">
-              <Image
-                src="/tour/malaysia1.webp"
-                alt="Malaysia Tour Package"
-                fill
-                style={{ objectFit: 'cover', objectPosition: 'center' }}
-                className="transition-transform duration-300 group-hover:scale-105"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
+      {/* What makes Comfort Tours your best choice */}
+      <section className="w-full max-w-6xl mx-auto py-20 px-4 md:px-8 bg-gradient-to-br from-gray-50 to-white">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-start">
+          {/* Top Row - Left: Heading */}
+          <div className="flex flex-col justify-center text-left">
+            <div className="mb-4 text-gray-500 text-lg font-medium tracking-wide">Luxury • Comfort • Convenience</div>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 leading-tight mb-6">
+              What makes <span className="text-red-500 bg-gradient-to-r from-red-500 to-red-600 bg-clip-text text-transparent">Comfort Tours</span><br />
+              your best choice?
+            </h2>
+          </div>
+
+          {/* Top Row - Middle: Card 1 */}
+          <div className="bg-white rounded-2xl p-8 flex flex-col items-center justify-center shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 group h-[300px]">
+            <div className="w-14 h-14 flex items-center justify-center bg-gradient-to-br from-red-50 to-red-100 rounded-2xl mb-4 group-hover:scale-110 transition-transform duration-300">
+              <svg className="w-8 h-8 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
+              </svg>
             </div>
-            <div className="flex flex-col flex-grow px-2">
-              <h3 className="text-lg font-semibold mb-2 text-secondary">Malaysia</h3>
-              <p className="text-gray-600 mb-4 flex-grow">5N/6D | Kuala Lumpur, Genting Highlands<br />Experience the vibrant culture and modern attractions of Malaysia</p>
-              <a href="https://comfortvacanze.com/package" target="_blank" rel="noopener noreferrer" className="btn mt-auto">View Details</a>
+            <h3 className="text-lg font-bold text-gray-900 mb-3 text-center leading-tight">Convenience and Flexibility</h3>
+            <p className="text-gray-600 text-sm text-center leading-relaxed">Enjoy the convenience and flexibility of having access to a fleet of vehicles as per your need and comfort.</p>
+          </div>
+
+          {/* Top Row - Right: Card 2 */}
+          <div className="bg-white rounded-2xl p-8 flex flex-col items-center justify-center shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 group h-[300px]">
+            <div className="w-14 h-14 flex items-center justify-center bg-gradient-to-br from-red-50 to-red-100 rounded-2xl mb-4 group-hover:scale-110 transition-transform duration-300">
+              <svg className="w-8 h-8 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2}>
+                <rect x="4" y="4" width="16" height="16" rx="2" stroke="currentColor" />
+                <path strokeLinecap="round" strokeLinejoin="round" d="M7 8h10M7 12h10M7 16h8" />
+              </svg>
+            </div>
+            <h3 className="text-lg font-bold text-gray-900 mb-3 text-center leading-tight">Streamlined Management</h3>
+            <p className="text-gray-600 text-sm text-center leading-relaxed">Easily track and manage rental bookings, expenses, and usage data through our online booking tool that integrates with the travel desks of our customers.</p>
+          </div>
+
+          {/* Bottom Row - Left & Middle: Wide Range of Vehicles (spans 2 cols) */}
+          <div className="bg-white rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 border border-gray-100 md:col-span-2 h-[300px]">
+            <div className="text-center mb-4">
+              <h3 className="font-bold text-xl mb-3 text-gray-900">Wide Range of Vehicles</h3>
+              <p className="text-gray-600 text-base leading-relaxed mb-4">
+                From economy cars for everyday use to luxury sedans for executive travel, we operate a fleet of <span className="font-semibold text-red-500">2000+</span> vehicles for you to choose from.
+              </p>
+            </div>
+            <div className="relative h-32 rounded-xl overflow-hidden bg-gradient-to-r from-gray-100 to-gray-200">
+              <Image
+                src="/images/rental_car.png"
+                alt="Car fleet"
+                width={400}
+                height={128}
+                style={{
+                  objectFit: 'cover',
+                  objectPosition: 'center center'
+                }}
+                className="transition-transform duration-500 hover:scale-105 w-full h-full"
+                priority
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent" />
             </div>
           </div>
-          <div className="card w-full max-w-sm flex flex-col group hover:shadow-xl transition-all duration-300">
-            <div className="relative w-full h-48 mb-4 rounded-lg overflow-hidden">
-              <Image
-                src="/tour/singapore-banner-1.webp"
-                alt="Singapore Tour Package"
-                fill
-                style={{ objectFit: 'cover', objectPosition: 'center' }}
-                className="transition-transform duration-300 group-hover:scale-105"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
+
+          {/* Bottom Row - Right: Card 4 (24/7 Support) */}
+          <div className="bg-white rounded-2xl p-8 flex flex-col items-center justify-center shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 group h-[300px]">
+            <div className="w-14 h-14 flex items-center justify-center bg-gradient-to-br from-red-50 to-red-100 rounded-2xl mb-4 group-hover:scale-110 transition-transform duration-300">
+              <svg className="w-10 h-10 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2}>
+                <circle cx="12" cy="12" r="10" stroke="currentColor" />
+                <path strokeLinecap="round" strokeLinejoin="round" d="M8 15a4 4 0 108-0v-1a4 4 0 00-8 0v1z" />
+                <path strokeLinecap="round" strokeLinejoin="round" d="M12 11.5v.01" />
+              </svg>
             </div>
-            <div className="flex flex-col flex-grow px-2">
-              <h3 className="text-lg font-semibold mb-2 text-secondary">Singapore</h3>
-              <p className="text-gray-600 mb-4 flex-grow">4N/5D | Marina Bay, Sentosa Island<br />Discover the Lion City&apos;s stunning skyline and world-class attractions</p>
-              <a href="https://comfortvacanze.com/package" target="_blank" rel="noopener noreferrer" className="btn mt-auto">View Details</a>
-            </div>
+            <h3 className="text-lg font-bold text-gray-900 mb-3 text-center leading-tight">24/7 Support</h3>
+            <p className="text-gray-600 text-sm text-center leading-relaxed">You can rely on our dedicated team to provide prompt assistance whenever needed.</p>
           </div>
-          <div className="card w-full max-w-sm flex flex-col group hover:shadow-xl transition-all duration-300">
-            <div className="relative w-full h-48 mb-4 rounded-lg overflow-hidden">
-              <Image
-                src="/tour/vietnam-banner-1.webp"
-                alt="Vietnam Tour Package"
-                fill
-                style={{ objectFit: 'cover', objectPosition: 'center' }}
-                className="transition-transform duration-300 group-hover:scale-105"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
-            </div>
-            <div className="flex flex-col flex-grow px-2">
-              <h3 className="text-lg font-semibold mb-2 text-secondary">Vietnam</h3>
-              <p className="text-gray-600 mb-4 flex-grow">6N/7D | Ho Chi Minh City, Hanoi, Ha Long Bay<br />Explore Vietnam&apos;s rich history, culture, and breathtaking landscapes</p>
-              <a href="https://comfortvacanze.com/package" target="_blank" rel="noopener noreferrer" className="btn mt-auto">View Details</a>
-            </div>
-          </div>
-        </div>
-        <div className="text-center mt-12">
-          <a 
-            href="https://comfortvacanze.com/package" 
-            target="_blank" 
-            rel="noopener noreferrer" 
-            className="text-primary hover:text-secondary font-semibold text-lg transition-colors duration-300 flex items-center justify-center gap-2"
-          >
-            View More International Packages
-            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-            </svg>
-          </a>
         </div>
       </section>
 
@@ -186,20 +290,20 @@ export default function Home() {
         <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-8 md:mb-12 text-center text-primary tracking-tight">What Our Customers Say</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
           <div className="card flex flex-col items-start">
-            <p className="text-lg mb-4">&quot;Comfort Tours made our holiday absolutely stress-free! From transport to hotels, everything was perfectly arranged. Highly recommended for a relaxed travel experience.&quot;</p>
+            <p className="text-lg mb-4">"Comfort Tours made our holiday absolutely stress-free! From transport to hotels, everything was perfectly arranged. Highly recommended for a relaxed travel experience."</p>
             <span className="font-semibold text-primary">Rohit Deshmukh, Mumbai</span>
           </div>
           <div className="card flex flex-col items-start">
-            <p className="text-lg mb-4">&quot;Best tour company we’ve experienced! Professional team, great service, and amazing memories. Thank you, Comfort Tours, for making our trip unforgettable.&quot;</p>
+            <p className="text-lg mb-4">"Best tour company we've experienced! Professional team, great service, and amazing memories. Thank you, Comfort Tours, for making our trip unforgettable."</p>
             <span className="font-semibold text-primary">Priya Nair, Pune</span>
           </div>
           <div className="card flex flex-col items-start">
-            <p className="text-lg mb-4">&quot;We loved every moment of our tour with Comfort Tours. Very well organized itineraries and friendly support throughout. Definitely booking with them again.&quot;</p>
+            <p className="text-lg mb-4">"We loved every moment of our tour with Comfort Tours. Very well organized itineraries and friendly support throughout. Definitely booking with them again."</p>
             <span className="font-semibold text-primary">Vijay Kulkarni, Nagpur</span>
           </div>
         </div>
       </section>
-      
+
       <ScrollToTop />
     </div>
   );

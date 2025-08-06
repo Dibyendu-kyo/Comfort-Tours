@@ -25,7 +25,7 @@ const carCategories = [
   {
     name: "SUVs & MUVs",
     vehicles: [
-      { name: "Toyota Innova", img: "https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?w=200&h=120&fit=crop" },
+      { name: "Toyota Innova", img: "/service/IMG_0489.JPG" },
       { name: "Mahindra Xylo", img: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=200&h=120&fit=crop" },
     ],
     features: ["Large Groups", "Comfort Ride", "Luggage Space", "Family Friendly"],
@@ -34,8 +34,8 @@ const carCategories = [
   {
     name: "Luxury Fleet",
     vehicles: [
-      { name: "BMW 5 Series", img: "https://images.unsplash.com/photo-1555215695-3004980ad54e?w=200&h=120&fit=crop" },
-      { name: "Mercedes E-Class", img: "https://images.unsplash.com/photo-1563720223185-11003d516935?w=200&h=120&fit=crop" },
+      { name: "BMW 5 Series", img: "/service/IMG_0447 (1).JPG" },
+      { name: "Mercedes E-Class", img: "/service/IMG_0490.JPG" },
     ],
     features: ["Chauffeur Driven", "Top Safety", "Premium Experience", "VIP Service"],
     description: "Ultimate luxury experience for special occasions and VIP travel"
@@ -119,7 +119,8 @@ export default function ServicesPage() {
           ))}
         </div>
       </section>
-      {/* Tour Packages */}
+      {/* Tour Packages - Hidden for now, might need later */}
+      {/* 
       <section className="mb-20">
         <div className="text-center mb-12">
           <h2 className="text-2xl sm:text-3xl font-bold mb-4 text-primary">Tour Packages</h2>
@@ -174,6 +175,7 @@ export default function ServicesPage() {
           </a>
         </div>
       </section>
+      */}
 
       {/* Corporate & Event Services */}
       <section className="mb-20">
