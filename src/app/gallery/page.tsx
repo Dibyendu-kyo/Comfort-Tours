@@ -30,12 +30,12 @@ export default function Gallery() {
             Watch our fleet in action and see why customers choose Comfort Tours for their travel needs.
           </p>
         </div>
-        
+
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
           {videos.map((src, idx) => (
             <div key={idx} className="relative rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300">
-              <video 
-                controls 
+              <video
+                controls
                 className="w-full h-64 object-cover"
               >
                 <source src={src} type="video/mp4" />
@@ -54,12 +54,12 @@ export default function Gallery() {
             Explore our premium fleet and see the quality vehicles that make your journey comfortable and memorable.
           </p>
         </div>
-        
+
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6">
           {/* Photo 1 */}
           <div className="relative group rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300">
-            <img 
-              src="/gallery/photos/IMG_0332.JPG" 
+            <img
+              src="/gallery/photos/IMG_0332.JPG"
               alt="Comfort Tours Fleet Vehicle"
               className="w-full h-48 sm:h-56 object-cover group-hover:scale-105 transition-transform duration-300"
             />
@@ -72,8 +72,8 @@ export default function Gallery() {
 
           {/* Photo 2 */}
           <div className="relative group rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300">
-            <img 
-              src="/gallery/photos/IMG_0447 (2).JPG" 
+            <img
+              src="/gallery/photos/IMG_0447 (2).JPG"
               alt="Luxury Vehicle Interior"
               className="w-full h-48 sm:h-56 object-cover group-hover:scale-105 transition-transform duration-300"
             />
@@ -86,8 +86,8 @@ export default function Gallery() {
 
           {/* Photo 3 */}
           <div className="relative group rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300">
-            <img 
-              src="/gallery/photos/IMG-20250221-WA0056.jpg" 
+            <img
+              src="/gallery/photos/IMG-20250221-WA0056.jpg"
               alt="Executive Car Service"
               className="w-full h-48 sm:h-56 object-cover group-hover:scale-105 transition-transform duration-300"
             />
@@ -100,8 +100,8 @@ export default function Gallery() {
 
           {/* Photo 4 */}
           <div className="relative group rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300">
-            <img 
-              src="/gallery/photos/IMG_0488.JPG" 
+            <img
+              src="/gallery/photos/IMG_0488.JPG"
               alt="Corporate Transport"
               className="w-full h-48 sm:h-56 object-cover group-hover:scale-105 transition-transform duration-300"
             />
@@ -114,8 +114,8 @@ export default function Gallery() {
 
           {/* Photo 5 */}
           <div className="relative group rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300">
-            <img 
-              src="/gallery/photos/IMG_0490 (1).JPG" 
+            <img
+              src="/gallery/photos/IMG_0490 (1).JPG"
               alt="Premium Vehicle Fleet"
               className="w-full h-48 sm:h-56 object-cover group-hover:scale-105 transition-transform duration-300"
             />
@@ -128,8 +128,8 @@ export default function Gallery() {
 
           {/* Photo 6 */}
           <div className="relative group rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300">
-            <img 
-              src="/gallery/photos/IMG_0497-1.jpg" 
+            <img
+              src="/gallery/photos/IMG_0497-1.jpg"
               alt="Chauffeur Driven Service"
               className="w-full h-48 sm:h-56 object-cover group-hover:scale-105 transition-transform duration-300"
             />
@@ -142,8 +142,8 @@ export default function Gallery() {
 
           {/* Photo 7 */}
           <div className="relative group rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300">
-            <img 
-              src="/gallery/photos/IMG_0571.JPG" 
+            <img
+              src="/gallery/photos/IMG_0571.JPG"
               alt="Fleet Maintenance"
               className="w-full h-48 sm:h-56 object-cover group-hover:scale-105 transition-transform duration-300"
             />
@@ -156,8 +156,8 @@ export default function Gallery() {
 
           {/* Photo 8 */}
           <div className="relative group rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300">
-            <img 
-              src="/gallery/photos/IMG_0616.JPG" 
+            <img
+              src="/gallery/photos/IMG_0616.JPG"
               alt="Travel Comfort"
               className="w-full h-48 sm:h-56 object-cover group-hover:scale-105 transition-transform duration-300"
             />
@@ -170,8 +170,8 @@ export default function Gallery() {
 
           {/* Photo 9 */}
           <div className="relative group rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300">
-            <img 
-              src="/gallery/photos/IMG-20250221-WA0005.jpg" 
+            <img
+              src="/gallery/photos/IMG-20250221-WA0005.jpg"
               alt="Professional Service"
               className="w-full h-48 sm:h-56 object-cover group-hover:scale-105 transition-transform duration-300"
             />
@@ -184,8 +184,8 @@ export default function Gallery() {
 
           {/* Photo 10 */}
           <div className="relative group rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300">
-            <img 
-              src="/gallery/photos/IMG-20250221-WA0055.jpg" 
+            <img
+              src="/gallery/photos/IMG-20250221-WA0055.jpg"
               alt="Quality Vehicles"
               className="w-full h-48 sm:h-56 object-cover group-hover:scale-105 transition-transform duration-300"
             />
@@ -198,23 +198,23 @@ export default function Gallery() {
 
           {/* Photo 11 */}
           <div className="relative group rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300">
-            <img 
-              src="/gallery/photos/IMG-20250221-WA0094.jpg" 
+            <img
+              src="/gallery/photos/IMG-20250221-WA0094.jpg"
               alt="Reliable Transport"
               className="w-full h-48 sm:h-56 object-cover group-hover:scale-105 transition-transform duration-300"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
               <div className="absolute bottom-4 left-4 text-white">
-                <p className="text-sm font-medium">Reliable Transport</p>
+                <p className="text-sm font-medium">Professional Fleet</p>
               </div>
             </div>
           </div>
 
           {/* Photo 12 */}
           <div className="relative group rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300">
-            <img 
-              src="/gallery/photos/IMG_0474.jpg" 
-              alt="Reliable Transport"
+            <img
+              src="/gallery/photos/IMG_0474.JPG"
+              alt="Professional Fleet"
               className="w-full h-48 sm:h-56 object-cover group-hover:scale-105 transition-transform duration-300"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
