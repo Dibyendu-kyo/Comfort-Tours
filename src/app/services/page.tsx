@@ -3,10 +3,10 @@ import Link from "next/link";
 
 export default function ServicesPage() {
   return (
-    <div className="flex flex-col w-full max-w-screen-xl mx-auto py-20 px-4 md:px-8">
+    <div className="flex flex-col w-full max-w-screen-xl mx-auto py-12 sm:py-16 md:py-20 px-4 sm:px-6 md:px-8">
       {/* Hero Section */}
-      <section className="relative mb-20 text-center">
-        <div className="relative h-64 md:h-80 rounded-2xl overflow-hidden mb-8">
+      <section className="relative mb-12 sm:mb-16 md:mb-20 text-center">
+        <div className="relative h-48 sm:h-56 md:h-64 lg:h-80 rounded-2xl overflow-hidden mb-6 sm:mb-8">
           <Image
             src="/images/services 01.png"
             alt="Comfort Tours Services"
@@ -16,10 +16,10 @@ export default function ServicesPage() {
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-black/30" />
           <div className="absolute inset-0 flex flex-col items-center justify-center text-white">
-            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold mb-4 tracking-tight drop-shadow-2xl text-white px-4">
+            <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-extrabold mb-3 sm:mb-4 tracking-tight drop-shadow-2xl text-white px-4">
               Our Services
             </h1>
-            <p className="text-lg sm:text-xl md:text-2xl max-w-4xl mx-auto leading-relaxed drop-shadow-lg text-white px-4">
+            <p className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl max-w-4xl mx-auto leading-relaxed drop-shadow-lg text-white px-4">
               Comprehensive Travel Solutions for Every Journey - From Economy to Luxury
             </p>
           </div>
@@ -27,18 +27,18 @@ export default function ServicesPage() {
       </section>
 
       {/* Our Service Models */}
-      <section className="mb-20">
-        <div className="text-center mb-12">
-          <h2 className="text-2xl sm:text-3xl font-bold mb-4 text-primary">Our Service Models</h2>
-          <p className="text-base sm:text-lg text-gray-600 max-w-3xl mx-auto px-4">
+      <section className="mb-12 sm:mb-16 md:mb-20">
+        <div className="text-center mb-8 sm:mb-10 md:mb-12">
+          <h2 className="text-xl sm:text-2xl md:text-3xl font-bold mb-3 sm:mb-4 text-primary">Our Service Models</h2>
+          <p className="text-sm sm:text-base md:text-lg text-gray-600 max-w-3xl mx-auto px-4 leading-relaxed">
             Comprehensive transportation solutions designed to meet every travel need with flexible pricing models and dedicated service.
           </p>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 md:gap-12">
           
           {/* Inter City */}
-          <div className="card flex flex-col items-center group hover:shadow-xl transition-all duration-300 p-8">
-            <div className="relative w-full h-56 mb-6 rounded-xl overflow-hidden">
+          <div className="card flex flex-col items-center group hover:shadow-xl transition-all duration-300 p-4 sm:p-6 md:p-8">
+            <div className="relative w-full h-44 sm:h-48 md:h-56 mb-4 sm:mb-5 md:mb-6 rounded-xl overflow-hidden">
               <Image
                 src="/gallery/home_services/Intercity.png"
                 alt="Inter City Travel"
@@ -47,9 +47,9 @@ export default function ServicesPage() {
                 className="transition-transform duration-300 group-hover:scale-105"
               />
             </div>
-            <h3 className="text-2xl font-bold mb-4 text-primary text-center">Inter City</h3>
-            <p className="text-gray-600 text-center mb-6 flex-grow leading-relaxed">Comfortable and reliable travel between cities with well-maintained vehicles and experienced drivers, ensuring a smooth journey every time.</p>
-            <Link href="/contact" className="btn text-white px-8 py-3">Get Quote</Link>
+            <h3 className="text-lg sm:text-xl md:text-2xl font-bold mb-3 sm:mb-4 text-primary text-center">Inter City</h3>
+            <p className="text-sm sm:text-base text-gray-600 text-center mb-4 sm:mb-5 md:mb-6 flex-grow leading-relaxed">Comfortable and reliable travel between cities with well-maintained vehicles and experienced drivers, ensuring a smooth journey every time.</p>
+            <Link href="/contact" className="btn text-white px-4 sm:px-6 md:px-8 py-2 sm:py-2.5 md:py-3 text-sm sm:text-base">Get Quote</Link>
           </div>
 
           {/* Intra City */}
