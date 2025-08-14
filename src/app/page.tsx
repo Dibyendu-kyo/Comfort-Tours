@@ -14,9 +14,9 @@ export default function Home() {
             src="/home-hero-img.png"
             alt="Chauffeur Driven Transport Solutions"
             fill
-            style={{ objectFit: 'cover', objectPosition: 'center' }}
+            style={{ objectFit: 'cover' }}
             priority
-            className="transition-transform duration-1000 ease-in-out"
+            className="transition-transform duration-1000 ease-in-out object-right sm:object-center"
           />
           {/* Dark overlay for better text readability */}
           <div className="absolute inset-0 bg-black/50" />
