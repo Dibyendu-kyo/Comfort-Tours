@@ -1,47 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
 
-const carCategories = [
-  {
-    name: "Economy Cars",
-    vehicles: [
-      { name: "Tata Indica", img: "https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?w=200&h=120&fit=crop" },
-      { name: "Hyundai Santro", img: "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?w=200&h=120&fit=crop" },
-    ],
-    features: ["Fuel Efficient", "Easy City Drive", "Affordable", "Perfect for Short Trips"],
-    description: "Perfect for city commutes and short distance travel"
-  },
-  {
-    name: "Premium Sedans",
-    vehicles: [
-      { name: "Honda City", img: "https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=200&h=120&fit=crop" },
-      { name: "Skoda Octavia", img: "https://images.unsplash.com/photo-1555215695-3004980ad54e?w=200&h=120&fit=crop" },
-    ],
-    features: ["Luxury Interiors", "Spacious", "AC", "Professional Chauffeur"],
-    description: "Comfortable and stylish for business and leisure travel"
-  },
-  {
-    name: "SUVs & MUVs",
-    vehicles: [
-      { name: "Toyota Innova", img: "/service/IMG_0489.JPG" },
-      { name: "Mahindra Xylo", img: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=200&h=120&fit=crop" },
-    ],
-    features: ["Large Groups", "Comfort Ride", "Luggage Space", "Family Friendly"],
-    description: "Ideal for family trips and group travel with ample space"
-  },
-  {
-    name: "Luxury Fleet",
-    vehicles: [
-      { name: "BMW 5 Series", img: "/service/IMG_0447 (1).JPG" },
-      { name: "Mercedes E-Class", img: "/service/IMG_0490.JPG" },
-    ],
-    features: ["Chauffeur Driven", "Top Safety", "Premium Experience", "VIP Service"],
-    description: "Ultimate luxury experience for special occasions and VIP travel"
-  },
-];
-
-
-
 export default function ServicesPage() {
   return (
     <div className="flex flex-col w-full max-w-screen-xl mx-auto py-20 px-4 md:px-8">
@@ -67,106 +26,178 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      {/* Car Rentals */}
+      {/* Our Service Models */}
       <section className="mb-20">
         <div className="text-center mb-12">
-          <h2 className="text-2xl sm:text-3xl font-bold mb-4 text-primary">Car Rental Fleet</h2>
+          <h2 className="text-2xl sm:text-3xl font-bold mb-4 text-primary">Our Service Models</h2>
           <p className="text-base sm:text-lg text-gray-600 max-w-3xl mx-auto px-4">
-            Choose from our diverse fleet of well-maintained vehicles, each category designed to meet specific travel needs and budgets.
+            Comprehensive transportation solutions designed to meet every travel need with flexible pricing models and dedicated service.
           </p>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 mb-12">
-          {carCategories.map((cat) => (
-            <div key={cat.name} className="bg-white rounded-2xl shadow-lg card p-8 hover:shadow-xl transition-all duration-300 group">
-              <div className="mb-6">
-                <h3 className="text-2xl font-bold text-primary mb-2">{cat.name}</h3>
-                <p className="text-gray-600">{cat.description}</p>
-              </div>
-              
-              <div className="grid grid-cols-2 gap-4 mb-6">
-                {cat.vehicles.map((v, i) => (
-                  <div key={i} className="relative rounded-lg overflow-hidden group-hover:scale-105 transition-transform duration-300">
-                    <Image src={v.img} alt={v.name} width={200} height={120} className="w-full h-24 object-cover" />
-                    <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-2">
-                      <span className="text-white text-sm font-semibold">{v.name}</span>
-                    </div>
-                  </div>
-                ))}
-              </div>
-              
-              <div className="mb-4">
-                <div className="flex flex-wrap gap-2 mb-4">
-                  {cat.features.map(f => (
-                    <span key={f} className="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm font-medium">
-                      {f}
-                    </span>
-                  ))}
-                </div>
-                <div className="flex justify-start">
-                  <Link href="/contact" className="btn text-white">Book Now</Link>
-                </div>
-              </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12">
+          
+          {/* Inter City */}
+          <div className="card flex flex-col items-center group hover:shadow-xl transition-all duration-300 p-8">
+            <div className="relative w-full h-56 mb-6 rounded-xl overflow-hidden">
+              <Image
+                src="/gallery/home_services/Intercity.png"
+                alt="Inter City Travel"
+                fill
+                style={{ objectFit: 'cover', objectPosition: 'center' }}
+                className="transition-transform duration-300 group-hover:scale-105"
+              />
             </div>
-          ))}
+            <h3 className="text-2xl font-bold mb-4 text-primary text-center">Inter City</h3>
+            <p className="text-gray-600 text-center mb-6 flex-grow leading-relaxed">Comfortable and reliable travel between cities with well-maintained vehicles and experienced drivers, ensuring a smooth journey every time.</p>
+            <Link href="/contact" className="btn text-white px-8 py-3">Get Quote</Link>
+          </div>
+
+          {/* Intra City */}
+          <div className="card flex flex-col items-center group hover:shadow-xl transition-all duration-300 p-8">
+            <div className="relative w-full h-56 mb-6 rounded-xl overflow-hidden">
+              <Image
+                src="/gallery/home_services/Intracity.png"
+                alt="Intra City Travel"
+                fill
+                style={{ objectFit: 'cover', objectPosition: 'center' }}
+                className="transition-transform duration-300 group-hover:scale-105"
+              />
+            </div>
+            <h3 className="text-2xl font-bold mb-4 text-primary text-center">Intra City</h3>
+            <p className="text-gray-600 text-center mb-6 flex-grow leading-relaxed">Convenient city travel solutions for your daily commuting, meetings, shopping, or leisure plans within the same city.</p>
+            <Link href="/contact" className="btn text-white px-8 py-3">Get Quote</Link>
+          </div>
+
+          {/* Airport Transfer */}
+          <div className="card flex flex-col items-center group hover:shadow-xl transition-all duration-300 p-8">
+            <div className="relative w-full h-56 mb-6 rounded-xl overflow-hidden">
+              <Image
+                src="/gallery/home_services/Airport cab service.png"
+                alt="Airport Transfer"
+                fill
+                style={{ objectFit: 'cover', objectPosition: 'center' }}
+                className="transition-transform duration-300 group-hover:scale-105"
+              />
+            </div>
+            <h3 className="text-2xl font-bold mb-4 text-primary text-center">Airport Transfer</h3>
+            <p className="text-gray-600 text-center mb-6 flex-grow leading-relaxed">Hassle-free pick-up and drop-off services to and from the airport, ensuring you&apos;re always on time for your flights.</p>
+            <Link href="/contact" className="btn text-white px-8 py-3">Get Quote</Link>
+          </div>
+
+          {/* Long-Term Rental */}
+          <div className="card flex flex-col items-center group hover:shadow-xl transition-all duration-300 p-8">
+            <div className="relative w-full h-56 mb-6 rounded-xl overflow-hidden">
+              <Image
+                src="/gallery/home_services/Long Term Car Rental.png"
+                alt="Long-Term Rental"
+                fill
+                style={{ objectFit: 'cover', objectPosition: 'center' }}
+                className="transition-transform duration-300 group-hover:scale-105"
+              />
+            </div>
+            <h3 className="text-2xl font-bold mb-4 text-primary text-center">Long-Term Rental</h3>
+            <p className="text-gray-600 text-center mb-6 flex-grow leading-relaxed">Flexible and affordable long-term cab rentals for businesses, corporate needs, or personal use.</p>
+            <Link href="/contact" className="btn text-white px-8 py-3">Get Quote</Link>
+          </div>
+
+          {/* Point to Point Model */}
+          <div className="card flex flex-col items-center group hover:shadow-xl transition-all duration-300 p-8">
+            <div className="relative w-full h-56 mb-6 rounded-xl overflow-hidden">
+              <Image
+                src="/gallery/home_services/Point to point Model.png"
+                alt="Point to Point Model"
+                fill
+                style={{ objectFit: 'cover', objectPosition: 'center' }}
+                className="transition-transform duration-300 group-hover:scale-105"
+              />
+            </div>
+            <h3 className="text-2xl font-bold mb-4 text-primary text-center">Point to Point Model</h3>
+            <p className="text-gray-600 text-center mb-6 flex-grow leading-relaxed">Direct and cost-effective rides between two specific locations with transparent pricing.</p>
+            <Link href="/contact" className="btn text-white px-8 py-3">Get Quote</Link>
+          </div>
+
+          {/* Route Based Model */}
+          <div className="card flex flex-col items-center group hover:shadow-xl transition-all duration-300 p-8">
+            <div className="relative w-full h-56 mb-6 rounded-xl overflow-hidden">
+              <Image
+                src="/gallery/home_services/Route Based Model.png"
+                alt="Route Based Model"
+                fill
+                style={{ objectFit: 'cover', objectPosition: 'center' }}
+                className="transition-transform duration-300 group-hover:scale-105"
+              />
+            </div>
+            <h3 className="text-2xl font-bold mb-4 text-primary text-center">Route Based Model</h3>
+            <p className="text-gray-600 text-center mb-6 flex-grow leading-relaxed">Pre-defined route travel services ideal for corporate shuttles, employee transportation, or regular commutes.</p>
+            <Link href="/contact" className="btn text-white px-8 py-3">Get Quote</Link>
+          </div>
+
+          {/* Kilometer Model */}
+          <div className="card flex flex-col items-center group hover:shadow-xl transition-all duration-300 p-8">
+            <div className="relative w-full h-56 mb-6 rounded-xl overflow-hidden">
+              <Image
+                src="/gallery/home_services/Kilometer model.png"
+                alt="Kilometer Model"
+                fill
+                style={{ objectFit: 'cover', objectPosition: 'center' }}
+                className="transition-transform duration-300 group-hover:scale-105"
+              />
+            </div>
+            <h3 className="text-2xl font-bold mb-4 text-primary text-center">Kilometer Model</h3>
+            <p className="text-gray-600 text-center mb-6 flex-grow leading-relaxed">Pay only for the distance you travel with our per-kilometer pricing system.</p>
+            <Link href="/contact" className="btn text-white px-8 py-3">Get Quote</Link>
+          </div>
+
+          {/* Trip Based Model */}
+          <div className="card flex flex-col items-center group hover:shadow-xl transition-all duration-300 p-8">
+            <div className="relative w-full h-56 mb-6 rounded-xl overflow-hidden">
+              <Image
+                src="/gallery/home_services/Trip Based Model.png"
+                alt="Trip Based Model"
+                fill
+                style={{ objectFit: 'cover', objectPosition: 'center' }}
+                className="transition-transform duration-300 group-hover:scale-105"
+              />
+            </div>
+            <h3 className="text-2xl font-bold mb-4 text-primary text-center">Trip Based Model</h3>
+            <p className="text-gray-600 text-center mb-6 flex-grow leading-relaxed">Fixed price packages designed for specific trips, tours, or custom travel plans.</p>
+            <Link href="/contact" className="btn text-white px-8 py-3">Get Quote</Link>
+          </div>
+
+          {/* Fixed Cab Model */}
+          <div className="card flex flex-col items-center group hover:shadow-xl transition-all duration-300 p-8">
+            <div className="relative w-full h-56 mb-6 rounded-xl overflow-hidden">
+              <Image
+                src="/gallery/home_services/Fixed Cab Model.png"
+                alt="Fixed Cab Model"
+                fill
+                style={{ objectFit: 'cover', objectPosition: 'center' }}
+                className="transition-transform duration-300 group-hover:scale-105"
+              />
+            </div>
+            <h3 className="text-2xl font-bold mb-4 text-primary text-center">Fixed Cab Model</h3>
+            <p className="text-gray-600 text-center mb-6 flex-grow leading-relaxed">A dedicated cab available for your service at a fixed cost for a set period or route.</p>
+            <Link href="/contact" className="btn text-white px-8 py-3">Get Quote</Link>
+          </div>
+
+          {/* FTE Model */}
+          <div className="card flex flex-col items-center group hover:shadow-xl transition-all duration-300 p-8">
+            <div className="relative w-full h-56 mb-6 rounded-xl overflow-hidden">
+              <Image
+                src="/gallery/home_services/FTE Model.png"
+                alt="FTE Model"
+                fill
+                style={{ objectFit: 'cover', objectPosition: 'center' }}
+                className="transition-transform duration-300 group-hover:scale-105"
+              />
+            </div>
+            <h3 className="text-2xl font-bold mb-4 text-primary text-center">FTE Model</h3>
+            <p className="text-gray-600 text-center mb-6 flex-grow leading-relaxed">Full-Time Equivalent vehicle model providing dedicated transport services tailored to your organization&apos;s daily needs.</p>
+            <Link href="/contact" className="btn text-white px-8 py-3">Get Quote</Link>
+          </div>
+
         </div>
       </section>
-      {/* Tour Packages - Hidden for now, might need later */}
-      {/* 
-      <section className="mb-20">
-        <div className="text-center mb-12">
-          <h2 className="text-2xl sm:text-3xl font-bold mb-4 text-primary">Tour Packages</h2>
-          <p className="text-base sm:text-lg text-gray-600 max-w-3xl mx-auto px-4">
-            Discover amazing destinations with our carefully curated tour packages designed for every type of traveler.
-          </p>
-        </div>
-        
-        <div className="flex gap-2 sm:gap-4 mb-8 flex-wrap justify-center px-4">
-          {packageTypes.map(type => (
-            <button 
-              key={type} 
-              onClick={() => setFilter(type)} 
-              className={`px-4 sm:px-6 py-2 sm:py-3 rounded-full font-semibold transition-all duration-300 text-sm sm:text-base ${
-                filter === type 
-                  ? 'bg-secondary text-primary shadow-lg scale-105' 
-                  : 'bg-white text-primary border-2 border-primary hover:bg-primary hover:text-white'
-              }`}
-            >
-              {type}
-            </button>
-          ))}
-        </div>
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 mb-12">
-          {tourPackages.filter(p => filter === "All" || p.type === filter).map(pkg => (
-            <div key={pkg.name} className="bg-white rounded-2xl shadow-lg card p-6 hover:shadow-xl transition-all duration-300 group">
-              <div className="relative rounded-lg overflow-hidden mb-4">
-                <Image src={pkg.img} alt={pkg.name} width={300} height={200} className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300" />
-                <div className="absolute top-4 right-4">
-                  <span className="bg-secondary text-primary px-3 py-1 rounded-full text-sm font-bold">{pkg.type}</span>
-                </div>
-              </div>
-              <h3 className="font-bold text-xl mb-2 text-primary">{pkg.name}</h3>
-              <p className="text-gray-600 mb-4">{pkg.desc}</p>
-              <a href="https://comfortvacanze.com/package" target="_blank" rel="noopener noreferrer" className="btn w-full text-white">Book Package</a>
-            </div>
-          ))}
-        </div>
-        
-        <div className="text-center">
-          <a 
-            href="https://comfortvacanze.com/package" 
-            target="_blank" 
-            rel="noopener noreferrer" 
-            className="text-primary hover:text-secondary font-semibold text-lg transition-colors duration-300 flex items-center justify-center gap-2"
-          >
-            View More International Packages
-            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-            </svg>
-          </a>
-        </div>
-      </section>
-      */}
 
       {/* Corporate & Event Services */}
       <section className="mb-20">
@@ -235,4 +266,4 @@ export default function ServicesPage() {
       </section>
     </div>
   );
-} 
+}

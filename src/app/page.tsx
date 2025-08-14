@@ -117,48 +117,103 @@ export default function Home() {
       <section className="w-full max-w-screen-xl mx-auto py-20 px-4 md:px-8">
         <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-8 md:mb-12 text-primary tracking-tight">Our Services</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
+
+          {/* Inter City */}
           <div className="card flex flex-col items-center group hover:shadow-xl transition-all duration-300">
             <div className="relative w-full h-48 mb-6 rounded-lg overflow-hidden">
               <Image
-                src="/images/rental_car.png"
-                alt="Car Rental Services"
+                src="/gallery/home_services/Intercity.png"
+                alt="Inter City Travel"
                 fill
                 style={{ objectFit: 'cover', objectPosition: 'center' }}
                 className="transition-transform duration-300 group-hover:scale-105"
               />
             </div>
-            <h3 className="text-xl font-semibold mb-2 text-primary">Car Rentals</h3>
-            <p className="text-gray-600 text-center mb-4 flex-grow">Wide range of vehicles for every need—economy, premium, SUVs, and luxury cars.</p>
-            <Link href="/services" className="btn text-white">View Cars</Link>
+            <h3 className="text-xl font-semibold mb-2 text-primary text-center">Inter City</h3>
+            <p className="text-gray-600 text-center mb-4 flex-grow">Comfortable and reliable travel between cities with well-maintained vehicles and experienced drivers.</p>
+            <Link href="/services" className="btn text-white">Learn More</Link>
           </div>
+
+          {/* Intra City */}
           <div className="card flex flex-col items-center group hover:shadow-xl transition-all duration-300">
             <div className="relative w-full h-48 mb-6 rounded-lg overflow-hidden">
               <Image
-                src="/images/Tour_packages.png"
-                alt="Tour Packages"
+                src="/gallery/home_services/Intracity.png"
+                alt="Intra City Travel"
                 fill
                 style={{ objectFit: 'cover', objectPosition: 'center' }}
                 className="transition-transform duration-300 group-hover:scale-105"
               />
             </div>
-            <h3 className="text-xl font-semibold mb-2 text-primary">Tour Packages</h3>
-            <p className="text-gray-600 text-center mb-4 flex-grow">Curated tours: Ashtavinayaka, Konkan, North India, and more. Customizable for families & groups.</p>
-            <Link href="/services" className="btn text-white">Explore Packages</Link>
+            <h3 className="text-xl font-semibold mb-2 text-primary text-center">Intra City</h3>
+            <p className="text-gray-600 text-center mb-4 flex-grow">Convenient city travel solutions for your daily commuting, meetings, shopping, or leisure plans.</p>
+            <Link href="/services" className="btn text-white">Learn More</Link>
           </div>
+
+          {/* Airport Transfer */}
           <div className="card flex flex-col items-center group hover:shadow-xl transition-all duration-300">
             <div className="relative w-full h-48 mb-6 rounded-lg overflow-hidden">
               <Image
-                src="/images/Corporate_packages.png"
-                alt="Corporate Travel Packages"
+                src="/gallery/home_services/Airport cab service.png"
+                alt="Airport Transfer"
                 fill
                 style={{ objectFit: 'cover', objectPosition: 'center' }}
                 className="transition-transform duration-300 group-hover:scale-105"
               />
             </div>
-            <h3 className="text-xl font-semibold mb-2 text-primary">Corporate Travel</h3>
-            <p className="text-gray-600 text-center mb-4 flex-grow">Employee transport, event logistics, and fleet management for businesses.</p>
-            <Link href="/services" className="btn">Corporate Solutions</Link>
+            <h3 className="text-xl font-semibold mb-2 text-primary text-center">Airport Transfer</h3>
+            <p className="text-gray-600 text-center mb-4 flex-grow">Hassle-free pick-up and drop-off services to and from the airport, ensuring you&apos;re always on time.</p>
+            <Link href="/services" className="btn text-white">Learn More</Link>
           </div>
+
+          {/* Long-Term Rental */}
+          <div className="card flex flex-col items-center group hover:shadow-xl transition-all duration-300">
+            <div className="relative w-full h-48 mb-6 rounded-lg overflow-hidden">
+              <Image
+                src="/gallery/home_services/Long Term Car Rental.png"
+                alt="Long-Term Rental"
+                fill
+                style={{ objectFit: 'cover', objectPosition: 'center' }}
+                className="transition-transform duration-300 group-hover:scale-105"
+              />
+            </div>
+            <h3 className="text-xl font-semibold mb-2 text-primary text-center">Long-Term Rental</h3>
+            <p className="text-gray-600 text-center mb-4 flex-grow">Flexible and affordable long-term cab rentals for businesses, corporate needs, or personal use.</p>
+            <Link href="/services" className="btn text-white">Learn More</Link>
+          </div>
+
+          {/* Point to Point Model */}
+          <div className="card flex flex-col items-center group hover:shadow-xl transition-all duration-300">
+            <div className="relative w-full h-48 mb-6 rounded-lg overflow-hidden">
+              <Image
+                src="/gallery/home_services/Point to point Model.png"
+                alt="Point to Point Model"
+                fill
+                style={{ objectFit: 'cover', objectPosition: 'center' }}
+                className="transition-transform duration-300 group-hover:scale-105"
+              />
+            </div>
+            <h3 className="text-xl font-semibold mb-2 text-primary text-center">Point to Point Model</h3>
+            <p className="text-gray-600 text-center mb-4 flex-grow">Direct and cost-effective rides between two specific locations with transparent pricing.</p>
+            <Link href="/services" className="btn text-white">Learn More</Link>
+          </div>
+
+          {/* Route Based Model */}
+          <div className="card flex flex-col items-center group hover:shadow-xl transition-all duration-300">
+            <div className="relative w-full h-48 mb-6 rounded-lg overflow-hidden">
+              <Image
+                src="/gallery/home_services/Route Based Model.png"
+                alt="Route Based Model"
+                fill
+                style={{ objectFit: 'cover', objectPosition: 'center' }}
+                className="transition-transform duration-300 group-hover:scale-105"
+              />
+            </div>
+            <h3 className="text-xl font-semibold mb-2 text-primary text-center">Route Based Model</h3>
+            <p className="text-gray-600 text-center mb-4 flex-grow">Pre-defined route travel services ideal for corporate shuttles and employee transportation.</p>
+            <Link href="/services" className="btn text-white">Learn More</Link>
+          </div>
+
         </div>
       </section>
 
