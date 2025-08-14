@@ -226,12 +226,20 @@ export default function ServicesPage() {
             </p>
             <div className="relative rounded-lg overflow-hidden mb-4">
               <Image 
-                src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=200&fit=crop" 
+                src="/gallery/home_services/corporate.jpeg" 
                 alt="Corporate Travel" 
                 width={400} 
-                height={200} 
+                height={400} 
+                style={{ objectFit: 'cover', objectPosition: 'center' }}
                 className="w-full h-32 object-cover" 
               />
+              {/* <Image
+                src="/gallery/home_services/corporate.jpeg"
+                alt="FTE Model"
+                fill
+                style={{ objectFit: 'cover', objectPosition: 'center' }}
+                className="transition-transform duration-300 group-hover:scale-105"
+              /> */}
             </div>
             <Link href="/contact" className="btn w-full text-white">Get Corporate Quote</Link>
           </div>
@@ -252,11 +260,12 @@ export default function ServicesPage() {
               From conferences to weddings and large group movements, we provide safe, reliable, and timely event transportation with our modern fleet and professional drivers.
             </p>
             <div className="relative rounded-lg overflow-hidden mb-4">
-              <Image 
-                src="https://images.unsplash.com/photo-1511578314322-379afb476865?w=400&h=200&fit=crop" 
-                alt="Event Transportation" 
+            <Image 
+                src="/gallery/home_services/event.jpeg" 
+                alt="Corporate Travel" 
                 width={400} 
-                height={200} 
+                height={400} 
+                style={{ objectFit: 'cover', objectPosition: 'center' }}
                 className="w-full h-32 object-cover" 
               />
             </div>

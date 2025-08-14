@@ -3,7 +3,9 @@ import React from "react";
 export default function Gallery() {
   const videos = [
     "/videos/WhatsApp Video 2025-07-17 at 1.01.13 PM.mp4",
-    "/videos/WhatsApp Video 2025-07-17 at 1.02.03 PM.mp4"
+    "/videos/WhatsApp Video 2025-07-17 at 1.02.03 PM.mp4",
+    "/videos/WhatsApp Video 2025-02-21 at 14.34.26_9400d439.mp4",
+    "/videos/VID-20250221-WA0008.mp4"
   ];
 
 
@@ -44,25 +46,183 @@ export default function Gallery() {
         </div>
       </section>
 
-      {/* Photo Gallery - Coming Soon */}
+      {/* Photo Gallery */}
       <section className="mb-20">
         <div className="text-center mb-12">
           <h2 className="text-2xl sm:text-3xl font-bold mb-4 text-primary">Photo Gallery</h2>
           <p className="text-base sm:text-lg text-gray-600 max-w-3xl mx-auto px-4">
-            Photo gallery coming soon. We&apos;re working on showcasing our fleet and destinations.
+            Explore our premium fleet and see the quality vehicles that make your journey comfortable and memorable.
           </p>
         </div>
         
-        <div className="bg-gradient-to-r from-primary/5 to-secondary/5 rounded-2xl p-12 text-center">
-          <div className="w-20 h-20 bg-secondary rounded-full flex items-center justify-center mx-auto mb-6">
-            <svg className="w-10 h-10 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
-            </svg>
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6">
+          {/* Photo 1 */}
+          <div className="relative group rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300">
+            <img 
+              src="/gallery/photos/IMG_0332.JPG" 
+              alt="Comfort Tours Fleet Vehicle"
+              className="w-full h-48 sm:h-56 object-cover group-hover:scale-105 transition-transform duration-300"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <div className="absolute bottom-4 left-4 text-white">
+                <p className="text-sm font-medium">Premium Fleet</p>
+              </div>
+            </div>
           </div>
-          <h3 className="text-2xl font-bold mb-4 text-primary">Photos Coming Soon</h3>
-          <p className="text-gray-600 max-w-2xl mx-auto">
-            We&apos;re preparing a beautiful collection of photos showcasing our fleet, destinations, and memorable journeys. Check back soon!
-          </p>
+
+          {/* Photo 2 */}
+          <div className="relative group rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300">
+            <img 
+              src="/gallery/photos/IMG_0447 (2).JPG" 
+              alt="Luxury Vehicle Interior"
+              className="w-full h-48 sm:h-56 object-cover group-hover:scale-105 transition-transform duration-300"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <div className="absolute bottom-4 left-4 text-white">
+                <p className="text-sm font-medium">Luxury Interior</p>
+              </div>
+            </div>
+          </div>
+
+          {/* Photo 3 */}
+          <div className="relative group rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300">
+            <img 
+              src="/gallery/photos/IMG-20250221-WA0056.jpg" 
+              alt="Executive Car Service"
+              className="w-full h-48 sm:h-56 object-cover group-hover:scale-105 transition-transform duration-300"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <div className="absolute bottom-4 left-4 text-white">
+                <p className="text-sm font-medium">Executive Service</p>
+              </div>
+            </div>
+          </div>
+
+          {/* Photo 4 */}
+          <div className="relative group rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300">
+            <img 
+              src="/gallery/photos/IMG_0488.JPG" 
+              alt="Corporate Transport"
+              className="w-full h-48 sm:h-56 object-cover group-hover:scale-105 transition-transform duration-300"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <div className="absolute bottom-4 left-4 text-white">
+                <p className="text-sm font-medium">Corporate Transport</p>
+              </div>
+            </div>
+          </div>
+
+          {/* Photo 5 */}
+          <div className="relative group rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300">
+            <img 
+              src="/gallery/photos/IMG_0490 (1).JPG" 
+              alt="Premium Vehicle Fleet"
+              className="w-full h-48 sm:h-56 object-cover group-hover:scale-105 transition-transform duration-300"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <div className="absolute bottom-4 left-4 text-white">
+                <p className="text-sm font-medium">Premium Fleet</p>
+              </div>
+            </div>
+          </div>
+
+          {/* Photo 6 */}
+          <div className="relative group rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300">
+            <img 
+              src="/gallery/photos/IMG_0497-1.jpg" 
+              alt="Chauffeur Driven Service"
+              className="w-full h-48 sm:h-56 object-cover group-hover:scale-105 transition-transform duration-300"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <div className="absolute bottom-4 left-4 text-white">
+                <p className="text-sm font-medium">Chauffeur Service</p>
+              </div>
+            </div>
+          </div>
+
+          {/* Photo 7 */}
+          <div className="relative group rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300">
+            <img 
+              src="/gallery/photos/IMG_0571.JPG" 
+              alt="Fleet Maintenance"
+              className="w-full h-48 sm:h-56 object-cover group-hover:scale-105 transition-transform duration-300"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <div className="absolute bottom-4 left-4 text-white">
+                <p className="text-sm font-medium">Well Maintained</p>
+              </div>
+            </div>
+          </div>
+
+          {/* Photo 8 */}
+          <div className="relative group rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300">
+            <img 
+              src="/gallery/photos/IMG_0616.JPG" 
+              alt="Travel Comfort"
+              className="w-full h-48 sm:h-56 object-cover group-hover:scale-105 transition-transform duration-300"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <div className="absolute bottom-4 left-4 text-white">
+                <p className="text-sm font-medium">Travel Comfort</p>
+              </div>
+            </div>
+          </div>
+
+          {/* Photo 9 */}
+          <div className="relative group rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300">
+            <img 
+              src="/gallery/photos/IMG-20250221-WA0005.jpg" 
+              alt="Professional Service"
+              className="w-full h-48 sm:h-56 object-cover group-hover:scale-105 transition-transform duration-300"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <div className="absolute bottom-4 left-4 text-white">
+                <p className="text-sm font-medium">Professional Service</p>
+              </div>
+            </div>
+          </div>
+
+          {/* Photo 10 */}
+          <div className="relative group rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300">
+            <img 
+              src="/gallery/photos/IMG-20250221-WA0055.jpg" 
+              alt="Quality Vehicles"
+              className="w-full h-48 sm:h-56 object-cover group-hover:scale-105 transition-transform duration-300"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <div className="absolute bottom-4 left-4 text-white">
+                <p className="text-sm font-medium">Quality Vehicles</p>
+              </div>
+            </div>
+          </div>
+
+          {/* Photo 11 */}
+          <div className="relative group rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300">
+            <img 
+              src="/gallery/photos/IMG-20250221-WA0094.jpg" 
+              alt="Reliable Transport"
+              className="w-full h-48 sm:h-56 object-cover group-hover:scale-105 transition-transform duration-300"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <div className="absolute bottom-4 left-4 text-white">
+                <p className="text-sm font-medium">Reliable Transport</p>
+              </div>
+            </div>
+          </div>
+
+          {/* Photo 12 */}
+          <div className="relative group rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300">
+            <img 
+              src="/gallery/photos/IMG_0474.jpg" 
+              alt="Reliable Transport"
+              className="w-full h-48 sm:h-56 object-cover group-hover:scale-105 transition-transform duration-300"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <div className="absolute bottom-4 left-4 text-white">
+                <p className="text-sm font-medium">Trust</p>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
