@@ -43,7 +43,7 @@ export default function ServicesPage() {
                 src="/gallery/home_services/Intercity.png"
                 alt="Inter City Travel"
                 fill
-                style={{ objectFit: 'cover', objectPosition: 'center' }}
+                style={{ objectFit: 'contain', objectPosition: 'center' }}
                 className="transition-transform duration-300 group-hover:scale-105"
               />
             </div>
@@ -59,7 +59,7 @@ export default function ServicesPage() {
                 src="/gallery/home_services/Intracity.png"
                 alt="Intra City Travel"
                 fill
-                style={{ objectFit: 'cover', objectPosition: 'center' }}
+                style={{ objectFit: 'contain', objectPosition: 'center' }}
                 className="transition-transform duration-300 group-hover:scale-105"
               />
             </div>
@@ -75,7 +75,7 @@ export default function ServicesPage() {
                 src="/gallery/home_services/Airport cab service.png"
                 alt="Airport Transfer"
                 fill
-                style={{ objectFit: 'cover', objectPosition: 'center' }}
+                style={{ objectFit: 'contain', objectPosition: 'center' }}
                 className="transition-transform duration-300 group-hover:scale-105"
               />
             </div>
@@ -91,7 +91,7 @@ export default function ServicesPage() {
                 src="/gallery/home_services/Long Term Car Rental.png"
                 alt="Long-Term Rental"
                 fill
-                style={{ objectFit: 'cover', objectPosition: 'center' }}
+                style={{ objectFit: 'contain', objectPosition: 'center' }}
                 className="transition-transform duration-300 group-hover:scale-105"
               />
             </div>
@@ -107,7 +107,7 @@ export default function ServicesPage() {
                 src="/gallery/home_services/Point to point Model.png"
                 alt="Point to Point Model"
                 fill
-                style={{ objectFit: 'cover', objectPosition: 'center' }}
+                style={{ objectFit: 'contain', objectPosition: 'center' }}
                 className="transition-transform duration-300 group-hover:scale-105"
               />
             </div>
@@ -123,7 +123,7 @@ export default function ServicesPage() {
                 src="/gallery/home_services/Route Based Model.png"
                 alt="Route Based Model"
                 fill
-                style={{ objectFit: 'cover', objectPosition: 'center' }}
+                style={{ objectFit: 'contain', objectPosition: 'center' }}
                 className="transition-transform duration-300 group-hover:scale-105"
               />
             </div>
@@ -139,7 +139,7 @@ export default function ServicesPage() {
                 src="/gallery/home_services/Kilometer model.png"
                 alt="Kilometer Model"
                 fill
-                style={{ objectFit: 'cover', objectPosition: 'center' }}
+                style={{ objectFit: 'contain', objectPosition: 'center' }}
                 className="transition-transform duration-300 group-hover:scale-105"
               />
             </div>
@@ -155,7 +155,7 @@ export default function ServicesPage() {
                 src="/gallery/home_services/Trip Based Model.png"
                 alt="Trip Based Model"
                 fill
-                style={{ objectFit: 'cover', objectPosition: 'center' }}
+                style={{ objectFit: 'contain', objectPosition: 'center' }}
                 className="transition-transform duration-300 group-hover:scale-105"
               />
             </div>
@@ -171,7 +171,7 @@ export default function ServicesPage() {
                 src="/gallery/home_services/Fixed Cab Model.png"
                 alt="Fixed Cab Model"
                 fill
-                style={{ objectFit: 'cover', objectPosition: 'center' }}
+                style={{ objectFit: 'contain', objectPosition: 'center' }}
                 className="transition-transform duration-300 group-hover:scale-105"
               />
             </div>
@@ -187,7 +187,7 @@ export default function ServicesPage() {
                 src="/gallery/home_services/FTE Model.png"
                 alt="FTE Model"
                 fill
-                style={{ objectFit: 'cover', objectPosition: 'center' }}
+                style={{ objectFit: 'contain', objectPosition: 'center' }}
                 className="transition-transform duration-300 group-hover:scale-105"
               />
             </div>

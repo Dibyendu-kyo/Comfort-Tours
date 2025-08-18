@@ -125,7 +125,7 @@ export default function Home() {
                 src="/gallery/home_services/Intercity.png"
                 alt="Inter City Travel"
                 fill
-                style={{ objectFit: 'cover', objectPosition: 'center' }}
+                style={{ objectFit: 'contain', objectPosition: 'center' }}
                 className="transition-transform duration-300 group-hover:scale-105"
               />
             </div>
@@ -141,7 +141,7 @@ export default function Home() {
                 src="/gallery/home_services/Intracity.png"
                 alt="Intra City Travel"
                 fill
-                style={{ objectFit: 'cover', objectPosition: 'center' }}
+                style={{ objectFit: 'contain', objectPosition: 'center' }}
                 className="transition-transform duration-300 group-hover:scale-105"
               />
             </div>
@@ -157,7 +157,7 @@ export default function Home() {
                 src="/gallery/home_services/Airport cab service.png"
                 alt="Airport Transfer"
                 fill
-                style={{ objectFit: 'cover', objectPosition: 'center' }}
+                style={{ objectFit: 'contain', objectPosition: 'center' }}
                 className="transition-transform duration-300 group-hover:scale-105"
               />
             </div>
@@ -173,7 +173,7 @@ export default function Home() {
                 src="/gallery/home_services/Long Term Car Rental.png"
                 alt="Long-Term Rental"
                 fill
-                style={{ objectFit: 'cover', objectPosition: 'center' }}
+                style={{ objectFit: 'contain', objectPosition: 'center' }}
                 className="transition-transform duration-300 group-hover:scale-105"
               />
             </div>
@@ -189,7 +189,7 @@ export default function Home() {
                 src="/gallery/home_services/Point to point Model.png"
                 alt="Point to Point Model"
                 fill
-                style={{ objectFit: 'cover', objectPosition: 'center' }}
+                style={{ objectFit: 'contain', objectPosition: 'center' }}
                 className="transition-transform duration-300 group-hover:scale-105"
               />
             </div>
@@ -205,7 +205,7 @@ export default function Home() {
                 src="/gallery/home_services/Route Based Model.png"
                 alt="Route Based Model"
                 fill
-                style={{ objectFit: 'cover', objectPosition: 'center' }}
+                style={{ objectFit: 'contain', objectPosition: 'center' }}
                 className="transition-transform duration-300 group-hover:scale-105"
               />
             </div>
@@ -296,7 +296,7 @@ export default function Home() {
             </div>
             <div className="relative h-32 rounded-xl overflow-hidden bg-gradient-to-r from-gray-100 to-gray-200">
               <Image
-                src="/images/rental_car.png"
+                src="/gallery/home_services/event.jpeg"
                 alt="Car fleet"
                 width={400}
                 height={128}
