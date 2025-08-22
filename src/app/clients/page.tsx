@@ -53,10 +53,10 @@ export default function ClientsPage() {
         </h1>
         <div className="max-w-4xl mx-auto space-y-6">
           <p className="text-base sm:text-lg md:text-xl text-gray-700 leading-relaxed px-4">
-            At Comfort Tours, we are proud to be the preferred transportation partner for some of India's leading IT, BPO, and manufacturing companies.
+            At Comfort Tours, we are proud to be the preferred transportation partner for some of India&apos;s leading IT, BPO, and manufacturing companies.
           </p>
           <p className="text-base sm:text-lg md:text-xl text-gray-700 leading-relaxed px-4">
-            For over 18+ years, we've successfully managed employee transportation for organizations of all sizes — ensuring safety, reliability, and cost-efficiency in a dynamic business environment.
+            For over 18+ years, we&apos;ve successfully managed employee transportation for organizations of all sizes — ensuring safety, reliability, and cost-efficiency in a dynamic business environment.
           </p>
         </div>
       </section>
@@ -71,7 +71,7 @@ export default function ClientsPage() {
               {category}
             </h3>
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-8">
-              {clients.map((client, index) => (
+              {clients.map((client) => (
                 <div 
                   key={client.name} 
                   className="group bg-white rounded-xl shadow-sm hover:shadow-lg border border-gray-100 hover:border-primary/20 p-6 flex flex-col items-center transition-all duration-300 hover:scale-105"
@@ -146,7 +146,7 @@ export default function ClientsPage() {
               </svg>
               <div>
                 <p className="text-gray-700 leading-relaxed mb-4">
-                  "Comfort Tours has been a trusted partner in managing our employee transportation for over a decade. Their professionalism and reliability make them stand out."
+                  &ldquo;Comfort Tours has been a trusted partner in managing our employee transportation for over a decade. Their professionalism and reliability make them stand out.&rdquo;
                 </p>
                 <p className="text-primary font-semibold">– Transport Desk Head, IT MNC</p>
               </div>
@@ -160,7 +160,7 @@ export default function ClientsPage() {
               </svg>
               <div>
                 <p className="text-gray-700 leading-relaxed mb-4">
-                  "With Comfort Tours, we don't worry about transport delays anymore. Their fleet and team are always dependable."
+                  &ldquo;With Comfort Tours, we don&apos;t worry about transport delays anymore. Their fleet and team are always dependable.&rdquo;
                 </p>
                 <p className="text-primary font-semibold">– Admin Manager, Manufacturing Firm</p>
               </div>

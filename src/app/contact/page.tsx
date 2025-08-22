@@ -34,10 +34,10 @@ export default function ContactPage() {
         </h1>
         <div className="max-w-4xl mx-auto space-y-4">
           <p className="text-lg sm:text-xl md:text-2xl text-gray-600 leading-relaxed px-4">
-            We're here to provide safe, reliable, and professional transport solutions for your business and personal travel needs.
+            We&apos;re here to provide safe, reliable, and professional transport solutions for your business and personal travel needs.
           </p>
           <p className="text-base sm:text-lg text-gray-600 leading-relaxed px-4">
-            Whether you're looking for corporate employee transport, intercity rentals, or event logistics, our team is ready to assist you.
+            Whether you&apos;re looking for corporate employee transport, intercity rentals, or event logistics, our team is ready to assist you.
           </p>
         </div>
       </section>

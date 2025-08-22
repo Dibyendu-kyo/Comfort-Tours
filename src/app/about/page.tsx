@@ -84,7 +84,7 @@ export default function AboutPage() {
               <h3 className="text-2xl font-bold text-primary">Our Vision</h3>
             </div>
             <p className="text-lg text-gray-700 leading-relaxed">
-              To be India's most trusted and innovative travel partner, delivering exceptional experiences while setting industry standards for safety, reliability, and service excellence.
+              To be India&apos;s most trusted and innovative travel partner, delivering exceptional experiences while setting industry standards for safety, reliability, and service excellence.
             </p>
           </div>
           <div className="bg-gradient-to-br from-secondary/10 to-primary/5 rounded-2xl p-8 card hover:shadow-xl transition-all duration-300">

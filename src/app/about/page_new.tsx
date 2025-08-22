@@ -27,7 +27,7 @@ export default function AboutPage() {
               About Comfort Tours
             </h1>
             <p className="text-lg sm:text-xl md:text-2xl max-w-4xl mx-auto leading-relaxed drop-shadow-lg text-white text-center px-4">
-              Pune&apos;s Premier Travel Partner Since 2006 - Redefining Luxury Travel with Safety & Excellence
+              Pune&apos;s Premier Travel Partner Since 2006 - Redefining Luxury Travel with Safety &amp; Excellence
             </p>
           </div>
         </div>
@@ -39,13 +39,13 @@ export default function AboutPage() {
           <div>
             <h2 className="text-2xl sm:text-3xl font-bold mb-6 text-primary">Our Story</h2>
             <p className="text-base sm:text-lg text-gray-700 mb-6 leading-relaxed">
-              Founded in 2006 by a team of passionate professionals, Comfort Tours Pvt. Ltd. began by serving the growing transport needs of Pune's IT and corporate sector.
+              Founded in 2006 by a team of passionate professionals, Comfort Tours Pvt. Ltd. began by serving the growing transport needs of Pune&apos;s IT and corporate sector.
             </p>
             <p className="text-base sm:text-lg text-gray-700 mb-6 leading-relaxed">
               We were the <strong>first company in Pune to introduce GPS-enabled buses </strong> for employee transport, setting new benchmarks in safety and efficiency.
             </p>
             <p className="text-base sm:text-lg text-gray-700 mb-6 leading-relaxed">
-              Today, Comfort Tours is among India's most trusted partners for <strong>corporate travel, employee transportation, and luxury fleet rentals </strong> — ensuring seamless journeys for businesses and individuals alike.
+              Today, Comfort Tours is among India&apos;s most trusted partners for <strong>corporate travel, employee transportation, and luxury fleet rentals </strong> — ensuring seamless journeys for businesses and individuals alike.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link href="/services" className="btn text-center text-white">Our Services</Link>
@@ -84,7 +84,7 @@ export default function AboutPage() {
               <h3 className="text-2xl font-bold text-primary">Our Vision</h3>
             </div>
             <p className="text-lg text-gray-700 leading-relaxed">
-              To be India's most trusted and innovative travel partner, delivering exceptional experiences while setting industry standards for safety, reliability, and service excellence.
+              To be India&apos;s most trusted and innovative travel partner, delivering exceptional experiences while setting industry standards for safety, reliability, and service excellence.
             </p>
           </div>
           <div className="bg-gradient-to-br from-secondary/10 to-primary/5 rounded-2xl p-8 card hover:shadow-xl transition-all duration-300">
