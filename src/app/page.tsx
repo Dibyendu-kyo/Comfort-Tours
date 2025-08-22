@@ -63,7 +63,7 @@ export default function Home() {
                 </div>
                 <div>
                   <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-red-500">75+</div>
-                  <div className="text-white text-sm sm:text-base leading-tight">Corporate Clients – India's top IT, BPO & manufacturing firms</div>
+                  <div className="text-white text-sm sm:text-base leading-tight">Corporate Clients – India&apos;s top IT, BPO & manufacturing firms</div>
                 </div>
               </div>
             </div>
@@ -434,7 +434,7 @@ export default function Home() {
       <section className="w-full max-w-screen-xl mx-auto py-12 sm:py-16 md:py-20 px-4 sm:px-6 md:px-8 bg-gradient-to-r from-orange-500 to-blue-500 rounded-xl my-12 sm:my-16 md:my-20" style={{ background: 'linear-gradient(135deg, #e67817 0%, #007dc0 100%)' }}>
         <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-center mb-6 sm:mb-8 md:mb-10 text-white tracking-tight">Ready to Travel with Comfort?</h2>
         <p className="text-center text-white/90 text-base sm:text-lg mb-8 sm:mb-10 max-w-4xl mx-auto leading-relaxed">
-          Whether it's corporate employee transport, intercity rentals, or luxury vehicles, Comfort Tours ensures safe, convenient, and professional travel solutions.
+          Whether it&apos;s corporate employee transport, intercity rentals, or luxury vehicles, Comfort Tours ensures safe, convenient, and professional travel solutions.
         </p>
         <div className="flex justify-center">
           <Link href="/contact" className="inline-flex items-center px-8 py-4 text-white font-bold text-lg rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105" style={{ backgroundColor: '#e67817' }} onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#007dc0'} onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#e67817'}>

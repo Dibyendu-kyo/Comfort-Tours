@@ -4,7 +4,7 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Our Services | Comfort Tours - Corporate Transport Solutions",
-  description: "Comfort Tours Pvt. Ltd. – Pune's premier corporate travel and chauffeur-driven transport provider. With 2,000+ vehicles, 75+ corporate clients, and 21+ years of excellence, we deliver safe, reliable, and professional travel solutions across India.",
+  description: "Comfort Tours Pvt. Ltd. – Pune&apos;s premier corporate travel and chauffeur-driven transport provider. With 2,000+ vehicles, 75+ corporate clients, and 21+ years of excellence, we deliver safe, reliable, and professional travel solutions across India.",
 };
 
 export default function ServicesPage() {
@@ -198,7 +198,7 @@ export default function ServicesPage() {
               />
             </div>
             <h3 className="text-2xl font-bold mb-4 text-primary text-center">FTE Model (Full-Time Equivalent)</h3>
-            <p className="text-gray-600 text-center mb-6 flex-grow leading-relaxed">A fully dedicated transport solution tailored to your organization's daily needs, with guaranteed vehicle availability.</p>
+            <p className="text-gray-600 text-center mb-6 flex-grow leading-relaxed">A fully dedicated transport solution tailored to your organization&apos;s daily needs, with guaranteed vehicle availability.</p>
             <Link href="/contact" className="btn text-white px-8 py-3">Request Corporate Proposal</Link>
           </div>
 

@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -64,9 +65,11 @@ export default function Gallery() {
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6">
           {/* Photo 1 */}
           <div className="relative group rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300">
-            <img
+            <Image
               src="/gallery/photos/IMG_0332.JPG"
               alt="Comfort Tours Fleet Vehicle"
+              width={400}
+              height={300}
               className="w-full h-48 sm:h-56 object-cover group-hover:scale-105 transition-transform duration-300"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
@@ -78,9 +81,11 @@ export default function Gallery() {
 
           {/* Photo 2 */}
           <div className="relative group rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300">
-            <img
+            <Image
               src="/gallery/photos/IMG_0447 (2).JPG"
               alt="Luxury Vehicle Interior"
+              width={400}
+              height={300}
               className="w-full h-48 sm:h-56 object-cover group-hover:scale-105 transition-transform duration-300"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
@@ -92,9 +97,11 @@ export default function Gallery() {
 
           {/* Photo 3 */}
           <div className="relative group rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300">
-            <img
+            <Image
               src="/gallery/photos/IMG-20250221-WA0056.jpg"
               alt="Executive Car Service"
+              width={400}
+              height={300}
               className="w-full h-48 sm:h-56 object-cover group-hover:scale-105 transition-transform duration-300"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
@@ -106,9 +113,11 @@ export default function Gallery() {
 
           {/* Photo 4 */}
           <div className="relative group rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300">
-            <img
+            <Image
               src="/gallery/photos/IMG_0488.JPG"
               alt="Corporate Transport"
+              width={400}
+              height={300}
               className="w-full h-48 sm:h-56 object-cover group-hover:scale-105 transition-transform duration-300"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
@@ -120,9 +129,11 @@ export default function Gallery() {
 
           {/* Photo 5 */}
           <div className="relative group rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300">
-            <img
+            <Image
               src="/gallery/photos/IMG_0490 (1).JPG"
               alt="Premium Vehicle Fleet"
+              width={400}
+              height={300}
               className="w-full h-48 sm:h-56 object-cover group-hover:scale-105 transition-transform duration-300"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
@@ -134,9 +145,11 @@ export default function Gallery() {
 
           {/* Photo 6 */}
           <div className="relative group rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300">
-            <img
+            <Image
               src="/gallery/photos/IMG_0497-1.jpg"
               alt="Chauffeur Driven Service"
+              width={400}
+              height={300}
               className="w-full h-48 sm:h-56 object-cover group-hover:scale-105 transition-transform duration-300"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
@@ -148,9 +161,11 @@ export default function Gallery() {
 
           {/* Photo 7 */}
           <div className="relative group rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300">
-            <img
+            <Image
               src="/gallery/photos/IMG_0571.JPG"
               alt="Fleet Maintenance"
+              width={400}
+              height={300}
               className="w-full h-48 sm:h-56 object-cover group-hover:scale-105 transition-transform duration-300"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
@@ -162,9 +177,11 @@ export default function Gallery() {
 
           {/* Photo 8 */}
           <div className="relative group rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300">
-            <img
+            <Image
               src="/gallery/photos/IMG_0616.JPG"
               alt="Travel Comfort"
+              width={400}
+              height={300}
               className="w-full h-48 sm:h-56 object-cover group-hover:scale-105 transition-transform duration-300"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
@@ -176,9 +193,11 @@ export default function Gallery() {
 
           {/* Photo 9 */}
           <div className="relative group rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300">
-            <img
+            <Image
               src="/gallery/photos/IMG-20250221-WA0005.jpg"
               alt="Professional Service"
+              width={400}
+              height={300}
               className="w-full h-48 sm:h-56 object-cover group-hover:scale-105 transition-transform duration-300"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
@@ -190,9 +209,11 @@ export default function Gallery() {
 
           {/* Photo 10 */}
           <div className="relative group rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300">
-            <img
+            <Image
               src="/gallery/photos/IMG-20250221-WA0055.jpg"
               alt="Quality Vehicles"
+              width={400}
+              height={300}
               className="w-full h-48 sm:h-56 object-cover group-hover:scale-105 transition-transform duration-300"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
@@ -204,9 +225,11 @@ export default function Gallery() {
 
           {/* Photo 11 */}
           <div className="relative group rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300">
-            <img
+            <Image
               src="/gallery/photos/IMG-20250221-WA0094.jpg"
               alt="Reliable Transport"
+              width={400}
+              height={300}
               className="w-full h-48 sm:h-56 object-cover group-hover:scale-105 transition-transform duration-300"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
@@ -218,9 +241,11 @@ export default function Gallery() {
 
           {/* Photo 12 */}
           <div className="relative group rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300">
-            <img
+            <Image
               src="/gallery/photos/IMG_0474.JPG"
               alt="Professional Fleet"
+              width={400}
+              height={300}
               className="w-full h-48 sm:h-56 object-cover group-hover:scale-105 transition-transform duration-300"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
