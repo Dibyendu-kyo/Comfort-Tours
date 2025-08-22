@@ -15,8 +15,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Comfort Tours | Pune&apos;s Premier Travel Agency",
-  description: "Car rentals, tour packages, and corporate travel solutions in Pune. Trusted by top companies and families since 2006.",
+  title: "Comfort Tours | Corporate Chauffeur-Driven Transport Solutions",
+  description: "Comfort Tours Pvt. Ltd. – Pune's premier corporate travel and chauffeur-driven transport provider. With 2,000+ vehicles, 75+ corporate clients, and 21+ years of excellence, we deliver safe, reliable, and professional travel solutions across India.",
   openGraph: {
     type: "website",
     locale: "en_IN",
@@ -33,8 +33,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Comfort Tours | Pune&apos;s Premier Travel Agency",
-    description: "Car rentals, tour packages, and corporate travel solutions in Pune. Trusted by top companies and families since 2006.",
+    title: "Comfort Tours | Corporate Chauffeur-Driven Transport Solutions",
+    description: "Comfort Tours Pvt. Ltd. – Pune's premier corporate travel and chauffeur-driven transport provider. With 2,000+ vehicles, 75+ corporate clients, and 21+ years of excellence, we deliver safe, reliable, and professional travel solutions across India.",
     images: [
       {
         url: "/images/og-image.png",

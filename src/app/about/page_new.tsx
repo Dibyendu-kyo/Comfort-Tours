@@ -15,7 +15,7 @@ export default function AboutPage() {
 
         <div className="relative w-full h-64 md:h-80 rounded-2xl overflow-hidden mb-8">
           <Image
-            src="/gallery/photos/IMG_0332.JPG"
+            src="/images/about us 01.png"
             alt="Comfort Tours Excellence"
             fill
             style={{ objectFit: 'cover', objectPosition: 'center' }}
@@ -39,13 +39,13 @@ export default function AboutPage() {
           <div>
             <h2 className="text-2xl sm:text-3xl font-bold mb-6 text-primary">Our Story</h2>
             <p className="text-base sm:text-lg text-gray-700 mb-6 leading-relaxed">
-              Founded in 2006 by a team of passionate professionals, Comfort Tours Pvt. Ltd. began by serving the growing transport needs of Pune’s IT and corporate sector.
+              Founded in 2006 by a team of passionate professionals, Comfort Tours Pvt. Ltd. began by serving the growing transport needs of Pune's IT and corporate sector.
             </p>
             <p className="text-base sm:text-lg text-gray-700 mb-6 leading-relaxed">
               We were the <strong>first company in Pune to introduce GPS-enabled buses </strong> for employee transport, setting new benchmarks in safety and efficiency.
             </p>
             <p className="text-base sm:text-lg text-gray-700 mb-6 leading-relaxed">
-              Today, Comfort Tours is among India’s most trusted partners for <strong>corporate travel, employee transportation, and luxury fleet rentals </strong> — ensuring seamless journeys for businesses and individuals alike.
+              Today, Comfort Tours is among India's most trusted partners for <strong>corporate travel, employee transportation, and luxury fleet rentals </strong> — ensuring seamless journeys for businesses and individuals alike.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link href="/services" className="btn text-center text-white">Our Services</Link>
@@ -104,52 +104,15 @@ export default function AboutPage() {
       </section>
 
       {/* Key Achievements */}
-      <section className="mb-20 bg-gradient-to-r from-primary/5 to-secondary/5 rounded-2xl p-8 md:p-12">
+      <section className="mb-20 bg-gradient-to-r from-primary/5 to-secondary/5 rounded-2xl p-12">
         <h2 className="text-2xl sm:text-3xl font-bold text-center mb-8 md:mb-12 text-primary">Key Achievements</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {/* 2,000+ Vehicles */}
-          <div className="flex flex-col items-center text-center p-6 bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105">
-            <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center mb-4">
-              <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7v8a2 2 0 002 2h6M8 7V5a2 2 0 012-2h4.586a1 1 0 01.707.293l4.414 4.414a1 1 0 01.293.707V15a2 2 0 01-2 2h-2M8 7H6a2 2 0 00-2 2v10a2 2 0 002 2h8a2 2 0 002-2v-2" />
-              </svg>
-            </div>
-            <h3 className="text-2xl font-bold text-primary mb-2">2,000+</h3>
-            <p className="text-gray-600 text-sm">Vehicles across economy, executive & luxury categories</p>
-          </div>
-
-          {/* 75+ Corporate Clients */}
-          <div className="flex flex-col items-center text-center p-6 bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105">
-            <div className="w-16 h-16 bg-secondary rounded-full flex items-center justify-center mb-4">
-              <svg className="w-8 h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
-              </svg>
-            </div>
-            <h3 className="text-2xl font-bold text-primary mb-2">75+</h3>
-            <p className="text-gray-600 text-sm">Corporate Clients including leading IT & Fortune 500 companies</p>
-          </div>
-
-          {/* First in Pune */}
-          <div className="flex flex-col items-center text-center p-6 bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105">
-            <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center mb-4">
-              <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 713.138-3.138z" />
-              </svg>
-            </div>
-            <h3 className="text-xl font-bold text-primary mb-2">First in Pune</h3>
-            <p className="text-gray-600 text-sm">To launch GPS-enabled buses for safe employee transport</p>
-          </div>
-
-          {/* 21+ Years */}
-          <div className="flex flex-col items-center text-center p-6 bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105">
-            <div className="w-16 h-16 bg-secondary rounded-full flex items-center justify-center mb-4">
-              <svg className="w-8 h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-              </svg>
-            </div>
-            <h3 className="text-2xl font-bold text-primary mb-2">21+ Years</h3>
-            <p className="text-gray-600 text-sm">Of Excellence in corporate and individual travel</p>
-          </div>
+        <div className="text-center">
+          <p className="text-lg text-gray-700 leading-relaxed">
+            <span className="font-bold text-primary">2,000+ Vehicles</span> across economy, executive & luxury categories • 
+            <span className="font-bold text-primary"> 75+ Corporate Clients</span> including leading IT & Fortune 500 companies • 
+            <span className="font-bold text-primary"> First in Pune</span> to launch GPS-enabled buses for safe employee transport • 
+            <span className="font-bold text-primary"> 21+ Years of Excellence</span> in corporate and individual travel
+          </p>
         </div>
       </section>
 
@@ -179,7 +142,7 @@ export default function AboutPage() {
             <p className="text-base">Phone: +91-20-41230000</p>
             <p className="text-base">Email: info@comfort-tours.com</p>
           </div>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center md">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-end">
             <Link href="/contact" className="inline-flex items-center justify-center px-6 py-3 bg-white text-orange-500 hover:bg-gray-100 font-semibold rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105">
               Contact Us
             </Link>

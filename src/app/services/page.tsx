@@ -1,5 +1,11 @@
 import Image from "next/image";
 import Link from "next/link";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Our Services | Comfort Tours - Corporate Transport Solutions",
+  description: "Comfort Tours Pvt. Ltd. – Pune's premier corporate travel and chauffeur-driven transport provider. With 2,000+ vehicles, 75+ corporate clients, and 21+ years of excellence, we deliver safe, reliable, and professional travel solutions across India.",
+};
 
 export default function ServicesPage() {
   return (
@@ -31,11 +37,11 @@ export default function ServicesPage() {
         <div className="text-center mb-8 sm:mb-10 md:mb-12">
           <h2 className="text-xl sm:text-2xl md:text-3xl font-bold mb-3 sm:mb-4 text-primary">Our Service Models</h2>
           <p className="text-sm sm:text-base md:text-lg text-gray-600 max-w-3xl mx-auto px-4 leading-relaxed">
-            Comprehensive transportation solutions designed to meet every travel need with flexible pricing models and dedicated service.
+            At Comfort Tours, we provide customized transport models designed to meet the needs of corporates, institutions, and individuals. With a fleet of 2,000+ vehicles and 21+ years of expertise, we ensure safe, reliable, and professional travel solutions across India.
           </p>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 md:gap-12">
-          
+
           {/* Inter City */}
           <div className="card flex flex-col items-center group hover:shadow-xl transition-all duration-300 p-4 sm:p-6 md:p-8">
             <div className="relative w-full h-44 sm:h-48 md:h-56 mb-4 sm:mb-5 md:mb-6 rounded-xl overflow-hidden">
@@ -47,9 +53,9 @@ export default function ServicesPage() {
                 className="transition-transform duration-300 group-hover:scale-105"
               />
             </div>
-            <h3 className="text-lg sm:text-xl md:text-2xl font-bold mb-3 sm:mb-4 text-primary text-center">Inter City</h3>
-            <p className="text-sm sm:text-base text-gray-600 text-center mb-4 sm:mb-5 md:mb-6 flex-grow leading-relaxed">Comfortable and reliable travel between cities with well-maintained vehicles and experienced drivers, ensuring a smooth journey every time.</p>
-            <Link href="/contact" className="btn text-white px-4 sm:px-6 md:px-8 py-2 sm:py-2.5 md:py-3 text-sm sm:text-base">Get Quote</Link>
+            <h3 className="text-lg sm:text-xl md:text-2xl font-bold mb-3 sm:mb-4 text-primary text-center">Intercity Travel</h3>
+            <p className="text-sm sm:text-base text-gray-600 text-center mb-4 sm:mb-5 md:mb-6 flex-grow leading-relaxed">Seamless and comfortable travel between cities with professional chauffeurs and modern vehicles. Perfect for business trips and corporate journeys.</p>
+            <Link href="/contact" className="btn text-white px-4 sm:px-6 md:px-8 py-2 sm:py-2.5 md:py-3 text-sm sm:text-base">Request Intercity Quote</Link>
           </div>
 
           {/* Intra City */}
@@ -63,9 +69,9 @@ export default function ServicesPage() {
                 className="transition-transform duration-300 group-hover:scale-105"
               />
             </div>
-            <h3 className="text-2xl font-bold mb-4 text-primary text-center">Intra City</h3>
-            <p className="text-gray-600 text-center mb-6 flex-grow leading-relaxed">Convenient city travel solutions for your daily commuting, meetings, shopping, or leisure plans within the same city.</p>
-            <Link href="/contact" className="btn text-white px-8 py-3">Get Quote</Link>
+            <h3 className="text-2xl font-bold mb-4 text-primary text-center">Intracity Travel</h3>
+            <p className="text-gray-600 text-center mb-6 flex-grow leading-relaxed">Convenient city rides for meetings, shopping, daily commuting, or leisure. Reliable, punctual, and hassle-free.</p>
+            <Link href="/contact" className="btn text-white px-8 py-3">Book City Travel</Link>
           </div>
 
           {/* Airport Transfer */}
@@ -79,9 +85,9 @@ export default function ServicesPage() {
                 className="transition-transform duration-300 group-hover:scale-105"
               />
             </div>
-            <h3 className="text-2xl font-bold mb-4 text-primary text-center">Airport Transfer</h3>
-            <p className="text-gray-600 text-center mb-6 flex-grow leading-relaxed">Hassle-free pick-up and drop-off services to and from the airport, ensuring you&apos;re always on time for your flights.</p>
-            <Link href="/contact" className="btn text-white px-8 py-3">Get Quote</Link>
+            <h3 className="text-2xl font-bold mb-4 text-primary text-center">Airport Transfers</h3>
+            <p className="text-gray-600 text-center mb-6 flex-grow leading-relaxed">On-time pick-up and drop-off services with real-time tracking — ensuring you never miss a flight.</p>
+            <Link href="/contact" className="btn text-white px-8 py-3">Book Airport Transfer</Link>
           </div>
 
           {/* Long-Term Rental */}
@@ -95,9 +101,9 @@ export default function ServicesPage() {
                 className="transition-transform duration-300 group-hover:scale-105"
               />
             </div>
-            <h3 className="text-2xl font-bold mb-4 text-primary text-center">Long-Term Rental</h3>
-            <p className="text-gray-600 text-center mb-6 flex-grow leading-relaxed">Flexible and affordable long-term cab rentals for businesses, corporate needs, or personal use.</p>
-            <Link href="/contact" className="btn text-white px-8 py-3">Get Quote</Link>
+            <h3 className="text-2xl font-bold mb-4 text-primary text-center">Long-Term Rentals</h3>
+            <p className="text-gray-600 text-center mb-6 flex-grow leading-relaxed">Cost-effective long-term leasing for corporates and individuals, with dedicated drivers and flexible contracts.</p>
+            <Link href="/contact" className="btn text-white px-8 py-3">Get Rental Proposal</Link>
           </div>
 
           {/* Point to Point Model */}
@@ -111,9 +117,9 @@ export default function ServicesPage() {
                 className="transition-transform duration-300 group-hover:scale-105"
               />
             </div>
-            <h3 className="text-2xl font-bold mb-4 text-primary text-center">Point to Point Model</h3>
-            <p className="text-gray-600 text-center mb-6 flex-grow leading-relaxed">Direct and cost-effective rides between two specific locations with transparent pricing.</p>
-            <Link href="/contact" className="btn text-white px-8 py-3">Get Quote</Link>
+            <h3 className="text-2xl font-bold mb-4 text-primary text-center">Point-to-Point Model</h3>
+            <p className="text-gray-600 text-center mb-6 flex-grow leading-relaxed">Direct, transparent, and cost-effective travel between fixed locations.</p>
+            <Link href="/contact" className="btn text-white px-8 py-3">Learn More</Link>
           </div>
 
           {/* Route Based Model */}
@@ -127,9 +133,9 @@ export default function ServicesPage() {
                 className="transition-transform duration-300 group-hover:scale-105"
               />
             </div>
-            <h3 className="text-2xl font-bold mb-4 text-primary text-center">Route Based Model</h3>
-            <p className="text-gray-600 text-center mb-6 flex-grow leading-relaxed">Pre-defined route travel services ideal for corporate shuttles, employee transportation, or regular commutes.</p>
-            <Link href="/contact" className="btn text-white px-8 py-3">Get Quote</Link>
+            <h3 className="text-2xl font-bold mb-4 text-primary text-center">Route-Based Model</h3>
+            <p className="text-gray-600 text-center mb-6 flex-grow leading-relaxed">Pre-defined shuttle routes designed for corporate employee transportation and daily commutes.</p>
+            <Link href="/contact" className="btn text-white px-8 py-3">Request Route Plan</Link>
           </div>
 
           {/* Kilometer Model */}
@@ -144,8 +150,8 @@ export default function ServicesPage() {
               />
             </div>
             <h3 className="text-2xl font-bold mb-4 text-primary text-center">Kilometer Model</h3>
-            <p className="text-gray-600 text-center mb-6 flex-grow leading-relaxed">Pay only for the distance you travel with our per-kilometer pricing system.</p>
-            <Link href="/contact" className="btn text-white px-8 py-3">Get Quote</Link>
+            <p className="text-gray-600 text-center mb-6 flex-grow leading-relaxed">Pay only for the distance you travel with our flexible per-kilometer billing system.</p>
+            <Link href="/contact" className="btn text-white px-8 py-3">Get Pricing</Link>
           </div>
 
           {/* Trip Based Model */}
@@ -159,9 +165,9 @@ export default function ServicesPage() {
                 className="transition-transform duration-300 group-hover:scale-105"
               />
             </div>
-            <h3 className="text-2xl font-bold mb-4 text-primary text-center">Trip Based Model</h3>
-            <p className="text-gray-600 text-center mb-6 flex-grow leading-relaxed">Fixed price packages designed for specific trips, tours, or custom travel plans.</p>
-            <Link href="/contact" className="btn text-white px-8 py-3">Get Quote</Link>
+            <h3 className="text-2xl font-bold mb-4 text-primary text-center">Trip-Based Model</h3>
+            <p className="text-gray-600 text-center mb-6 flex-grow leading-relaxed">Fixed-price packages designed for specific trips, tours, or customized travel plans.</p>
+            <Link href="/contact" className="btn text-white px-8 py-3">Explore Packages</Link>
           </div>
 
           {/* Fixed Cab Model */}
@@ -176,8 +182,8 @@ export default function ServicesPage() {
               />
             </div>
             <h3 className="text-2xl font-bold mb-4 text-primary text-center">Fixed Cab Model</h3>
-            <p className="text-gray-600 text-center mb-6 flex-grow leading-relaxed">A dedicated cab available for your service at a fixed cost for a set period or route.</p>
-            <Link href="/contact" className="btn text-white px-8 py-3">Get Quote</Link>
+            <p className="text-gray-600 text-center mb-6 flex-grow leading-relaxed">Dedicated cab services at a fixed cost for a set period or route — ideal for executives and corporates.</p>
+            <Link href="/contact" className="btn text-white px-8 py-3">Book Fixed Cab</Link>
           </div>
 
           {/* FTE Model */}
@@ -191,9 +197,9 @@ export default function ServicesPage() {
                 className="transition-transform duration-300 group-hover:scale-105"
               />
             </div>
-            <h3 className="text-2xl font-bold mb-4 text-primary text-center">FTE Model</h3>
-            <p className="text-gray-600 text-center mb-6 flex-grow leading-relaxed">Full-Time Equivalent vehicle model providing dedicated transport services tailored to your organization&apos;s daily needs.</p>
-            <Link href="/contact" className="btn text-white px-8 py-3">Get Quote</Link>
+            <h3 className="text-2xl font-bold mb-4 text-primary text-center">FTE Model (Full-Time Equivalent)</h3>
+            <p className="text-gray-600 text-center mb-6 flex-grow leading-relaxed">A fully dedicated transport solution tailored to your organization's daily needs, with guaranteed vehicle availability.</p>
+            <Link href="/contact" className="btn text-white px-8 py-3">Request Corporate Proposal</Link>
           </div>
 
         </div>
@@ -207,69 +213,86 @@ export default function ServicesPage() {
             Professional transportation solutions for businesses, institutions, and special events.
           </p>
         </div>
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
-          <div className="bg-gradient-to-br from-primary/5 to-secondary/10 rounded-2xl p-8 card hover:shadow-xl transition-all duration-300">
-            <div className="flex items-center mb-6">
-              <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center mr-4">
-                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
-                </svg>
-              </div>
-              <div>
-                <h3 className="text-2xl font-bold text-primary">Corporate Travel</h3>
-                <p className="text-gray-600">Employee transport & fleet management</p>
-              </div>
-            </div>
-            <p className="text-gray-700 mb-6 leading-relaxed">
-              Dedicated employee transport, event logistics, and fleet management for businesses and institutions. Trusted by top IT, BPO, and manufacturing companies in Pune.
-            </p>
-            <div className="relative rounded-lg overflow-hidden mb-4">
-              <Image 
-                src="/gallery/home_services/corporate.jpeg" 
-                alt="Corporate Travel" 
-                width={400} 
-                height={400} 
-                style={{ objectFit: 'cover', objectPosition: 'center' }}
-                className="w-full h-32 object-cover" 
-              />
-              {/* <Image
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          {/* Corporate Travel */}
+          <div className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105 overflow-hidden">
+            <div className="relative h-48 overflow-hidden">
+              <Image
                 src="/gallery/home_services/corporate.jpeg"
-                alt="FTE Model"
+                alt="Corporate Travel"
                 fill
                 style={{ objectFit: 'cover', objectPosition: 'center' }}
-                className="transition-transform duration-300 group-hover:scale-105"
-              /> */}
-            </div>
-            <Link href="/contact" className="btn w-full text-white">Get Corporate Quote</Link>
-          </div>
-          
-          <div className="bg-gradient-to-br from-secondary/10 to-primary/5 rounded-2xl p-8 card hover:shadow-xl transition-all duration-300">
-            <div className="flex items-center mb-6">
-              <div className="w-16 h-16 bg-secondary rounded-full flex items-center justify-center mr-4">
-                <svg className="w-8 h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                </svg>
-              </div>
-              <div>
-                <h3 className="text-2xl font-bold text-primary">Event Transportation</h3>
-                <p className="text-gray-600">Conferences, weddings & group events</p>
-              </div>
-            </div>
-            <p className="text-gray-700 mb-6 leading-relaxed">
-              From conferences to weddings and large group movements, we provide safe, reliable, and timely event transportation with our modern fleet and professional drivers.
-            </p>
-            <div className="relative rounded-lg overflow-hidden mb-4">
-            <Image 
-                src="/gallery/home_services/event.jpeg" 
-                alt="Corporate Travel" 
-                width={400} 
-                height={400} 
-                style={{ objectFit: 'cover', objectPosition: 'center' }}
-                className="w-full h-32 object-cover" 
+                className="transition-transform duration-300 hover:scale-110"
               />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+              <div className="absolute top-4 left-4">
+                <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center">
+                  <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                  </svg>
+                </div>
+              </div>
             </div>
-            <Link href="/contact" className="btn w-full text-white">Plan Event Transport</Link>
+            <div className="p-8">
+              <h3 className="text-2xl font-bold text-primary mb-2">Corporate Travel</h3>
+              <p className="text-gray-600 mb-4 font-medium">Dedicated employee transportation & fleet management</p>
+
+              <div className="space-y-3 mb-6">
+                <div className="flex items-start space-x-3">
+                  <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
+                  <p className="text-gray-700 leading-relaxed">Cost-optimized shuttle solutions for IT, BPO, and manufacturing companies</p>
+                </div>
+                <div className="flex items-start space-x-3">
+                  <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
+                  <p className="text-gray-700 leading-relaxed">GPS-enabled fleet with professional chauffeurs</p>
+                </div>
+              </div>
+
+              <Link href="/contact" className="btn w-full text-white text-center inline-block">
+                Get Corporate Travel Quote
+              </Link>
+            </div>
+          </div>
+
+          {/* Event Transportation */}
+          <div className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105 overflow-hidden">
+            <div className="relative h-48 overflow-hidden">
+              <Image
+                src="/gallery/home_services/event.jpeg"
+                alt="Event Transportation"
+                fill
+                style={{ objectFit: 'cover', objectPosition: 'center' }}
+                className="transition-transform duration-300 hover:scale-110"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+              <div className="absolute top-4 left-4">
+                <div className="w-12 h-12 bg-secondary rounded-full flex items-center justify-center">
+                  <svg className="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <div className="p-8">
+              <h3 className="text-2xl font-bold text-primary mb-2">Event Transportation</h3>
+              <p className="text-gray-600 mb-4 font-medium">Reliable transport solutions for conferences, weddings & group events</p>
+
+              <div className="space-y-3 mb-6">
+                <div className="flex items-start space-x-3">
+                  <div className="w-2 h-2 bg-secondary rounded-full mt-2 flex-shrink-0"></div>
+                  <p className="text-gray-700 leading-relaxed">Large fleet for seamless logistics management</p>
+                </div>
+                <div className="flex items-start space-x-3">
+                  <div className="w-2 h-2 bg-secondary rounded-full mt-2 flex-shrink-0"></div>
+                  <p className="text-gray-700 leading-relaxed">Experienced drivers ensuring safety and punctuality</p>
+                </div>
+              </div>
+
+              <Link href="/contact" className="btn w-full text-white text-center inline-block">
+                Plan Your Event Transport
+              </Link>
+            </div>
           </div>
         </div>
       </section>

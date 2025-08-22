@@ -30,11 +30,16 @@ export default function ContactPage() {
       {/* Hero Section */}
       <section className="mb-20 text-center">
         <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold mb-6 text-primary tracking-tight">
-          Get In Touch
+          Get in Touch
         </h1>
-        <p className="text-lg sm:text-xl md:text-2xl text-gray-600 mb-8 max-w-4xl mx-auto leading-relaxed px-4">
-          Ready to plan your next journey? We&apos;re here to help make your travel dreams come true.
-        </p>
+        <div className="max-w-4xl mx-auto space-y-4">
+          <p className="text-lg sm:text-xl md:text-2xl text-gray-600 leading-relaxed px-4">
+            We're here to provide safe, reliable, and professional transport solutions for your business and personal travel needs.
+          </p>
+          <p className="text-base sm:text-lg text-gray-600 leading-relaxed px-4">
+            Whether you're looking for corporate employee transport, intercity rentals, or event logistics, our team is ready to assist you.
+          </p>
+        </div>
       </section>
 
       {/* Contact Cards */}
@@ -47,7 +52,7 @@ export default function ContactPage() {
               </svg>
             </div>
             <h3 className="text-xl font-bold text-primary mb-2">Call Us</h3>
-            <p className="text-gray-600 mb-4">Speak directly with our travel experts</p>
+            <p className="text-gray-600 mb-4">Speak directly with our travel experts for quick assistance</p>
             <div className="space-y-2">
               <Link href="tel:+912041230000" className="block text-primary hover:text-secondary font-semibold transition-colors">
                 +91-20-41230000
@@ -65,13 +70,10 @@ export default function ContactPage() {
               </svg>
             </div>
             <h3 className="text-xl font-bold text-primary mb-2">Email Us</h3>
-            <p className="text-gray-600 mb-4">Send us your travel requirements</p>
+            <p className="text-gray-600 mb-4">Send us your requirements and receive a response within a few hours</p>
             <div className="space-y-2">
-              <Link href="mailto:raj.kolpe@comfort-toursindia.com" className="block text-primary hover:text-secondary font-semibold transition-colors text-sm">
-                raj.kolpe@comfort-toursindia.com
-              </Link>
-              <Link href="mailto:bookings@comfort-toursindia.com" className="block text-primary hover:text-secondary font-semibold transition-colors text-sm">
-                bookings@comfort-toursindia.com
+              <Link href="mailto:info@comfort-tours.com" className="block text-primary hover:text-secondary font-semibold transition-colors text-sm">
+                info@comfort-tours.com
               </Link>
             </div>
           </div>
@@ -84,12 +86,14 @@ export default function ContactPage() {
               </svg>
             </div>
             <h3 className="text-xl font-bold text-primary mb-2">Visit Us</h3>
-            <p className="text-gray-600 mb-4">Come to our office for personalized service</p>
+            <p className="text-gray-600 mb-4">Comfort Tours Pvt. Ltd.</p>
             <p className="text-sm text-gray-700 leading-relaxed">
-              Office No. 1, 2nd Floor<br />
-              Rucha Building, Punavale<br />
-              Pune - 411033
+              Office No. 1, 2nd Floor, Rucha Building<br />
+              Punavale, Pune – 411033, Maharashtra
             </p>
+            <div className="mt-4 p-3 bg-primary/10 rounded-lg">
+              <p className="text-sm font-semibold text-primary">Business Hours: 24*7</p>
+            </div>
           </div>
         </div>
       </section>
@@ -100,7 +104,7 @@ export default function ContactPage() {
           {/* Contact Form */}
           <div className="bg-white rounded-2xl shadow-lg card px-8 pt-6 pb-10 self-start">
             <h2 className="text-2xl sm:text-3xl font-bold mb-6 text-primary">Send Us a Message</h2>
-            <p className="text-gray-600 mb-6">Fill out the form below and we&apos;ll get back to you within 24 hours.</p>
+            <p className="text-gray-600 mb-6">Fill in the form below, and our team will get back to you within 2–4 business hours.</p>
 
             {/* Status Messages */}
             <div className="mb-6 min-h-[1px]">
@@ -119,7 +123,7 @@ export default function ContactPage() {
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                       </svg>
                     )}
-                    {submitStatus.message}
+                    {submitStatus.type === 'success' ? 'Thank you! Our team will contact you shortly.' : submitStatus.message}
                   </div>
                 </div>
               )}
@@ -171,10 +175,10 @@ export default function ContactPage() {
                   disabled={isSubmitting}
                 >
                   <option value="">Select a service</option>
-                  <option value="car-rental">Car Rental</option>
-                  <option value="tour-package">Tour Package</option>
                   <option value="corporate-travel">Corporate Travel</option>
-                  <option value="event-transport">Event Transportation</option>
+                  <option value="employee-transport">Employee Transport</option>
+                  <option value="event-transportation">Event Transportation</option>
+                  <option value="airport-transfer">Airport Transfer</option>
                   <option value="other">Other</option>
                 </select>
               </div>
@@ -205,7 +209,7 @@ export default function ContactPage() {
                     Sending...
                   </>
                 ) : (
-                  'Send Message'
+                  'Submit Request'
                 )}
               </button>
             </form>
@@ -237,7 +241,7 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h4 className="font-bold text-primary mb-1">Business Hours</h4>
-                    <p className="text-gray-700">Monday - Saturday: 9:00 AM - 7:00 PM<br />Sunday: 10:00 AM - 5:00 PM</p>
+                    <p className="text-gray-700">24*7 Service Available</p>
                   </div>
                 </div>
 
@@ -257,7 +261,7 @@ export default function ContactPage() {
 
             {/* Google Maps */}
             <div className="bg-white rounded-2xl shadow-lg card p-8">
-              <h3 className="text-2xl font-bold text-primary mb-4">Find Us</h3>
+              <h3 className="text-2xl font-bold text-primary mb-4">Find Us on Map</h3>
               <div className="relative w-full h-64 rounded-lg overflow-hidden">
                 <iframe
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d121046.33902250009!2d73.7418492!3d18.542540300000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2b75f842bf51f%3A0x67b5cf581f2f8f00!2sComfort%20Tours%20Pvt.%20Ltd.!5e0!3m2!1sen!2sin!4v1753879333753!5m2!1sen!2sin"
@@ -278,17 +282,27 @@ export default function ContactPage() {
                   rel="noopener noreferrer"
                   className="btn text-sm px-4 py-2 text-white"
                 >
-                  Comfort Tours Pvt. Ltd. - Google Maps
+                  Get Directions
                 </a>
               </div>
               <div className="mt-4 p-4 bg-primary/5 rounded-lg">
-                <p className="text-sm text-gray-700">
-                  <strong>📍 Office Location:</strong> Office No. 1, 2nd Floor, Rucha Building, Punavale, Pune - 411033
+                <p className="text-sm text-gray-700 mb-2">
+                  <strong>Office Location:</strong> Office No. 1, 2nd Floor, Rucha Building, Punavale, Pune – 411033
                 </p>
-                <p className="text-sm text-gray-600 mt-2">
-                  Click on the map to get directions or use your preferred navigation app.
+                <p className="text-sm text-gray-600">
+                  Easily get directions via Google Maps or your preferred navigation app.
                 </p>
               </div>
+            </div>
+
+            {/* CTA Buttons */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <Link href="/contact" className="btn text-white text-center py-3">
+                Request a Quote
+              </Link>
+              <Link href="/contact" className="btn bg-white text-primary border-2 border-primary hover:bg-primary hover:text-white text-center py-3">
+                Partner With Us
+              </Link>
             </div>
           </div>
         </div>
