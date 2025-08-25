@@ -72,8 +72,8 @@ export default function ContactPage() {
             <h3 className="text-xl font-bold text-primary mb-2">Email Us</h3>
             <p className="text-gray-600 mb-4">Send us your requirements and receive a response within a few hours</p>
             <div className="space-y-2">
-              <Link href="mailto:info@comfort-tours.com" className="block text-primary hover:text-secondary font-semibold transition-colors text-sm">
-                info@comfort-tours.com
+              <Link href="mailto:info@comfort-toursindia.com" className="block text-primary hover:text-secondary font-semibold transition-colors text-sm">
+                info@comfort-toursindia.com
               </Link>
             </div>
           </div>

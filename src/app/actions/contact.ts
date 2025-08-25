@@ -25,42 +25,38 @@ export async function submitContactForm(formData: FormData) {
   }
 
   try {
-    // Log the form submission for now (you can check server logs)
-    const submissionData = {
-      name,
-      email,
-      phone,
-      service: service || 'Not specified',
-      message,
-      timestamp: new Date().toLocaleString('en-IN', { timeZone: 'Asia/Kolkata' }),
-      userAgent: 'Web Form Submission'
-    }
+    // Create form data for PHP handler
+    const phpFormData = new FormData()
+    phpFormData.append('name', name)
+    phpFormData.append('email', email)
+    phpFormData.append('phone', phone)
+    phpFormData.append('service', service || 'Not specified')
+    phpFormData.append('message', message)
 
-    // Log to server console (you can check deployment logs)
-    console.log('=== NEW CONTACT FORM SUBMISSION ===')
-    console.log('Name:', name)
-    console.log('Email:', email)
-    console.log('Phone:', phone)
-    console.log('Service:', service || 'Not specified')
-    console.log('Message:', message)
-    console.log('Submitted at:', submissionData.timestamp)
-    console.log('=====================================')
+    // Submit to PHP handler
+    const response = await fetch('/contact-handler.php', {
+      method: 'POST',
+      body: phpFormData,
+    })
 
-    // You can also save to a database here if needed
-    // await saveToDatabase(submissionData)
+    const result = await response.json()
 
-    // Simulate processing time
-    await new Promise(resolve => setTimeout(resolve, 1000))
-
-    return { 
-      success: true, 
-      message: 'Thank you for your message! We have received your inquiry and will get back to you within 24 hours. For immediate assistance, please call +91-20-41230000.' 
+    if (result.success) {
+      return { 
+        success: true, 
+        message: 'Thank you for your message! We have received your inquiry and will get back to you within 2-4 business hours. For immediate assistance, please call +91-20-41230000.' 
+      }
+    } else {
+      return { 
+        success: false, 
+        error: result.message || 'Failed to send message. Please try again.' 
+      }
     }
   } catch (error) {
     console.error('Contact form error:', error)
     return { 
       success: false, 
-      error: 'Sorry, there was an error processing your message. Please try again or contact us directly at +91-20-41230000 or raj.kolpe@comfort-toursindia.com' 
+      error: 'Sorry, there was an error processing your message. Please try again or contact us directly at +91-20-41230000 or info@comfort-toursindia.com' 
     }
   }
 }

@@ -140,7 +140,7 @@ export default function AboutPage() {
             <p className="text-lg font-semibold">Comfort Tours Pvt. Ltd.</p>
             <p className="text-base">Office No. 1, 2nd Floor, Rucha Building, Punavale, Pune – 411033</p>
             <p className="text-base">Phone: +91-20-41230000</p>
-            <p className="text-base">Email: info@comfort-tours.com</p>
+            <p className="text-base">Email: info@comfort-toursindia.com</p>
           </div>
           <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-end">
             <Link href="/contact" className="inline-flex items-center justify-center px-6 py-3 bg-white text-orange-500 hover:bg-gray-100 font-semibold rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105">

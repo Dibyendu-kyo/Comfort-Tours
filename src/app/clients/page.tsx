@@ -64,7 +64,7 @@ export default function ClientsPage() {
       {/* Client Portfolio by Category */}
       <section className="mb-20">
         <h2 className="text-2xl sm:text-3xl font-bold mb-12 text-center text-primary">Client Portfolio</h2>
-        
+
         {Object.entries(clientCategories).map(([category, clients]) => (
           <div key={category} className="mb-16">
             <h3 className="text-xl sm:text-2xl font-bold mb-8 text-primary border-b-2 border-primary/20 pb-2">
@@ -72,8 +72,8 @@ export default function ClientsPage() {
             </h3>
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-8">
               {clients.map((client) => (
-                <div 
-                  key={client.name} 
+                <div
+                  key={client.name}
                   className="group bg-white rounded-xl shadow-sm hover:shadow-lg border border-gray-100 hover:border-primary/20 p-6 flex flex-col items-center transition-all duration-300 hover:scale-105"
                 >
                   <div className="relative w-full h-16 mb-4 flex items-center justify-center">
@@ -138,36 +138,77 @@ export default function ClientsPage() {
       {/* Client Testimonials */}
       <section className="mb-20">
         <h2 className="text-2xl sm:text-3xl font-bold mb-12 text-center text-primary">What Our Clients Say</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div className="bg-white rounded-2xl shadow-lg p-8 border-l-4 border-primary">
             <div className="flex items-start mb-4">
-              <svg className="w-8 h-8 text-primary mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h4v10h-10z"/>
-              </svg>
+              <div className="w-12 h-12 rounded-full overflow-hidden mr-4 flex-shrink-0">
+                <Image
+                  src="/testimonials/priya-nair.jpeg"
+                  alt="Priya Nair"
+                  width={48}
+                  height={48}
+                  className="object-cover w-full h-full"
+                />
+              </div>
               <div>
                 <p className="text-gray-700 leading-relaxed mb-4">
                   &ldquo;Comfort Tours has been a trusted partner in managing our employee transportation for over a decade. Their professionalism and reliability make them stand out.&rdquo;
                 </p>
-                <p className="text-primary font-semibold">– Transport Desk Head, IT MNC</p>
+                <div>
+                  <p className="text-primary font-semibold">Priya Nair</p>
+                  <p className="text-gray-600 text-sm">Transport Desk Head, IT MNC</p>
+                </div>
               </div>
             </div>
           </div>
-          
+
           <div className="bg-white rounded-2xl shadow-lg p-8 border-l-4 border-secondary">
             <div className="flex items-start mb-4">
-              <svg className="w-8 h-8 text-secondary mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h4v10h-10z"/>
-              </svg>
+              <div className="w-12 h-12 rounded-full overflow-hidden mr-4 flex-shrink-0">
+                <Image
+                  src="/testimonials/rohit-deshmukh.jpeg"
+                  alt="Rohit Deshmukh"
+                  width={48}
+                  height={48}
+                  className="object-cover w-full h-full"
+                />
+              </div>
               <div>
                 <p className="text-gray-700 leading-relaxed mb-4">
                   &ldquo;With Comfort Tours, we don&apos;t worry about transport delays anymore. Their fleet and team are always dependable.&rdquo;
                 </p>
-                <p className="text-primary font-semibold">– Admin Manager, Manufacturing Firm</p>
+                <div>
+                  <p className="text-primary font-semibold">Rohit Deshmukh</p>
+                  <p className="text-gray-600 text-sm">Admin Manager, Manufacturing Firm</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="bg-white rounded-2xl shadow-lg p-8 border-l-4 border-primary">
+            <div className="flex items-start mb-4">
+              <div className="w-12 h-12 rounded-full overflow-hidden mr-4 flex-shrink-0">
+                <Image
+                  src="/testimonials/vijay-kulkarni.jpeg"
+                  alt="Vijay Kulkarni"
+                  width={48}
+                  height={48}
+                  className="object-cover w-full h-full"
+                />
+              </div>
+              <div>
+                <p className="text-gray-700 leading-relaxed mb-4">
+                  &ldquo;Their GPS-enabled buses and professional drivers give us complete peace of mind for our employees&apos; daily commute.&rdquo;
+                </p>
+                <div>
+                  <p className="text-primary font-semibold">Vijay Kulkarni</p>
+                  <p className="text-gray-600 text-sm">HR Director, Tech Company</p>
+                </div>
               </div>
             </div>
           </div>
         </div>
-        
+
         <div className="text-center mt-12">
           <Link href="/contact" className="btn text-white px-8 py-3 text-lg">
             Partner With Us
@@ -183,7 +224,7 @@ export default function ClientsPage() {
             <p className="text-lg font-semibold">Comfort Tours Pvt. Ltd.</p>
             <p className="text-base">Office No. 1, 2nd Floor, Rucha Building, Punavale, Pune – 411033</p>
             <p className="text-base">Phone: +91-20-41230000</p>
-            <p className="text-base">Email: info@comfort-tours.com</p>
+            <p className="text-base">Email: info@comfort-toursindia.com</p>
           </div>
           <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-end">
             <Link href="/contact" className="inline-flex items-center justify-center px-6 py-3 bg-white text-orange-500 hover:bg-gray-100 font-semibold rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105">

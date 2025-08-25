@@ -170,7 +170,7 @@ export default function RootLayout({
               <p className="mb-2">Comfort Tours Pvt. Ltd.</p>
               <p className="mb-2">Office No. 1, 2nd Floor, Rucha Building,<br />Punavale, Pune - 411033</p>
               <p className="mb-2">Phone: <Link href="tel:+912041230000" className="footer-link">+91-20-41230000</Link></p>
-              <p className="mb-2">Email: <Link href="mailto:info@comfort-tours.com" className="footer-link">info@comfort-tours.com</Link></p>
+              <p className="mb-2">Email: <Link href="mailto:info@comfort-toursindia.com" className="footer-link">info@comfort-toursindia.com</Link></p>
             </div>
             {/* Quick Links */}
             <div>

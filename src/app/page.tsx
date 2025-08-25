@@ -369,10 +369,14 @@ export default function Home() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
           <div className="card flex flex-col items-start">
             <div className="flex items-center mb-4">
-              <div className="w-12 h-12 bg-gray-300 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
-                <svg className="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
-                </svg>
+              <div className="w-12 h-12 rounded-full overflow-hidden mr-4 flex-shrink-0">
+                <Image
+                  src="/testimonials/rohit-deshmukh.jpeg"
+                  alt="Rohit Deshmukh"
+                  width={48}
+                  height={48}
+                  className="object-cover w-full h-full"
+                />
               </div>
               <div>
                 <div className="flex mb-1">
@@ -389,10 +393,14 @@ export default function Home() {
           </div>
           <div className="card flex flex-col items-start">
             <div className="flex items-center mb-4">
-              <div className="w-12 h-12 bg-gray-300 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
-                <svg className="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
-                </svg>
+              <div className="w-12 h-12 rounded-full overflow-hidden mr-4 flex-shrink-0">
+                <Image
+                  src="/testimonials/priya-nair.jpeg"
+                  alt="Priya Nair"
+                  width={48}
+                  height={48}
+                  className="object-cover w-full h-full"
+                />
               </div>
               <div>
                 <div className="flex mb-1">
@@ -409,10 +417,14 @@ export default function Home() {
           </div>
           <div className="card flex flex-col items-start">
             <div className="flex items-center mb-4">
-              <div className="w-12 h-12 bg-gray-300 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
-                <svg className="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
-                </svg>
+              <div className="w-12 h-12 rounded-full overflow-hidden mr-4 flex-shrink-0">
+                <Image
+                  src="/testimonials/vijay-kulkarni.jpeg"
+                  alt="Vijay Kulkarni"
+                  width={48}
+                  height={48}
+                  className="object-cover w-full h-full"
+                />
               </div>
               <div>
                 <div className="flex mb-1">
