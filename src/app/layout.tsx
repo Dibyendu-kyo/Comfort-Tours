@@ -107,8 +107,24 @@ export default function RootLayout({
                 const mobileMenu = document.getElementById('mobile-menu');
                 
                 if (mobileMenuButton && mobileMenu) {
+                  // Toggle menu when button is clicked
                   mobileMenuButton.addEventListener('click', function() {
                     mobileMenu.classList.toggle('hidden');
+                  });
+                  
+                  // Close menu when any link is clicked
+                  const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+                  mobileMenuLinks.forEach(function(link) {
+                    link.addEventListener('click', function() {
+                      mobileMenu.classList.add('hidden');
+                    });
+                  });
+                  
+                  // Close menu when clicking outside
+                  document.addEventListener('click', function(event) {
+                    if (!mobileMenu.contains(event.target) && !mobileMenuButton.contains(event.target)) {
+                      mobileMenu.classList.add('hidden');
+                    }
                   });
                 }
               });

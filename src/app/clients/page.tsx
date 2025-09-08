@@ -16,7 +16,7 @@ const clientCategories = {
     { name: "Persistent Systems", logo: "/logo/Persistent.png" },
     { name: "BirlaSoft", logo: "/logo/BirlaSoft.png" },
     { name: "ZS Associates", logo: "/logo/ZS_Associates_Logo.png" },
-    { name: "KPIT", logo: "/logo/17.png" },
+    { name: "KPIT", logo: "/logo/17.PNG" },
     { name: "BitWise Solutions", logo: "/logo/BitWiseSolutions.png" }
   ],
   "Manufacturing & Engineering": [
@@ -39,7 +39,7 @@ const clientCategories = {
   "FMCG & Others": [
     { name: "Ready Roti", logo: "/logo/ReadyRoti.png" },
     { name: "Sydler", logo: "/logo/Sydler.png" },
-    { name: "XPO Logistics", logo: "/logo/8.png" }
+    { name: "XPO Logistics", logo: "/logo/8.PNG" }
   ]
 };
 

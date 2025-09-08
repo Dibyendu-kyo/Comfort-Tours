@@ -12,7 +12,11 @@ export default function Gallery() {
     "/videos/WhatsApp Video 2025-07-17 at 1.01.13 PM.mp4",
     "/videos/WhatsApp Video 2025-07-17 at 1.02.03 PM.mp4",
     "/videos/WhatsApp Video 2025-02-21 at 14.34.26_9400d439.mp4",
-    "/videos/VID-20250221-WA0008.mp4"
+    "/videos/VID-20250221-WA0008.mp4",
+    "/videos/VID-20250907-WA0019.mp4",
+    "/videos/VID-20250907-WA0020.mp4",
+    "/videos/VID-20250907-WA0021.mp4",
+    "/videos/VID-20250908-WA0002.mp4"
   ];
 
 
