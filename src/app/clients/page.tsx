@@ -4,7 +4,8 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Our Clients | Comfort Tours - Trusted by 75+ Companies",
-  description: "Comfort Tours is the trusted employee transport partner for 75+ leading IT, BPO, and manufacturing companies in Pune. With 2,000+ vehicles and 18+ years of expertise, we deliver reliable, safe, and professional corporate travel solutions.",
+  description: "Comfort Tours is the trusted employee transport partner for 75+ leading IT, BPO, and manufacturing companies in Pune. With 2,000+ vehicles and 21+ years of expertise, we deliver reliable, safe, and professional corporate travel solutions.",
+  keywords: "Employee transport partner Pune, Corporate travel solutions India, Trusted fleet provider for IT & BPO companies",
 };
 
 const clientCategories = {
@@ -17,7 +18,18 @@ const clientCategories = {
     { name: "BirlaSoft", logo: "/logo/BirlaSoft.png" },
     { name: "ZS Associates", logo: "/logo/ZS_Associates_Logo.png" },
     { name: "KPIT", logo: "/logo/17.PNG" },
-    { name: "BitWise Solutions", logo: "/logo/BitWiseSolutions.png" }
+    { name: "BitWise Solutions", logo: "/logo/BitWiseSolutions.png" },
+    { name: "3DPLM Software Solutions", logo: "/logo/3dPLM Software.PNG" },
+    { name: "Actiohx Solutions", logo: "/logo/actiohx_logo.jpeg" },
+    { name: "Calsoft", logo: "/logo/Calsoft Pvt Ltd.png" },
+    { name: "Cross Country Infotech", logo: "/logo/Cross Country Infotech Pvt Ltd.png" },
+    { name: "Entercoms Solutions", logo: "/logo/entercoms.png" },
+    { name: "EQ Technologic", logo: "/logo/eq_technologic_logo.jpeg" },
+    { name: "Sterlite Technologies", logo: "/logo/Sterlite.png" },
+    { name: "Siemens", logo: "/logo/images (2).png" },
+    { name: "Inventive Global Solutions", logo: "/logo/unnamed.png" },
+    { name: "Vis Networks", logo: "/logo/3e61f7ea-df0f-43ef-acf2-a8d139cae2b7.png" },
+    { name: "Fourneyron Works India", logo: "/logo/fourneyron-1.png" }
   ],
   "Manufacturing & Engineering": [
     { name: "Atlas Copco", logo: "/logo/Atlas-Copco-Logo.svg.png" },
@@ -27,19 +39,36 @@ const clientCategories = {
     { name: "Mitutoyo", logo: "/logo/Mitutoyo.png" },
     { name: "VOSS Automotive", logo: "/logo/voss-automotive.png" },
     { name: "Exotech", logo: "/logo/exotech-logo.png" },
-    { name: "Entercoms", logo: "/logo/entercoms.png" }
+    { name: "BPW", logo: "/logo/BPW-logo.png" },
+    { name: "Edwards India", logo: "/logo/edwards_logo.jpeg" },
+    { name: "Panasonic India", logo: "/logo/118596.Picture2.png" },
+    { name: "Leoni", logo: "/logo/channels4_profile.jpg" },
+    { name: "Bauer Kompressoren India", logo: "/logo/1680108387825.jpeg" },
   ],
   "Energy & Infrastructure": [
     { name: "MNGL", logo: "/logo/mngl.jpg" },
-    { name: "Sterlite Technologies", logo: "/logo/Sterlite.png" },
     { name: "Thermax", logo: "/logo/Thermax.png" },
     { name: "SEW Eurodrive", logo: "/logo/sew.png" },
-    { name: "Metito", logo: "/logo/Metito.png" }
+    { name: "Metito", logo: "/logo/Metito.png" },
+    { name: "Tulip Infratech", logo: "/logo/tulip_infratech_logo.jpeg" },
+    { name: "YORK", logo: "/logo/images.png" },
+    { name: "ENRX", logo: "/logo/1673873557423.jpeg" },
+    { name: "Sarda Energy & Minerals", logo: "/logo/images (1).jpeg" },
+    
   ],
   "FMCG & Others": [
     { name: "Ready Roti", logo: "/logo/ReadyRoti.png" },
     { name: "Sydler", logo: "/logo/Sydler.png" },
-    { name: "XPO Logistics", logo: "/logo/8.PNG" }
+    { name: "XPO Logistics", logo: "/logo/8.PNG" },
+    { name: "3RUrban Solutions", logo: "/logo/3rUrban-Transparent-logo_d.png" },
+    { name: "Access Healthcare Services", logo: "/logo/Access Healthcare Services Pvt Ltd.png" },
+    { name: "Girikand Logistics", logo: "/logo/girikandtravels_logo.jpeg" },
+    { name: "Aditya Birla Health Services", logo: "/logo/63344059b72794c0f8ff1b87_logo__Aditya-birla.png" },
+    { name: "R M Rajapurkar & Co", logo: "/logo/r_m_rajapurkar_co_chartered_accountants_logo.jpeg" },
+    { name: "Macs-Agharkar Research Institute", logo: "/logo/iak85pm5_400x400.jpg" },
+    { name: "Malpani Group", logo: "/logo/1740561829582.jpeg" },
+    { name: "Natural Sugar & Allied Industries", logo: "/logo/Dairy-English.png" },
+    { name: "Imagicaa", logo: "/logo/images (1).png" },
   ]
 };
 
@@ -56,7 +85,7 @@ export default function ClientsPage() {
             At Comfort Tours, we are proud to be the preferred transportation partner for some of India&apos;s leading IT, BPO, and manufacturing companies.
           </p>
           <p className="text-base sm:text-lg md:text-xl text-gray-700 leading-relaxed px-4">
-            For over 18+ years, we&apos;ve successfully managed employee transportation for organizations of all sizes — ensuring safety, reliability, and cost-efficiency in a dynamic business environment.
+            For over 21+ years, we&apos;ve successfully managed employee transportation for organizations of all sizes — ensuring safety, reliability, and cost-efficiency in a dynamic business environment.
           </p>
         </div>
       </section>
@@ -95,9 +124,20 @@ export default function ClientsPage() {
         ))}
 
         <div className="text-center mt-12">
-          <Link href="/contact" className="btn text-white px-8 py-3 text-lg">
-            View Complete Client Portfolio
-          </Link>
+          <div className="bg-gradient-to-r from-primary/10 to-secondary/10 rounded-2xl p-8 mb-8">
+            <h3 className="text-2xl font-bold text-primary mb-4">Join 75+ Leading Companies</h3>
+            <p className="text-gray-700 mb-6 max-w-2xl mx-auto">
+              Join the ranks of India&apos;s most successful companies who trust Comfort Tours for their employee transportation needs.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link href="/contact" className="btn text-white px-8 py-3 text-lg">
+                Request Corporate Proposal
+              </Link>
+              <Link href="/contact" className="btn bg-white text-primary border-2 border-primary hover:bg-primary hover:text-white px-8 py-3 text-lg">
+                View Complete Portfolio
+              </Link>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -120,7 +160,7 @@ export default function ClientsPage() {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
               </svg>
             </div>
-            <span className="text-4xl font-extrabold text-primary mb-2 block">18+</span>
+            <span className="text-4xl font-extrabold text-primary mb-2 block">21+</span>
             <span className="text-lg font-medium text-gray-700">Years of Long-Term Partnerships</span>
           </div>
           <div className="text-center">
@@ -131,6 +171,16 @@ export default function ClientsPage() {
             </div>
             <span className="text-4xl font-extrabold text-primary mb-2 block">100%</span>
             <span className="text-lg font-medium text-gray-700">Client Satisfaction Rate</span>
+          </div>
+        </div>
+        
+        {/* Trust Badge */}
+        <div className="text-center mt-12">
+          <div className="inline-flex items-center bg-white rounded-full px-6 py-3 shadow-lg">
+            <svg className="w-6 h-6 text-primary mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+            <span className="text-primary font-bold">Serving Fortune 500 Clients</span>
           </div>
         </div>
       </section>
